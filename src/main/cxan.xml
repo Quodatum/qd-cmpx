@@ -2,7 +2,7 @@
     <abstract>Component management</abstract>
     <author id="abunce">Andy Bunce</author>
     <maintainer id="abunce">Andy Bunce</maintainer>
-    <home>?</home>
+    <home>https://github.com/Quodatum/qd-cmpx</home>
     <category id="libs">Library</category>
     <tag>component</tag>
 </package>
