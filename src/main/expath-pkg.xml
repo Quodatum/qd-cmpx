@@ -1,12 +1,12 @@
 <package xmlns="http://expath.org/ns/pkg" name="http://expkg-zone58.github.io/ex-dotml"
-	abbrev="ex-dotml" version="0.0.9" spec="1.0">
-	<title>Transform dotML into dot via XQuery or XSLT</title>
+	abbrev="qd-cmpx" version="0.0.1" spec="1.0">
+	<title>Components</title>
 	<xquery>
-		<namespace>http://www.martin-loetzsch.de/DOTML</namespace>
-		<file>dotml.xqm</file>
+		<namespace>quodatum.cmpx</namespace>
+		<file>cmpx.xqm</file>
 	</xquery>
-	<xslt>
-		<import-uri>http://www.martin-loetzsch.de/DOTML</import-uri>
-		<file>dotml2dot.xsl</file>
-	</xslt>
+	<xquery>
+		<import-uri>quodatum.doc.file</import-uri>
+		<file>files.xqm</file>
+	</xquery>
 </package>
