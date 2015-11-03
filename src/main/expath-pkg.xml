@@ -6,7 +6,7 @@
 		<file>cmpx.xqm</file>
 	</xquery>
 	<xquery>
-		<import-uri>quodatum.doc.file</import-uri>
+		<namespace>quodatum.doc.file</namespace>
 		<file>files.xqm</file>
 	</xquery>
 </package>
