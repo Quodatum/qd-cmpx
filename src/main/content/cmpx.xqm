@@ -25,6 +25,9 @@ declare namespace pkg="http://expath.org/ns/pkg";
  :)		
 declare variable $cmpx:comps as element(cmp)+ :=fn:doc("components.xml")/components/cmp;
 
+(:~
+ : anotate a pkg:dependency with a @status attribute
+ :) 
 declare function status($cmp as element(pkg:dependency)) as element(pkg:dependency)
 {
 let $c:=find($cmp/@name)

@@ -4,6 +4,7 @@
 		<runat>browser</runat>
 		<tagline>The AngularJS tree component.
 		</tagline>
+		<depends>angularjs</depends>
 		<home>http://wix.github.io/angular-tree-control/</home>
 		<licence>MIT</licence>
 		<release version="0.2.0">
@@ -195,14 +196,6 @@
 		</release>
 	</cmp>
 
-	<cmp name="saxon-he">
-		<runat>basex</runat>
-		<home>http://www.saxonica.com/welcome/welcome.xml</home>
-		<tagline>basic XSLT 2.0 processor
-		</tagline>
-		<depends>java</depends>
-	</cmp>
-
 	<cmp name="async">
 		<runat>browser</runat>
 		<home>https://github.com/caolan/async</home>
@@ -267,10 +260,16 @@
 		<release version="01.08.2014">
 			<local>lib/ace/01.08.2014</local>
 		</release>
+		<release version="1.2">
+           <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js</cdn>
+            <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ext-language_tools.js</cdn>
+        </release>
 	</cmp>
 
 	<cmp name="ui-ace">
 		<home>https://github.com/angular-ui/ui-ace</home>
+		<depends>angularjs</depends>
+		<depends>ace</depends>
 		<release version="01.08.2014">
 			<cdn>lib/ace/01.08.2014</cdn>
 		</release>
@@ -368,7 +367,8 @@
 		<home>https://github.com/lwhiteley/AngularLogExtender</home>
 		<depends>angularjs</depends>
 		<tagline>AngularLogExtender is an AngularJS module that extends the
-			Angular $log functionality. </tagline>
+			Angular $log functionality.
+		</tagline>
 		<release version="0.0.10">
 
 			<local type="js">lib/AngularLogExtender/0.0.10/log-ex-unobtrusive.min.js
@@ -382,7 +382,8 @@
 		<depends>angularjs</depends>
 		<tagline>Smart table is an Angularjs module to easily display data in
 			a table with a set of built in features such filtering,sorting, etc
-			in a declarative way.</tagline>
+			in a declarative way.
+		</tagline>
 		<release version="1.4.9">
 
 			<local type="js">lib/smart-table/1.4.9/smart-table.min.js
@@ -395,24 +396,110 @@
 		<home>http://angular-ui.github.io/ui-router/site</home>
 		<depends>angularjs</depends>
 		<tagline>The de-facto solution to flexible routing with nested views
-			in AngularJS</tagline>
+			in AngularJS
+		</tagline>
 		<release version="0.2.15">
 
 			<cdn type="js">//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js
 			</cdn>
 		</release>
 	</cmp>
-	
-	<cmp name="angular-breadcrumb">
-        <runat>browser</runat>
-        <home>http://ncuillery.github.io/angular-breadcrumb</home>
-        <depends>angular-ui-router</depends>
-        <tagline>angular-breadcrumb is a module for AngularJS, which generates a breadcrumb for any page of your application. 
-        It is strongly based on the UI-router framework and its hierarchical tree of states.</tagline>
-        <release version="0.4.0">
 
-            <cdn type="js">https://cdn.rawgit.com/ncuillery/angular-breadcrumb/v0.4.0/dist/angular-breadcrumb.js
+	<cmp name="angular-breadcrumb">
+		<runat>browser</runat>
+		<home>http://ncuillery.github.io/angular-breadcrumb</home>
+		<depends>angular-ui-router</depends>
+		<tagline>angular-breadcrumb is a module for AngularJS, which generates
+			a breadcrumb for any page of your application.
+			It is strongly based on
+			the UI-router framework and its hierarchical
+			tree of states.
+		</tagline>
+		<release version="0.4.0">
+
+			<cdn type="js">https://cdn.rawgit.com/ncuillery/angular-breadcrumb/v0.4.0/dist/angular-breadcrumb.js
+			</cdn>
+		</release>
+	</cmp>
+
+	<cmp name="dexie.js">
+		<runat>browser</runat>
+		<home>http://www.dexie.org/</home>
+		<tagline>Minimalistic IndexedDB API with bullet proof transactions
+		</tagline>
+		<release version="1.1.0">
+			<cdn type="js">https://cdnjs.cloudflare.com/ajax/libs/dexie/1.1.0/Dexie.js
+			</cdn>
+		</release>
+	</cmp>
+	<cmp name="NgDexie">
+		<runat>browser</runat>
+		<home>https://github.com/FlussoBV/NgDexie</home>
+		<tagline>AngularJS wrapper around the Dexie.js library
+		</tagline>
+		<depends>angularjs</depends>
+		<depends>dexie.js</depends>
+		<release version="0.0.15">
+			<cdn type="js">https://cdn.rawgit.com/FlussoBV/NgDexie/v0.0.15/build/ngDexie.js
+			</cdn>
+		</release>
+	</cmp>
+
+	<cmp name="svg-pan-zoom">
+		<runat>browser</runat>
+		<home>https://github.com/ariutta/svg-pan-zoom</home>
+		<tagline>JavaScript library that enables panning and zooming of an SVG
+			in an HTML document, with mouse events or custom JavaScript hooks
+		</tagline>
+		<release version="3.2.3">
+			<local type="js">lib/svg-pan-zoom/3.2.3/svg-pan-zoom.js
+			</local>
+		</release>
+	</cmp>
+	
+	<cmp name="angular-svg-pan-zoom">
+        <runat>browser</runat>
+        <home>https://github.com/Promact/angular-svg-pan-zoom/tree/b8c6574b222e41ab57c5eafbc096bc73ab413f0f</home>
+        <tagline>It's an angular wrapper library for https://github.com/ariutta/svg-pan-zoom
+        </tagline>
+        <depends>angularjs</depends>
+        <depends>svg-pan-zoom</depends>
+        <release version="b8c6574b222e41ab57c5eafbc096bc73ab413f0f">
+              <cdn type="js">https://cdn.rawgit.com/Promact/angular-svg-pan-zoom/b8c6574b222e41ab57c5eafbc096bc73ab413f0f/dist/angular-svg-pan-zoom.js
             </cdn>
         </release>
     </cmp>
+    
+	<cmp name="angular-auto-height">
+        <runat>browser</runat>
+        <home>https://github.com/twygmbh/angular-auto-height</home>
+        <tagline>An AngularJS directive to automatically
+         adjust the height of an element corresponding to the parent and siblings. 
+        </tagline>
+        <release version="0.0.4">
+            <cdn type="js">//cdn.rawgit.com/twygmbh/angular-auto-height/9c7a5bdf673b1296d5dd504f463e478c20efc101/dist/auto-height.js
+            </cdn>
+        </release>
+    </cmp>
+    
+    <cmp name="ex-graphviz">
+        <runat>expath</runat>
+        <home>https://github.com/expkg-zone58/ex-graphviz</home>
+        <tagline>XQuery interface for Graphviz with EXPath packaging.
+        </tagline>
+        <release version="0.0.7">
+            <cdn type="xar">https://github.com/expkg-zone58/ex-graphviz/releases/download/v0.0.7/ex-graphviz-0.0.7.xar
+            </cdn>
+        </release>
+    </cmp>
+  <cmp name="ex-dotml">
+        <runat>expath</runat>
+        <home>https://github.com/expkg-zone58/ex-dotml</home>
+        <tagline>The dotML library provides conversion from dotML format to graphviz dot
+        </tagline>
+        <release version="0.0.9">
+            <cdn type="xar">https://github.com/expkg-zone58/ex-dotml/releases/download/v0.0.9/ex-dotml-0.0.9.xar
+            </cdn>
+        </release>
+    </cmp>    
 </components>

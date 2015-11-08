@@ -36,6 +36,14 @@ file:list($s,fn:true(),$glob)
 !df:keep-files(.,$s)
 };
 
+(:~ true path from segment :)
+declare function df:webapp-expath($app as xs:string)
+ as element()?{
+ let $p:=$df:base || $app || file:dir-separator() || "expath-pkg.xml"
+ return if (doc-available($p)) 
+        then doc($p)/*
+        else () 		
+};
 
 (:~ true path from segment :)
 declare function df:webpath($path as xs:string)
@@ -44,7 +52,7 @@ declare function df:webpath($path as xs:string)
 };
 
 (:~
- : list of all appications
+ : list of all web applications
  :)
 declare function df:apps() as xs:string*
 {
