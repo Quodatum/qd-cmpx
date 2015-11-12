@@ -6,7 +6,7 @@
  : @copyright Quodatum Ltd  
  :)
 module namespace  cmpx = 'quodatum.cmpx';
-declare default function namespace 'quodatum.cmpx';
+
 
 declare namespace pkg="http://expath.org/ns/pkg";
 
@@ -28,9 +28,9 @@ declare variable $cmpx:comps as element(cmp)+ :=fn:doc("components.xml")/compone
 (:~
  : anotate a pkg:dependency with a @status attribute
  :) 
-declare function status($cmp as element(pkg:dependency)) as element(pkg:dependency)
+declare function cmpx:status($cmp as element(pkg:dependency)) as element(pkg:dependency)
 {
-let $c:=find($cmp/@name)
+let $c:=cmpx:find($cmp/@name)
 let $value:=if(fn:empty($c)) 
         then "missing"
         else if($c/release/@version=$cmp/@version) 
@@ -43,27 +43,27 @@ return $res
 (:~
  : generate includes required for components
  :)
-declare function includes($cmps as element(cmp)*)
+declare function cmpx:includes($cmps as element(cmp)*)
 {
 let $css:=$cmps/release[1]/cdn[@type="css"]
 let $js:=$cmps/release[1]/cdn[@type="js"]
 return <include><css>{$css}</css><js>{$js}</js></include>
 };
 
-declare function find($name as xs:string) as element(cmp)?
+declare function cmpx:find($name as xs:string) as element(cmp)?
 {
   $cmpx:comps[@name=$name]
 };
 
-declare function dependants($name as xs:string) as element(cmp)*
+declare function cmpx:dependants($name as xs:string) as element(cmp)*
 {
-  let $c:=find($name)
-  let $d:=$c/depends!find(.)
+  let $c:=cmpx:find($name)
+  let $d:=$c/depends!cmpx:find(.)
   return ($d)
 };
 
 (:~ names of components :)
-declare function names($cmps as element(cmp)*) as xs:string*
+declare function cmpx:names($cmps as element(cmp)*) as xs:string*
 {
   $cmps/@name
 };
@@ -72,11 +72,11 @@ declare function names($cmps as element(cmp)*) as xs:string*
 (:~ 
  : topologic sort 
  :)
-declare function topologic-sort($unordered)   {
-  topologic-sort($unordered,())
+declare function cmpx:topologic-sort($unordered)   {
+  cmpx:topologic-sort($unordered,())
 };
 
-declare function topologic-sort($unordered, $ordered )   {
+declare function cmpx:topologic-sort($unordered, $ordered )   {
     if (fn:empty($unordered))
     then $ordered
     else
@@ -84,24 +84,38 @@ declare function topologic-sort($unordered, $ordered )   {
 		let $_:=fn:trace(fn:count($unordered),"LEFT")
         return 
           if ($nodes)
-          then topologic-sort( $unordered except $nodes, ($ordered, $nodes ))
+          then cmpx:topologic-sort( $unordered except $nodes, ($ordered, $nodes ))
           else ()  (: cycles so no order possible :)
 };
 
 (:~
  : extend component list by recursively adding dependants  
  :)
-declare function closure($cmps as element(cmp)*) as element(cmp)*
+declare function cmpx:closure($cmps as element(cmp)*) as element(cmp)*
 { 
- closure($cmps,())
+ cmpx:closure($cmps,())
 };
 
-declare function closure($new as element(cmp)*,$current as element(cmp)*)
+declare function cmpx:closure($new as element(cmp)*,$current as element(cmp)*)
 as element(cmp)*
 {
 let $n:=$new except $current
 return if (fn:empty($n)) 
        then $current
-       else let $x:=$n/depends!find(.)
-	        return closure($x,($current,$n)) 
+       else let $x:=$n/depends!cmpx:find(.)
+	        return cmpx:closure($x,($current,$n)) 
 };
+
+declare function cmpx:add-or-update-attributes
+  ( $elements as element()* ,
+    $attrNames as xs:QName* ,
+    $attrValues as xs:anyAtomicType* )  as element()? {
+
+   for $element in $elements
+   return element { node-name($element)}
+                  { for $attrName at $seq in $attrNames
+                    return attribute {$attrName}
+                                     {$attrValues[$seq]},
+                    $element/@*[not(node-name(.) = $attrNames)],
+                    $element/node() }
+ } ;
