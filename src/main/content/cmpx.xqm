@@ -23,7 +23,17 @@ declare namespace pkg="http://expath.org/ns/pkg";
  :	<title>Web app Documentation</title>
  :	<dependency name="twitter-bootstrap-css" version="3.3.4" />
  :)		
-declare variable $cmpx:comps as element(cmp)+ :=fn:doc("components.xml")/components/cmp;
+declare variable $cmpx:comps as element(cmp)* :=fn:doc("components.xml")/components/cmp;
+
+(:~
+ : 'return expath-pkg doc for app $name
+ :)
+declare function cmpx:expath-pkg($name as xs:string){
+	let $wp:=db:system()/globaloptions/webpath/string()
+            || file:dir-separator()
+	let $f:=  file:resolve-path($name ||"/expath-pkg.xml",$wp)
+	return fn:doc($f)
+};
 
 (:~
  : anotate a pkg:dependency with a @status attribute
