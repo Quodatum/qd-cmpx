@@ -1,5 +1,7 @@
 # qd-cmpx
-component database
+
+A component database. Locations, versions and dependancies for Expath and browser based components.
+
 
 ## Examples
 

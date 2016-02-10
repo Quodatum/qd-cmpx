@@ -12,6 +12,5 @@
       <dependency processor="basex"/>
       <file name="ex-dotml-0.0.5.xar" role="pkg"/>
     </version>
-
   </pkg>
 </repo>

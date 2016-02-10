@@ -1,0 +1,221 @@
+<xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0">
+  <xqdoc:control>
+    <xqdoc:date>2016-02-10T10:36:43.709Z</xqdoc:date>
+    <xqdoc:version>1.1</xqdoc:version>
+  </xqdoc:control>
+  <xqdoc:module type="library">
+    <xqdoc:uri>quodatum.cmpx</xqdoc:uri>
+    <xqdoc:name>cmpx.xqm</xqdoc:name>
+    <xqdoc:comment>
+      <xqdoc:description>Component library tools
+Install this in the BaseX respository</xqdoc:description>
+      <xqdoc:since>April 2015</xqdoc:since>
+      <xqdoc:author>Andy Bunce</xqdoc:author>
+      <xqdoc:custom tag="copyright">Quodatum Ltd</xqdoc:custom>
+    </xqdoc:comment>
+  </xqdoc:module>
+  <xqdoc:namespaces>
+    <xqdoc:namespace prefix="cmpx" uri="quodatum.cmpx"/>
+    <xqdoc:namespace prefix="pkg" uri="http://expath.org/ns/pkg"/>
+  </xqdoc:namespaces>
+  <xqdoc:imports/>
+  <xqdoc:variables>
+    <xqdoc:variable>
+      <xqdoc:name>cmpx:comps</xqdoc:name>
+      <xqdoc:comment>
+        <xqdoc:description>the database..
+&lt;components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="components.xsd"&gt;
+	&lt;cmp name="angular-tree-control"&gt;
+		...
+		&lt;release version="0.2.0"&gt;
+
+Package format:
+&lt;package abbrev="doc" name="urn:quodatum.basex.doc" version="0.5.11"
+	spec="1.0" xmlns="http://expath.org/ns/pkg"&gt;
+	&lt;title&gt;Web app Documentation&lt;/title&gt;
+	&lt;dependency name="twitter-bootstrap-css" version="3.3.4" /&gt;</xqdoc:description>
+      </xqdoc:comment>
+      <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+    </xqdoc:variable>
+  </xqdoc:variables>
+  <xqdoc:functions>
+    <xqdoc:function arity="1">
+      <xqdoc:comment>
+        <xqdoc:description>'return expath-pkg doc for app $name</xqdoc:description>
+      </xqdoc:comment>
+      <xqdoc:name>cmpx:expath-pkg</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:expath-pkg($name as xs:string) as item()*</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>name</xqdoc:name>
+          <xqdoc:type>xs:string</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type occurrence="*">item()</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="1">
+      <xqdoc:comment>
+        <xqdoc:description>anotate a pkg:dependency with a @status attribute</xqdoc:description>
+      </xqdoc:comment>
+      <xqdoc:name>cmpx:status</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:status($cmp as element(pkg:dependency)) as element(pkg:dependency)</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>cmp</xqdoc:name>
+          <xqdoc:type>element(pkg:dependency)</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type>element(pkg:dependency)</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="1">
+      <xqdoc:comment>
+        <xqdoc:description>generate includes required for components</xqdoc:description>
+      </xqdoc:comment>
+      <xqdoc:name>cmpx:includes</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:includes($cmps as element(cmp)*) as item()*</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>cmps</xqdoc:name>
+          <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type occurrence="*">item()</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="1">
+      <xqdoc:name>cmpx:find</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:find($name as xs:string) as element(cmp)?</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>name</xqdoc:name>
+          <xqdoc:type>xs:string</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type occurrence="?">element(cmp)</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="1">
+      <xqdoc:name>cmpx:dependants</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:dependants($name as xs:string) as element(cmp)*</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>name</xqdoc:name>
+          <xqdoc:type>xs:string</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="1">
+      <xqdoc:comment>
+        <xqdoc:description>names of components</xqdoc:description>
+      </xqdoc:comment>
+      <xqdoc:name>cmpx:names</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:names($cmps as element(cmp)*) as xs:string*</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>cmps</xqdoc:name>
+          <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type occurrence="*">xs:string</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="1">
+      <xqdoc:comment>
+        <xqdoc:description>topologic sort</xqdoc:description>
+      </xqdoc:comment>
+      <xqdoc:name>cmpx:topologic-sort</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:topologic-sort($unordered as item()*) as item()*</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>unordered</xqdoc:name>
+          <xqdoc:type occurrence="*">item()</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type occurrence="*">item()</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="2">
+      <xqdoc:name>cmpx:topologic-sort</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:topologic-sort($unordered as item()*, $ordered as item()*) as item()*</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>unordered</xqdoc:name>
+          <xqdoc:type occurrence="*">item()</xqdoc:type>
+        </xqdoc:parameter>
+        <xqdoc:parameter>
+          <xqdoc:name>ordered</xqdoc:name>
+          <xqdoc:type occurrence="*">item()</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type occurrence="*">item()</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="1">
+      <xqdoc:comment>
+        <xqdoc:description>extend component list by recursively adding dependants</xqdoc:description>
+      </xqdoc:comment>
+      <xqdoc:name>cmpx:closure</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:closure($cmps as element(cmp)*) as element(cmp)*</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>cmps</xqdoc:name>
+          <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="2">
+      <xqdoc:name>cmpx:closure</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:closure($new as element(cmp)*, $current as element(cmp)*) as element(cmp)*</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>new</xqdoc:name>
+          <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+        </xqdoc:parameter>
+        <xqdoc:parameter>
+          <xqdoc:name>current</xqdoc:name>
+          <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="3">
+      <xqdoc:name>cmpx:add-or-update-attributes</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:add-or-update-attributes($elements as element()*, $attrNames as xs:QName*, $attrValues as xs:anyAtomicType*) as element()?</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>elements</xqdoc:name>
+          <xqdoc:type occurrence="*">element()</xqdoc:type>
+        </xqdoc:parameter>
+        <xqdoc:parameter>
+          <xqdoc:name>attrNames</xqdoc:name>
+          <xqdoc:type occurrence="*">xs:QName</xqdoc:type>
+        </xqdoc:parameter>
+        <xqdoc:parameter>
+          <xqdoc:name>attrValues</xqdoc:name>
+          <xqdoc:type occurrence="*">xs:anyAtomicType</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type occurrence="?">element()</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+  </xqdoc:functions>
+</xqdoc:xqdoc>
