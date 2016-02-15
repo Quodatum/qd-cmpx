@@ -12,5 +12,14 @@
       <dependency processor="basex"/>
       <file name="ex-dotml-0.0.5.xar" role="pkg"/>
     </version>
+    <version num="0.0.6">
+      <!-- generated: {fn:current-dateTime()} -->
+    </version>
+    <version num="0.0.7">
+      <!-- generated: {fn:current-dateTime()} -->
+    </version>
+    <version num="0.0.8">
+      <!-- generated: {fn:current-dateTime()} -->
+    </version>
   </pkg>
 </repo>

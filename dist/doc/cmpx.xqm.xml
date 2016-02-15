@@ -1,6 +1,6 @@
 <xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0">
   <xqdoc:control>
-    <xqdoc:date>2016-02-10T10:36:43.709Z</xqdoc:date>
+    <xqdoc:date>2016-02-14T15:23:05.135Z</xqdoc:date>
     <xqdoc:version>1.1</xqdoc:version>
   </xqdoc:control>
   <xqdoc:module type="library">
@@ -42,7 +42,8 @@ Package format:
   <xqdoc:functions>
     <xqdoc:function arity="1">
       <xqdoc:comment>
-        <xqdoc:description>'return expath-pkg doc for app $name</xqdoc:description>
+        <xqdoc:description/>
+        <xqdoc:return>expath-pkg doc for app $name</xqdoc:return>
       </xqdoc:comment>
       <xqdoc:name>cmpx:expath-pkg</xqdoc:name>
       <xqdoc:signature>declare function cmpx:expath-pkg($name as xs:string) as item()*</xqdoc:signature>
@@ -86,6 +87,32 @@ Package format:
       </xqdoc:parameters>
       <xqdoc:return>
         <xqdoc:type occurrence="*">item()</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="1">
+      <xqdoc:name>cmpx:css</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:css($e as element()) as item()*</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>e</xqdoc:name>
+          <xqdoc:type>element()</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type>element()</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="1">
+      <xqdoc:name>cmpx:js</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:js($e as element()) as element(script)</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>e</xqdoc:name>
+          <xqdoc:type>element()</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type>element(script)</xqdoc:type>
       </xqdoc:return>
     </xqdoc:function>
     <xqdoc:function arity="1">

@@ -26,7 +26,7 @@ declare namespace pkg="http://expath.org/ns/pkg";
 declare variable $cmpx:comps as element(cmp)* :=fn:doc("components.xml")/components/cmp;
 
 (:~
- : 'return expath-pkg doc for app $name
+ : @return expath-pkg doc for app $name
  :)
 declare function cmpx:expath-pkg($name as xs:string){
 	let $wp:=db:system()/globaloptions/webpath/string()
@@ -50,14 +50,23 @@ return copy $res := $cmp
 modify  insert  node attribute status {$value} into $res
 return $res
 };
+
 (:~
  : generate includes required for components
  :)
 declare function cmpx:includes($cmps as element(cmp)*)
 {
-let $css:=$cmps/release[1]/cdn[@type="css"]
-let $js:=$cmps/release[1]/cdn[@type="js"]
-return <include><css>{$css}</css><js>{$js}</js></include>
+let $css:=$cmps!release[1]/*[@type="css"]
+let $js:=$cmps!release[1]/*[@type="js"]
+return <include><css>{$css!cmpx:css(.)}</css><js>{$js!cmpx:js(.)}</js></include>
+};
+
+declare function cmpx:css($e as element()){
+ <link href="{$e}" rel="stylesheet" type="text/css"/>
+};
+
+declare function cmpx:js($e as element()) as element(script){
+ <script src="{$e}"/>
 };
 
 declare function cmpx:find($name as xs:string) as element(cmp)?
