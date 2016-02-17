@@ -297,6 +297,14 @@
       <local type="js">lib/filepick/0.1.0/directives.js</local>
     </release>
   </cmp>
+  <cmp name="quodatum-config">
+    <runat>browser</runat>
+    <home>https://github.com/Quodatum/app-doc</home>
+    <tagline>common config</tagline>
+    <release version="0.1.0" offline="true">
+      <local type="js">lib/config.js</local>
+    </release>
+  </cmp>
   <cmp name="restangular">
     <runat>browser</runat>
     <home>https://github.com/mgonto/restangular</home>

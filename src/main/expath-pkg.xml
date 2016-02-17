@@ -1,5 +1,5 @@
 <package xmlns="http://expath.org/ns/pkg" name="https://github.com/Quodatum/qd-cmpx"
-	abbrev="qd-cmpx" version="0.0.8" spec="1.0">
+	abbrev="qd-cmpx" version="0.0.10" spec="1.0">
 	<title>Components</title>
 	<xquery>
 		<namespace>quodatum.cmpx</namespace>

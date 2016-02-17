@@ -1,6 +1,6 @@
 <xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0">
   <xqdoc:control>
-    <xqdoc:date>2016-02-14T15:23:05.135Z</xqdoc:date>
+    <xqdoc:date>2016-02-17T14:41:22.981Z</xqdoc:date>
     <xqdoc:version>1.1</xqdoc:version>
   </xqdoc:control>
   <xqdoc:module type="library">
@@ -17,6 +17,7 @@ Install this in the BaseX respository</xqdoc:description>
   <xqdoc:namespaces>
     <xqdoc:namespace prefix="cmpx" uri="quodatum.cmpx"/>
     <xqdoc:namespace prefix="pkg" uri="http://expath.org/ns/pkg"/>
+    <xqdoc:namespace prefix="ann" uri="http://www.w3.org/2012/xquery"/>
   </xqdoc:namespaces>
   <xqdoc:imports/>
   <xqdoc:variables>
@@ -37,6 +38,23 @@ Package format:
 	&lt;dependency name="twitter-bootstrap-css" version="3.3.4" /&gt;</xqdoc:description>
       </xqdoc:comment>
       <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+    </xqdoc:variable>
+    <xqdoc:variable>
+      <xqdoc:name>cmpx:webpath</xqdoc:name>
+      <xqdoc:comment>
+        <xqdoc:description>web path</xqdoc:description>
+      </xqdoc:comment>
+      <xqdoc:annotations>
+        <xqdoc:annotation name="private"/>
+      </xqdoc:annotations>
+      <xqdoc:type>xs:string</xqdoc:type>
+    </xqdoc:variable>
+    <xqdoc:variable>
+      <xqdoc:name>cmpx:libpath</xqdoc:name>
+      <xqdoc:comment>
+        <xqdoc:description>location of static lib</xqdoc:description>
+      </xqdoc:comment>
+      <xqdoc:type>xs:string</xqdoc:type>
     </xqdoc:variable>
   </xqdoc:variables>
   <xqdoc:functions>
@@ -91,7 +109,7 @@ Package format:
     </xqdoc:function>
     <xqdoc:function arity="1">
       <xqdoc:name>cmpx:css</xqdoc:name>
-      <xqdoc:signature>declare function cmpx:css($e as element()) as item()*</xqdoc:signature>
+      <xqdoc:signature>declare function cmpx:css($e as element()) as element(link)?</xqdoc:signature>
       <xqdoc:parameters>
         <xqdoc:parameter>
           <xqdoc:name>e</xqdoc:name>
@@ -99,7 +117,7 @@ Package format:
         </xqdoc:parameter>
       </xqdoc:parameters>
       <xqdoc:return>
-        <xqdoc:type>element()</xqdoc:type>
+        <xqdoc:type occurrence="?">element(link)</xqdoc:type>
       </xqdoc:return>
     </xqdoc:function>
     <xqdoc:function arity="1">

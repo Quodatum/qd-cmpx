@@ -25,13 +25,17 @@ declare namespace pkg="http://expath.org/ns/pkg";
  :)		
 declare variable $cmpx:comps as element(cmp)* :=fn:doc("components.xml")/components/cmp;
 
+(:~ web path :)
+declare %private variable $cmpx:webpath:=db:system()/globaloptions/webpath/string()  || file:dir-separator();
+
+(:~ location of static lib :)
+declare variable $cmpx:libpath:=$cmpx:webpath  || "static/lib" || file:dir-separator();
+
 (:~
  : @return expath-pkg doc for app $name
  :)
 declare function cmpx:expath-pkg($name as xs:string){
-	let $wp:=db:system()/globaloptions/webpath/string()
-            || file:dir-separator()
-	let $f:=  file:resolve-path($name ||"/expath-pkg.xml",$wp)
+	let $f:=  file:resolve-path($name ||"/expath-pkg.xml",$cmpx:webpath)
 	return fn:doc($f)
 };
 
@@ -56,16 +60,20 @@ return $res
  :)
 declare function cmpx:includes($cmps as element(cmp)*)
 {
-let $css:=$cmps!release[1]/*[@type="css"]
-let $js:=$cmps!release[1]/*[@type="js"]
+let $css:=$cmps!(release[1]/*[@type="css"])
+let $js:=$cmps!(release[1]/*[@type="js"])
 return <include><css>{$css!cmpx:css(.)}</css><js>{$js!cmpx:js(.)}</js></include>
 };
 
-declare function cmpx:css($e as element()){
+declare function cmpx:css($e as element()) 
+as element(link)?
+{
  <link href="{$e}" rel="stylesheet" type="text/css"/>
 };
 
-declare function cmpx:js($e as element()) as element(script){
+declare function cmpx:js($e as element())
+ as element(script)
+{
  <script src="{$e}"/>
 };
 
