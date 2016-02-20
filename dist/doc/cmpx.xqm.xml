@@ -1,6 +1,6 @@
 <xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0">
   <xqdoc:control>
-    <xqdoc:date>2016-02-17T14:41:22.981Z</xqdoc:date>
+    <xqdoc:date>2016-02-20T14:00:44.728Z</xqdoc:date>
     <xqdoc:version>1.1</xqdoc:version>
   </xqdoc:control>
   <xqdoc:module type="library">
@@ -241,25 +241,36 @@ Package format:
         <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
       </xqdoc:return>
     </xqdoc:function>
-    <xqdoc:function arity="3">
-      <xqdoc:name>cmpx:add-or-update-attributes</xqdoc:name>
-      <xqdoc:signature>declare function cmpx:add-or-update-attributes($elements as element()*, $attrNames as xs:QName*, $attrValues as xs:anyAtomicType*) as element()?</xqdoc:signature>
+    <xqdoc:function arity="1">
+      <xqdoc:comment>
+        <xqdoc:description>save files for release to local static library</xqdoc:description>
+      </xqdoc:comment>
+      <xqdoc:name>cmpx:save-offline</xqdoc:name>
+      <xqdoc:annotations>
+        <xqdoc:annotation name="updating"/>
+      </xqdoc:annotations>
+      <xqdoc:signature>declare %updating function cmpx:save-offline($release as element(release)) as item()*</xqdoc:signature>
       <xqdoc:parameters>
         <xqdoc:parameter>
-          <xqdoc:name>elements</xqdoc:name>
-          <xqdoc:type occurrence="*">element()</xqdoc:type>
-        </xqdoc:parameter>
-        <xqdoc:parameter>
-          <xqdoc:name>attrNames</xqdoc:name>
-          <xqdoc:type occurrence="*">xs:QName</xqdoc:type>
-        </xqdoc:parameter>
-        <xqdoc:parameter>
-          <xqdoc:name>attrValues</xqdoc:name>
-          <xqdoc:type occurrence="*">xs:anyAtomicType</xqdoc:type>
+          <xqdoc:name>release</xqdoc:name>
+          <xqdoc:type>element(release)</xqdoc:type>
         </xqdoc:parameter>
       </xqdoc:parameters>
       <xqdoc:return>
-        <xqdoc:type occurrence="?">element()</xqdoc:type>
+        <xqdoc:type occurrence="*">item()</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="1">
+      <xqdoc:name>cmpx:full-uri</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:full-uri($n as item()*) as item()*</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>n</xqdoc:name>
+          <xqdoc:type occurrence="*">item()</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type occurrence="*">item()</xqdoc:type>
       </xqdoc:return>
     </xqdoc:function>
   </xqdoc:functions>

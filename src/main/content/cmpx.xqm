@@ -29,7 +29,7 @@ declare variable $cmpx:comps as element(cmp)* :=fn:doc("components.xml")/compone
 declare %private variable $cmpx:webpath:=db:system()/globaloptions/webpath/string()  || file:dir-separator();
 
 (:~ location of static lib :)
-declare variable $cmpx:libpath:=$cmpx:webpath  || "static/lib" || file:dir-separator();
+declare variable $cmpx:libpath:=$cmpx:webpath  || "static/lib" ;
 
 (:~
  : @return expath-pkg doc for app $name
@@ -108,7 +108,7 @@ declare function cmpx:topologic-sort($unordered, $ordered )   {
     then $ordered
     else
         let $nodes := $unordered [ every $id in depends satisfies $id = $ordered/@name]
-		let $_:=fn:trace(fn:count($unordered),"LEFT")
+		(: let $_:=fn:trace(fn:count($unordered),"LEFT") :)
         return 
           if ($nodes)
           then cmpx:topologic-sort( $unordered except $nodes, ($ordered, $nodes ))
@@ -133,16 +133,23 @@ return if (fn:empty($n))
 	        return cmpx:closure($x,($current,$n)) 
 };
 
-declare function cmpx:add-or-update-attributes
-  ( $elements as element()* ,
-    $attrNames as xs:QName* ,
-    $attrValues as xs:anyAtomicType* )  as element()? {
+(:~ save files for release to local static library :)
+declare %updating function cmpx:save-offline($release as element(release))
+{
+let $target:=function($name){fn:string-join(
+($cmpx:libpath,$release/../@name,$release/@version,$name),file:dir-separator()
+)}
+return (
+	if(fn:not(file:is-dir($target("")))) then file:create-dir($target("")) else (),
+	for $f in $release/*
+	let $name:=fn:tokenize($f,"/")[fn:last()]
+	let $t:=fetch:text(cmpx:full-uri($f))
+	return file:write($target($name),$t)
+)
+};
 
-   for $element in $elements
-   return element { node-name($element)}
-                  { for $attrName at $seq in $attrNames
-                    return attribute {$attrName}
-                                     {$attrValues[$seq]},
-                    $element/@*[not(node-name(.) = $attrNames)],
-                    $element/node() }
- } ;
+declare function cmpx:full-uri($n){
+if(fn:starts-with($n,"//"))then "http:" ||$n
+else if(fn:starts-with($n,"/"))then "http://localhost:8489" || $n
+else $n
+};

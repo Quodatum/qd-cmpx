@@ -8,6 +8,7 @@
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ext-language_tools.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="angular-auto-height">
     <runat>browser</runat>
     <home>https://github.com/twygmbh/angular-auto-height</home>
@@ -17,6 +18,7 @@
       <cdn type="js">//cdn.rawgit.com/twygmbh/angular-auto-height/9c7a5bdf673b1296d5dd504f463e478c20efc101/dist/auto-height.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="angular-breadcrumb">
     <runat>browser</runat>
     <home>http://ncuillery.github.io/angular-breadcrumb</home>
@@ -30,6 +32,7 @@
       <cdn type="js">https://cdn.rawgit.com/ncuillery/angular-breadcrumb/v0.4.0/dist/angular-breadcrumb.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="angular-charts">
     <runat>browser</runat>
     <home>http://chinmaymk.github.io/angular-charts/</home>
@@ -37,9 +40,10 @@
     <depends>angularjs</depends>
     <depends>d3</depends>
     <release version="0.2.1" offline="true">
-      <local type="js">lib/angular-charts/0.2.1/angular-charts.min.js</local>
+      <local type="js">/static/lib/angular-charts/0.2.1/angular-charts.min.js</local>
     </release>
   </cmp>
+  
   <cmp name="angular-flashr">
     <home>https://github.com/TylerGarlick/angular.flashr</home>
     <tagline>Flashr is a library that simulates flashing in rails in
@@ -51,16 +55,18 @@
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.min.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="angular-growl-2">
     <runat>browser</runat>
     <home>https://github.com/JanStevens/angular-growl-2</home>
     <depends>angularjs</depends>
     <tagline>growl-like notifications for angularJS projects</tagline>
     <release version="0.7.0" offline="true">
-      <local type="css">lib/angular-growl-2/0.7.0/angular-growl.min.css</local>
-      <local type="js">lib/angular-growl-2/0.7.0/angular-growl.min.js</local>
+      <local type="css">/static/lib/angular-growl-2/0.7.0/angular-growl.min.css</local>
+      <local type="js">/static/lib/angular-growl-2/0.7.0/angular-growl.min.js</local>
     </release>
   </cmp>
+  
   <cmp name="angular-hotkeys">
     <runat>browser</runat>
     <home>http://chieffancypants.github.io/angular-hotkeys/</home>
@@ -68,13 +74,14 @@
 			apps</tagline>
     <depends>angularjs</depends>
     <release version="1.2.0" offline="true">
-      <local type="js">lib/angular-hotkeys/1.2.0/hotkeys.min.js</local>
+      <local type="js">/static/lib/angular-hotkeys/1.2.0/hotkeys.min.js</local>
     </release>
     <release version="1.4.5" >
       <cdn type="css">//cdnjs.cloudflare.com/ajax/libs/angular-hotkeys/1.4.5/hotkeys.css</cdn>
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/angular-hotkeys/1.4.5/hotkeys.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="angular-moment">
     <runat>browser</runat>
     <home>https://github.com/urish/angular-moment</home>
@@ -86,6 +93,7 @@
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/angular-moment/0.7.0/angular-moment.min.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="angular-svg-pan-zoom">
     <runat>browser</runat>
     <home>https://github.com/Promact/angular-svg-pan-zoom/tree/b8c6574b222e41ab57c5eafbc096bc73ab413f0f</home>
@@ -96,6 +104,7 @@
       <cdn type="js">https://cdn.rawgit.com/Promact/angular-svg-pan-zoom/b8c6574b222e41ab57c5eafbc096bc73ab413f0f/dist/angular-svg-pan-zoom.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="angular-tree-control">
     <runat>browser</runat>
     <tagline>The AngularJS tree component.</tagline>
@@ -103,10 +112,11 @@
     <home>http://wix.github.io/angular-tree-control/</home>
     <licence>MIT</licence>
     <release version="0.2.0" offline="true">
-      <local type="css">lib/angular-tree-control/0.2.0/css/tree-control.css</local>
-      <local type="js">lib/angular-tree-control/0.2.0/tree-control.js</local>
+      <local type="css">/static/lib/angular-tree-control/0.2.0/css/tree-control.css</local>
+      <local type="js">/static/lib/angular-tree-control/0.2.0/tree-control.js</local>
     </release>
   </cmp>
+  
   <cmp name="angular-ui-bootstrap">
     <runat>browser</runat>
     <home>http://angular-ui.github.io/bootstrap/</home>
@@ -117,6 +127,7 @@
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="angular-ui-router">
     <runat>browser</runat>
     <home>http://angular-ui.github.io/ui-router/site</home>
@@ -127,15 +138,17 @@
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="angular-ya-treeview">
     <home>https://github.com/ca77y/angular-ya-treeview</home>
     <tagline>Yet Another Treeview for AngularJS</tagline>
     <depends>angularjs</depends>
 <release version="0.2.2" offline="true">
-      <local type="css">lib/angular-ya-treeview/0.2.2/css/ya-treeview.css</local>
-      <local type="js">lib/angular-ya-treeview/0.2.2/ya-treeview-tpls.js</local>
+      <local type="css">/static/lib/angular-ya-treeview/0.2.2/css/ya-treeview.css</local>
+      <local type="js">/static/lib/angular-ya-treeview/0.2.2/ya-treeview-tpls.js</local>
     </release>
   </cmp>
+  
   <cmp name="angularjs">
     <runat>browser</runat>
     <home>https://angularjs.org/</home>
@@ -150,6 +163,7 @@
      <cdn type="js">//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="AngularLogExtender">
     <runat>browser</runat>
     <home>https://github.com/lwhiteley/AngularLogExtender</home>
@@ -157,9 +171,10 @@
     <tagline>AngularLogExtender is an AngularJS module that extends the
 			Angular $log functionality.</tagline>
     <release version="0.0.10" offline="true">
-      <local type="js">lib/AngularLogExtender/0.0.10/log-ex-unobtrusive.min.js</local>
+      <local type="js">/static/lib/AngularLogExtender/0.0.10/log-ex-unobtrusive.min.js</local>
     </release>
   </cmp>
+  
   <cmp name="async">
     <runat>browser</runat>
     <home>https://github.com/caolan/async</home>
@@ -168,6 +183,7 @@
       <cdn>//cdnjs.cloudflare.com/ajax/libs/async/0.8.0/async.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="d3">
     <runat>browser</runat>
     <home>http://d3js.org/</home>
@@ -176,6 +192,7 @@
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.min.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="dexie.js">
     <runat>browser</runat>
     <home>http://www.dexie.org/</home>
@@ -184,6 +201,7 @@
       <cdn type="js">https://cdnjs.cloudflare.com/ajax/libs/dexie/1.1.0/Dexie.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="ex-dotml">
     <runat>expath</runat>
     <home>https://github.com/expkg-zone58/ex-dotml</home>
@@ -192,6 +210,7 @@
       <cdn type="xar">https://github.com/expkg-zone58/ex-dotml/releases/download/v0.0.9/ex-dotml-0.0.9.xar</cdn>
     </release>
   </cmp>
+  
   <cmp name="ex-graphviz">
     <runat>expath</runat>
     <home>https://github.com/expkg-zone58/ex-graphviz</home>
@@ -200,23 +219,26 @@
       <cdn type="xar">https://github.com/expkg-zone58/ex-graphviz/releases/download/v0.0.7/ex-graphviz-0.0.7.xar</cdn>
     </release>
   </cmp>
+  
   <cmp name="FileSaver">
     <home>https://github.com/eligrey/FileSaver.js/</home>
     <tagline>An HTML5 saveAs() FileSaver implementation</tagline>
     <release version="" offline="true">
-      <local type="js">lib/FileSaver.js</local>
+      <local type="js">/static/lib/FileSaver.js</local>
     </release>
   </cmp>
+  
   <cmp name="font-awesome">
     <runat>browser</runat>
     <home>http://fortawesome.github.io/Font-Awesome/</home>
     <tagline>Font Awesome gives you scalable vector icons that can instantly be customized
-			— size, color, drop shadow, and anything that can be done with the
+			 size, color, drop shadow, and anything that can be done with the
 			power of CSS.</tagline>
     <release version="4.3.0">
       <cdn type="css">//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css</cdn>
     </release>
   </cmp>
+  
   <cmp name="jquery">
     <runat>browser</runat>
     <tagline>jQuery is a fast, small, and feature-rich JavaScript library.
@@ -229,6 +251,7 @@
       <cdn type="js">//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="lodash">
     <runat>browser</runat>
     <home>http://lodash.com/</home>
@@ -239,6 +262,7 @@
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="moment">
     <runat>browser</runat>
     <home>http://momentjs.com/</home>
@@ -249,15 +273,17 @@
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/moment-with-langs.min.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="ng-google-chart">
     <runat>browser</runat>
     <home>http://bouil.github.io/angular-google-chart/#/fat</home>
     <tagline>Google Chart Tools AngularJS Directive Module</tagline>
     <depends>angularjs</depends>
     <release version="0.0.9" offline="true">
-      <local type="js">lib/googlechart/0.0.9/ng-google-chart.js</local>
+      <local type="js">/static/lib/googlechart/0.0.9/ng-google-chart.js</local>
     </release>
   </cmp>
+  
   <cmp name="NgDexie">
     <runat>browser</runat>
     <home>https://github.com/FlussoBV/NgDexie</home>
@@ -268,15 +294,17 @@
       <cdn type="js">https://cdn.rawgit.com/FlussoBV/NgDexie/v0.0.15/build/ngDexie.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="ngStorage">
     <runat>browser</runat>
     <home>https://github.com/gsklee/ngStorage</home>
     <tagline>localStorage and sessionStorage done right for AngularJS.</tagline>
     <depends>angularjs</depends>
     <release version="0.3.0" offline="true">
-      <local type="js">lib/ngStorage/0.3.0/ngStorage.js</local>
+      <local type="js">/static/lib/ngStorage/0.3.0/ngStorage.js</local>
     </release>
   </cmp>
+  
   <cmp name="oci.treeview">
     <runat>browser</runat>
     <home>https://github.com/objectcomputing/oci.treeview</home>
@@ -284,27 +312,30 @@
 			behavior</tagline>
     <depends>angularjs</depends>
     <release version="2040305" offline="true">
-      <local type="js">lib/oci.treeview/2040305/treeview.min.js</local>
-      <local type="css">lib/oci.treeview/2040305/treeview.css</local>
+      <local type="js">/static/lib/oci.treeview/2040305/treeview.min.js</local>
+      <local type="css">/static/lib/oci.treeview/2040305/treeview.css</local>
     </release>
   </cmp>
+  
   <cmp name="quodatum-directives">
     <runat>browser</runat>
     <home>https://github.com/Quodatum/app-doc</home>
     <depends>angular-ya-treeview</depends>
     <tagline>Set of UI controls. Includes File selector with tree view</tagline>
     <release version="0.1.0" offline="true">
-      <local type="js">lib/filepick/0.1.0/directives.js</local>
+      <local type="js">/static/lib/filepick/0.1.0/directives.js</local>
     </release>
   </cmp>
+  
   <cmp name="quodatum-config">
     <runat>browser</runat>
     <home>https://github.com/Quodatum/app-doc</home>
     <tagline>common config</tagline>
     <release version="0.1.0" offline="true">
-      <local type="js">lib/config.js</local>
+      <local type="js">/static/lib/config.js</local>
     </release>
   </cmp>
+  
   <cmp name="restangular">
     <runat>browser</runat>
     <home>https://github.com/mgonto/restangular</home>
@@ -316,6 +347,7 @@
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/restangular/3.1.1/restangular.min.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="satellizer">
     <runat>browser</runat>
     <home>https://github.com/sahat/satellizer</home>
@@ -330,6 +362,7 @@
       <cdn type="js">//cdn.jsdelivr.net/satellizer/0.7.0/satellizer.min.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="scrollTo">
     <runat>browser</runat>
     <home>https://github.com/khalilravanna/scrollTo</home>
@@ -339,6 +372,7 @@
     <depends>angularjs</depends>
     <licence>MIT</licence>
   </cmp>
+  
   <cmp name="smart-table">
     <runat>browser</runat>
     <home>https://github.com/lorenzofox3/Smart-Table</home>
@@ -347,9 +381,10 @@
 			a table with a set of built in features such filtering,sorting, etc
 			in a declarative way.</tagline>
     <release version="1.4.9" offline="true">
-      <local type="js">lib/smart-table/1.4.9/smart-table.min.js</local>
+      <local type="js">/static/lib/smart-table/1.4.9/smart-table.min.js</local>
     </release>
   </cmp>
+  
   <cmp name="stacktrace">
     <runat>browser</runat>
     <home>http://www.stacktracejs.com/</home>
@@ -357,24 +392,27 @@
 			stack traces in
 			all web browsers.</tagline>
     <release version="0.6.0" offline="true">
-      <cdn type="js">lib/stacktrace/0.6.0</cdn>
+      <local type="js">/static/lib/stacktrace/0.6.0</local>
     </release>
   </cmp>
+  
   <cmp name="svg-pan-zoom">
     <runat>browser</runat>
     <home>https://github.com/ariutta/svg-pan-zoom</home>
     <tagline>JavaScript library that enables panning and zooming of an SVG
 			in an HTML document, with mouse events or custom JavaScript hooks</tagline>
-    <release version="3.2.3">
-      <local type="js">lib/svg-pan-zoom/3.2.3/svg-pan-zoom.js</local>
+    <release version="3.2.3" offline="true">
+      <local type="js">/static/lib/svg-pan-zoom/3.2.3/svg-pan-zoom.js</local>
     </release>
   </cmp>
+  
   <cmp name="toastr">
     <home>http://codeseven.github.io/toastr/</home>
     <release version="2.0.1">
       <cdn>//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.min.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="twitter-bootstrap">
     <runat>browser</runat>
     <home>http://getbootstrap.com/</home>
@@ -386,6 +424,7 @@
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js</cdn>
     </release>
   </cmp>
+  
   <cmp name="twitter-bootstrap-css">
     <runat>browser</runat>
     <home>http://getbootstrap.com/</home>
@@ -396,12 +435,14 @@
       <cdn type="css">//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.css</cdn>
     </release>
   </cmp>
+  
   <cmp name="ui-ace">
     <home>https://github.com/angular-ui/ui-ace</home>
     <depends>angularjs</depends>
     <depends>ace</depends>
-    <release version="0.2.3">
-      <local type="js">lib/ui-ace/ui-ace-0.2.3/ui-ace.js</local>
+    <release version="0.2.3" offline="true">
+      <local type="js">/static/lib/ui-ace/ui-ace-0.2.3/ui-ace.js</local>
     </release>
   </cmp>
+  
 </components>
