@@ -7,6 +7,10 @@
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js</cdn>
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ext-language_tools.js</cdn>
     </release>
+      <release version="1.2.3" offline="true">
+      <local type="js">/static/lib/ace/1.2.3/src-min-noconflict/ace.js</local>
+      <local type="js">/static/lib/ace/1.2.3/src-min-noconflict/ext-language_tools.js</local>
+    </release>
   </cmp>
   
   <cmp name="angular-auto-height">
@@ -25,11 +29,13 @@
     <depends>angular-ui-router</depends>
     <tagline>angular-breadcrumb is a module for AngularJS, which generates
 			a breadcrumb for any page of your application.
-			It is strongly based on
-			the UI-router framework and its hierarchical
+			It is strongly based on the UI-router framework and its hierarchical
 			tree of states.</tagline>
     <release version="0.4.0">
       <cdn type="js">https://cdn.rawgit.com/ncuillery/angular-breadcrumb/v0.4.0/dist/angular-breadcrumb.js</cdn>
+    </release>
+        <release version="0.4.0" offline="true">
+      <local type="js">/static/lib/angular-breadcrumb/v0.4.0/dist/angular-breadcrumb.js</local>
     </release>
   </cmp>
   
@@ -126,6 +132,9 @@
     <release version="0.14.3">
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js</cdn>
     </release>
+        <release version="0.14.3" offline="true">
+      <local type="js">/static/lib/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js</local>
+    </release>
   </cmp>
   
   <cmp name="angular-ui-router">
@@ -136,6 +145,9 @@
 			in AngularJS</tagline>
     <release version="0.2.15">
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js</cdn>
+    </release>
+      <release version="0.2.15" offline="true">
+      <local type="js">/static/lib/angular-ui-router/0.2.15/angular-ui-router.js</local>
     </release>
   </cmp>
   
@@ -161,6 +173,14 @@
 	 <cdn type="js">//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-sanitize.js</cdn>
 	 <cdn type="js">//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-touch.js</cdn>
      <cdn type="js">//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.js</cdn>
+    </release>
+       <release version="1.3.15" offline="true">
+      <local type="js">/static/lib/angularjs/1.3.15/angular.js</local>
+	 <local type="js">/static/lib/angularjs/1.3.15/angular-resource.js</local>
+ 	<local type="js">/static/lib/angularjs/1.3.15/angular-cookies.js</local>
+	 <local type="js">/static/lib/angularjs/1.3.15/angular-sanitize.js</local>
+	 <local type="js">/static/lib/angularjs/1.3.15/angular-touch.js</local>
+     <local type="js">/static/lib/angularjs/1.3.15/angular-animate.js</local>
     </release>
   </cmp>
   
@@ -237,6 +257,9 @@
     <release version="4.3.0">
       <cdn type="css">//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css</cdn>
     </release>
+      <release version="4.3.0" offline="true">
+      <local type="css">/static/lib/font-awesome/4.3.0/css/font-awesome.min.css</local>
+    </release>
   </cmp>
   
   <cmp name="jquery">
@@ -260,6 +283,9 @@
     <licence>MIT</licence>
     <release version="2.4.1">
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js</cdn>
+    </release>
+      <release version="2.4.1" offline="true">
+      <local type="js">/static/lib/lodash/2.4.1/lodash.min.js</local>
     </release>
   </cmp>
   
@@ -292,6 +318,9 @@
     <depends>dexie.js</depends>
     <release version="0.0.15">
       <cdn type="js">https://cdn.rawgit.com/FlussoBV/NgDexie/v0.0.15/build/ngDexie.js</cdn>
+    </release>
+      <release version="0.0.15" offline="true">
+      <local type="js">/static/lib/NgDexie/v0.0.15/build/ngDexie.js</local>
     </release>
   </cmp>
   
@@ -343,8 +372,11 @@
 			properly and easily</tagline>
     <depends>angularjs</depends>
     <depends>lodash</depends>
-    <release version="3.1.1">
-      <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/restangular/3.1.1/restangular.min.js</cdn>
+    <release version="1.3.1">
+      <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/restangular/1.3.1/restangular.min.js</cdn>
+    </release>
+      <release version="1.3.1" offline="true">
+      <local type="js">/static/lib/restangular/1.3.1/restangular.min.js</local>
     </release>
   </cmp>
   
@@ -420,19 +452,21 @@
 			responsive, mobile first projects on the web.</tagline>
     <licence>Apache v2.0</licence>
     <release version="3.3.1">
-      <cdn type="css">//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.css</cdn>
-      <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js</cdn>
+      <cdn type="css">//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.css</cdn>
+      <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js</cdn>
     </release>
   </cmp>
   
   <cmp name="twitter-bootstrap-css">
     <runat>browser</runat>
     <home>http://getbootstrap.com/</home>
-    <tagline>The most popular front-end framework for developing
-			responsive, mobile first projects on the web.</tagline>
+    <tagline>bootstrap css only.</tagline>
     <licence>Apache v2.0</licence>
     <release version="3.3.4">
       <cdn type="css">//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.css</cdn>
+    </release>
+      <release version="3.3.4" offline="true">
+      <cdn type="css">/static/lib/twitter-bootstrap/3.3.4/css/bootstrap.css</cdn>
     </release>
   </cmp>
   

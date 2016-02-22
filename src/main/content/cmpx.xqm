@@ -45,24 +45,36 @@ declare function cmpx:expath-pkg($name as xs:string){
 declare function cmpx:status($cmp as element(pkg:dependency)) as element(pkg:dependency)
 {
 let $c:=cmpx:find($cmp/@name)
+let $versions:=$c/release[@version=$cmp/@version]
 let $value:=if(fn:empty($c)) 
         then "missing"
-        else if($c/release/@version=$cmp/@version) 
+        else if($versions) 
              then  "ok"
              else  "noversion"
 return copy $res := $cmp
-modify  insert  node attribute status {$value} into $res
+modify  (insert  node attribute status {$value} into $res,
+                insert node attribute offline {fn:boolean($versions[@offline])} into $res)
 return $res
 };
 
+declare function cmpx:app($app as xs:string){
+let   $deps:= cmpx:expath-pkg($app)//pkg:dependency
+let $c:= $deps!cmpx:find(@name)
+let $c2:=$c=>cmpx:closure()
+let   $s:=  cmpx:topologic-sort($c2)
+return cmpx:includes($s)
+};
 (:~
  : generate includes required for components
  :)
-declare function cmpx:includes($cmps as element(cmp)*)
+declare function cmpx:includes($cmps as element(cmp)*) as element(include)
 {
 let $css:=$cmps!(release[1]/*[@type="css"])
 let $js:=$cmps!(release[1]/*[@type="js"])
-return <include><css>{$css!cmpx:css(.)}</css><js>{$js!cmpx:js(.)}</js></include>
+return <include>
+	<css>{$css!cmpx:css(.)}</css>
+	<js>{$js!cmpx:js(.)}</js>
+</include>
 };
 
 declare function cmpx:css($e as element()) 
