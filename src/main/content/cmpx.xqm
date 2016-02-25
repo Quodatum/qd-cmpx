@@ -7,8 +7,8 @@
  :)
 module namespace  cmpx = 'quodatum.cmpx';
 
-
 declare namespace pkg="http://expath.org/ns/pkg";
+declare variable $cmpx:_ver:="0.1.6";
 
 (:~ the database..
  : <components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -57,20 +57,21 @@ modify  (insert  node attribute status {$value} into $res,
 return $res
 };
 
-declare function cmpx:app($app as xs:string){
+declare function cmpx:app($app as xs:string,$offline as xs:boolean){
 let   $deps:= cmpx:expath-pkg($app)//pkg:dependency
 let $c:= $deps!cmpx:find(@name)
 let $c2:=$c=>cmpx:closure()
 let   $s:=  cmpx:topologic-sort($c2)
-return cmpx:includes($s)
+return cmpx:includes($s,$offline)
 };
+
 (:~
  : generate includes required for components
  :)
-declare function cmpx:includes($cmps as element(cmp)*) as element(include)
+declare function cmpx:includes($cmps as element(cmp)*,$offline as xs:boolean) as element(include)
 {
-let $css:=$cmps!(release[1]/*[@type="css"])
-let $js:=$cmps!(release[1]/*[@type="js"])
+let $css:=$cmps!(fn:head(release[if($offline)then @offline else fn:true()])/*[@type="css"])
+let $js:=$cmps!(fn:head(release[if($offline)then @offline else fn:true()])/*[@type="js"])
 return <include>
 	<css>{$css!cmpx:css(.)}</css>
 	<js>{$js!cmpx:js(.)}</js>
@@ -89,6 +90,12 @@ declare function cmpx:js($e as element())
  <script src="{$e}"/>
 };
 
+(:~ report failed paths :)
+declare function cmpx:app-fails($includes as element(include))
+{
+let $uri:=$includes/(script/js/@src|css/link/@href)!cmpx:full-uri(.)
+return $uri
+};
 declare function cmpx:find($name as xs:string) as element(cmp)?
 {
   $cmpx:comps[@name=$name]
@@ -160,8 +167,10 @@ return (
 )
 };
 
+(:~ full uri from component path
+:)
 declare function cmpx:full-uri($n){
 if(fn:starts-with($n,"//"))then "http:" ||$n
-else if(fn:starts-with($n,"/"))then "http://localhost:8489" || $n
+else if(fn:starts-with($n,"/"))then "http://localhost:8984" || $n
 else $n
 };

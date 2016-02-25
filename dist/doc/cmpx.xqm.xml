@@ -1,6 +1,6 @@
 <xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0">
   <xqdoc:control>
-    <xqdoc:date>2016-02-22T15:20:29.361Z</xqdoc:date>
+    <xqdoc:date>2016-02-25T04:54:26.981Z</xqdoc:date>
     <xqdoc:version>1.1</xqdoc:version>
   </xqdoc:control>
   <xqdoc:module type="library">
@@ -21,6 +21,10 @@ Install this in the BaseX respository</xqdoc:description>
   </xqdoc:namespaces>
   <xqdoc:imports/>
   <xqdoc:variables>
+    <xqdoc:variable>
+      <xqdoc:name>cmpx:_ver</xqdoc:name>
+      <xqdoc:type>xs:string</xqdoc:type>
+    </xqdoc:variable>
     <xqdoc:variable>
       <xqdoc:name>cmpx:comps</xqdoc:name>
       <xqdoc:comment>
@@ -91,29 +95,37 @@ Package format:
         <xqdoc:type>element(pkg:dependency)</xqdoc:type>
       </xqdoc:return>
     </xqdoc:function>
-    <xqdoc:function arity="1">
+    <xqdoc:function arity="2">
       <xqdoc:name>cmpx:app</xqdoc:name>
-      <xqdoc:signature>declare function cmpx:app($app as xs:string) as item()*</xqdoc:signature>
+      <xqdoc:signature>declare function cmpx:app($app as xs:string, $offline as xs:boolean) as item()*</xqdoc:signature>
       <xqdoc:parameters>
         <xqdoc:parameter>
           <xqdoc:name>app</xqdoc:name>
           <xqdoc:type>xs:string</xqdoc:type>
+        </xqdoc:parameter>
+        <xqdoc:parameter>
+          <xqdoc:name>offline</xqdoc:name>
+          <xqdoc:type>xs:boolean</xqdoc:type>
         </xqdoc:parameter>
       </xqdoc:parameters>
       <xqdoc:return>
         <xqdoc:type occurrence="*">item()</xqdoc:type>
       </xqdoc:return>
     </xqdoc:function>
-    <xqdoc:function arity="1">
+    <xqdoc:function arity="2">
       <xqdoc:comment>
         <xqdoc:description>generate includes required for components</xqdoc:description>
       </xqdoc:comment>
       <xqdoc:name>cmpx:includes</xqdoc:name>
-      <xqdoc:signature>declare function cmpx:includes($cmps as element(cmp)*) as element(include)</xqdoc:signature>
+      <xqdoc:signature>declare function cmpx:includes($cmps as element(cmp)*, $offline as xs:boolean) as element(include)</xqdoc:signature>
       <xqdoc:parameters>
         <xqdoc:parameter>
           <xqdoc:name>cmps</xqdoc:name>
           <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+        </xqdoc:parameter>
+        <xqdoc:parameter>
+          <xqdoc:name>offline</xqdoc:name>
+          <xqdoc:type>xs:boolean</xqdoc:type>
         </xqdoc:parameter>
       </xqdoc:parameters>
       <xqdoc:return>
@@ -144,6 +156,22 @@ Package format:
       </xqdoc:parameters>
       <xqdoc:return>
         <xqdoc:type>element(script)</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="1">
+      <xqdoc:comment>
+        <xqdoc:description>report failed paths</xqdoc:description>
+      </xqdoc:comment>
+      <xqdoc:name>cmpx:app-fails</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:app-fails($includes as element(include)) as item()*</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>includes</xqdoc:name>
+          <xqdoc:type>element(include)</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type occurrence="*">item()</xqdoc:type>
       </xqdoc:return>
     </xqdoc:function>
     <xqdoc:function arity="1">
@@ -274,6 +302,9 @@ Package format:
       </xqdoc:return>
     </xqdoc:function>
     <xqdoc:function arity="1">
+      <xqdoc:comment>
+        <xqdoc:description>full uri from component path</xqdoc:description>
+      </xqdoc:comment>
       <xqdoc:name>cmpx:full-uri</xqdoc:name>
       <xqdoc:signature>declare function cmpx:full-uri($n as item()*) as item()*</xqdoc:signature>
       <xqdoc:parameters>

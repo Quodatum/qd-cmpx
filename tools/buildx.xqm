@@ -25,7 +25,7 @@ declare namespace pkg="http://expath.org/ns/pkg";
  : write xqdoc for $src/$path to $dest
  :)
 declare %updating  function write-xqdoc($path,$src,$dest){
-  let $url:=fn:resolve-uri( $path,$src)=>fn:trace()
+  let $url:=fn:resolve-uri( $path,$src)
   let $type:=fetch:content-type($url)
  
   return  switch($type)

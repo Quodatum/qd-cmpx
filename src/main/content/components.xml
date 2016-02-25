@@ -3,7 +3,7 @@
     <home>http://ace.c9.io/</home>
     <licence>BSD</licence>
     <tagline>Ace is an embeddable code editor written in JavaScript.</tagline>
-    <release version="1.2.3" offline="false">
+    <release version="1.2.3" >
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js</cdn>
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ext-language_tools.js</cdn>
     </release>
@@ -35,7 +35,7 @@
       <cdn type="js">https://cdn.rawgit.com/ncuillery/angular-breadcrumb/v0.4.0/dist/angular-breadcrumb.js</cdn>
     </release>
         <release version="0.4.0" offline="true">
-      <local type="js">/static/lib/angular-breadcrumb/v0.4.0/dist/angular-breadcrumb.js</local>
+      <local type="js">/static/lib/angular-breadcrumb/0.4.0/angular-breadcrumb.js</local>
     </release>
   </cmp>
   
@@ -156,7 +156,7 @@
     <tagline>Yet Another Treeview for AngularJS</tagline>
     <depends>angularjs</depends>
 <release version="0.2.2" offline="true">
-      <local type="css">/static/lib/angular-ya-treeview/0.2.2/css/ya-treeview.css</local>
+      <local type="css">/static/lib/angular-ya-treeview/0.2.2/ya-treeview.css</local>
       <local type="js">/static/lib/angular-ya-treeview/0.2.2/ya-treeview-tpls.js</local>
     </release>
   </cmp>
@@ -220,6 +220,9 @@
     <release version="1.1.0">
       <cdn type="js">https://cdnjs.cloudflare.com/ajax/libs/dexie/1.1.0/Dexie.js</cdn>
     </release>
+        <release version="1.1.0" offline="true">
+      <local type="js">/static/lib/dexie.js/1.1.0/Dexie.js</local>
+    </release>
   </cmp>
   
   <cmp name="ex-dotml">
@@ -258,7 +261,7 @@
       <cdn type="css">//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css</cdn>
     </release>
       <release version="4.3.0" offline="true">
-      <local type="css">/static/lib/font-awesome/4.3.0/css/font-awesome.min.css</local>
+      <local type="css">/static/lib/font-awesome/4.3.0/font-awesome.min.css</local>
     </release>
   </cmp>
   
@@ -320,7 +323,7 @@
       <cdn type="js">https://cdn.rawgit.com/FlussoBV/NgDexie/v0.0.15/build/ngDexie.js</cdn>
     </release>
       <release version="0.0.15" offline="true">
-      <local type="js">/static/lib/NgDexie/v0.0.15/build/ngDexie.js</local>
+      <local type="js">/static/lib/NgDexie/0.0.15/ngDexie.js</local>
     </release>
   </cmp>
   
@@ -352,7 +355,7 @@
     <depends>angular-ya-treeview</depends>
     <tagline>Set of UI controls. Includes File selector with tree view</tagline>
     <release version="0.1.0" offline="true">
-      <local type="js">/static/lib/filepick/0.1.0/directives.js</local>
+      <local type="js">/static/lib/quodatum-directives/0.1.0/directives.js</local>
     </release>
   </cmp>
   
@@ -466,7 +469,7 @@
       <cdn type="css">//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.css</cdn>
     </release>
       <release version="3.3.4" offline="true">
-      <cdn type="css">/static/lib/twitter-bootstrap/3.3.4/css/bootstrap.css</cdn>
+      <cdn type="css">/static/lib/twitter-bootstrap-css/3.3.4/bootstrap.css</cdn>
     </release>
   </cmp>
   
