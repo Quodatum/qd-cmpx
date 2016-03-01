@@ -90,12 +90,26 @@ declare function cmpx:js($e as element())
  <script src="{$e}"/>
 };
 
-(:~ report failed paths :)
-declare function cmpx:app-fails($includes as element(include))
+(:~ sequence of all referenced uris 
+  : @param $port http port 
+ :)
+declare function cmpx:app-resolve($includes as element(include),$port)
 {
-let $uri:=$includes/(script/js/@src|css/link/@href)!cmpx:full-uri(.)
-return $uri
+	let $uri:=($includes/js/script/@src,$includes/css/link/@href)
+	return $uri!cmpx:full-uri(.,$port)
 };
+(:~ referenced uri for default port :)
+declare function cmpx:app-resolve($includes as element(include))
+{
+	cmpx:app-resolve($includes,"8984")
+};
+(:~ full uri from component path :)
+declare function cmpx:full-uri($uri,$port) as xs:string{
+	if(fn:starts-with($uri,"//"))then "http:" ||$uri
+	else if(fn:starts-with($uri,"/"))then "http://localhost:" || $port || $uri
+	else $uri
+};
+
 declare function cmpx:find($name as xs:string) as element(cmp)?
 {
   $cmpx:comps[@name=$name]
@@ -162,15 +176,8 @@ return (
 	if(fn:not(file:is-dir($target("")))) then file:create-dir($target("")) else (),
 	for $f in $release/*
 	let $name:=fn:tokenize($f,"/")[fn:last()]
-	let $t:=fetch:text(cmpx:full-uri($f))
+	let $t:=fetch:text(cmpx:full-uri($f,"80"))
 	return file:write($target($name),$t)
 )
 };
 
-(:~ full uri from component path
-:)
-declare function cmpx:full-uri($n){
-if(fn:starts-with($n,"//"))then "http:" ||$n
-else if(fn:starts-with($n,"/"))then "http://localhost:8984" || $n
-else $n
-};

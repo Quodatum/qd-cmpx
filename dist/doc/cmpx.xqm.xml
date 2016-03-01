@@ -1,6 +1,6 @@
 <xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0">
   <xqdoc:control>
-    <xqdoc:date>2016-02-25T04:54:26.981Z</xqdoc:date>
+    <xqdoc:date>2016-02-26T03:35:47.983Z</xqdoc:date>
     <xqdoc:version>1.1</xqdoc:version>
   </xqdoc:control>
   <xqdoc:module type="library">
@@ -158,16 +158,57 @@ Package format:
         <xqdoc:type>element(script)</xqdoc:type>
       </xqdoc:return>
     </xqdoc:function>
-    <xqdoc:function arity="1">
+    <xqdoc:function arity="2">
       <xqdoc:comment>
-        <xqdoc:description>report failed paths</xqdoc:description>
+        <xqdoc:description>sequence of all referenced uris</xqdoc:description>
+        <xqdoc:param>$port http port</xqdoc:param>
       </xqdoc:comment>
-      <xqdoc:name>cmpx:app-fails</xqdoc:name>
-      <xqdoc:signature>declare function cmpx:app-fails($includes as element(include)) as item()*</xqdoc:signature>
+      <xqdoc:name>cmpx:app-resolve</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:app-resolve($includes as element(include), $port as item()*) as item()*</xqdoc:signature>
       <xqdoc:parameters>
         <xqdoc:parameter>
           <xqdoc:name>includes</xqdoc:name>
           <xqdoc:type>element(include)</xqdoc:type>
+        </xqdoc:parameter>
+        <xqdoc:parameter>
+          <xqdoc:name>port</xqdoc:name>
+          <xqdoc:type occurrence="*">item()</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type occurrence="*">item()</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="1">
+      <xqdoc:comment>
+        <xqdoc:description>referenced uri for default port</xqdoc:description>
+      </xqdoc:comment>
+      <xqdoc:name>cmpx:app-resolve</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:app-resolve($includes as element(include)) as item()*</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>includes</xqdoc:name>
+          <xqdoc:type>element(include)</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type occurrence="*">item()</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="2">
+      <xqdoc:comment>
+        <xqdoc:description>full uri from component path</xqdoc:description>
+      </xqdoc:comment>
+      <xqdoc:name>cmpx:full-uri</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:full-uri($uri as item()*, $port as item()*) as item()*</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>uri</xqdoc:name>
+          <xqdoc:type occurrence="*">item()</xqdoc:type>
+        </xqdoc:parameter>
+        <xqdoc:parameter>
+          <xqdoc:name>port</xqdoc:name>
+          <xqdoc:type occurrence="*">item()</xqdoc:type>
         </xqdoc:parameter>
       </xqdoc:parameters>
       <xqdoc:return>
@@ -295,22 +336,6 @@ Package format:
         <xqdoc:parameter>
           <xqdoc:name>release</xqdoc:name>
           <xqdoc:type>element(release)</xqdoc:type>
-        </xqdoc:parameter>
-      </xqdoc:parameters>
-      <xqdoc:return>
-        <xqdoc:type occurrence="*">item()</xqdoc:type>
-      </xqdoc:return>
-    </xqdoc:function>
-    <xqdoc:function arity="1">
-      <xqdoc:comment>
-        <xqdoc:description>full uri from component path</xqdoc:description>
-      </xqdoc:comment>
-      <xqdoc:name>cmpx:full-uri</xqdoc:name>
-      <xqdoc:signature>declare function cmpx:full-uri($n as item()*) as item()*</xqdoc:signature>
-      <xqdoc:parameters>
-        <xqdoc:parameter>
-          <xqdoc:name>n</xqdoc:name>
-          <xqdoc:type occurrence="*">item()</xqdoc:type>
         </xqdoc:parameter>
       </xqdoc:parameters>
       <xqdoc:return>
