@@ -176,8 +176,8 @@ return (
 	if(fn:not(file:is-dir($target("")))) then file:create-dir($target("")) else (),
 	for $f in $release/*
 	let $name:=fn:tokenize($f,"/")[fn:last()]
-	let $t:=fetch:text(cmpx:full-uri($f,"80"))
-	return file:write($target($name),$t)
+	let $t:=fetch:binary(cmpx:full-uri($f,"80"))
+	return file:write-binary($target($name),$t)
 )
 };
 
