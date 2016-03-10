@@ -1,6 +1,6 @@
 <xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0">
   <xqdoc:control>
-    <xqdoc:date>2016-03-01T13:36:17.955Z</xqdoc:date>
+    <xqdoc:date>2016-03-06T14:39:42.487Z</xqdoc:date>
     <xqdoc:version>1.1</xqdoc:version>
   </xqdoc:control>
   <xqdoc:module type="library">
@@ -81,7 +81,8 @@ Package format:
     </xqdoc:function>
     <xqdoc:function arity="1">
       <xqdoc:comment>
-        <xqdoc:description>anotate a pkg:dependency with a @status attribute</xqdoc:description>
+        <xqdoc:description>anotate a pkg:dependency with info about availability 
+adds a @status attribute</xqdoc:description>
       </xqdoc:comment>
       <xqdoc:name>cmpx:status</xqdoc:name>
       <xqdoc:signature>declare function cmpx:status($cmp as element(pkg:dependency)) as element(pkg:dependency)</xqdoc:signature>
@@ -96,16 +97,21 @@ Package format:
       </xqdoc:return>
     </xqdoc:function>
     <xqdoc:function arity="2">
+      <xqdoc:comment>
+        <xqdoc:description/>
+        <xqdoc:param>$app name of app</xqdoc:param>
+        <xqdoc:return>map of dependant resources</xqdoc:return>
+      </xqdoc:comment>
       <xqdoc:name>cmpx:app</xqdoc:name>
-      <xqdoc:signature>declare function cmpx:app($app as xs:string, $offline as xs:boolean) as item()*</xqdoc:signature>
+      <xqdoc:signature>declare function cmpx:app($app as xs:string, $opts as map(*)) as item()*</xqdoc:signature>
       <xqdoc:parameters>
         <xqdoc:parameter>
           <xqdoc:name>app</xqdoc:name>
           <xqdoc:type>xs:string</xqdoc:type>
         </xqdoc:parameter>
         <xqdoc:parameter>
-          <xqdoc:name>offline</xqdoc:name>
-          <xqdoc:type>xs:boolean</xqdoc:type>
+          <xqdoc:name>opts</xqdoc:name>
+          <xqdoc:type>map(*)</xqdoc:type>
         </xqdoc:parameter>
       </xqdoc:parameters>
       <xqdoc:return>
@@ -117,19 +123,19 @@ Package format:
         <xqdoc:description>generate includes required for components</xqdoc:description>
       </xqdoc:comment>
       <xqdoc:name>cmpx:includes</xqdoc:name>
-      <xqdoc:signature>declare function cmpx:includes($cmps as element(cmp)*, $offline as xs:boolean) as element(include)</xqdoc:signature>
+      <xqdoc:signature>declare function cmpx:includes($cmps as element(cmp)*, $opts as map(*)) as map(*)</xqdoc:signature>
       <xqdoc:parameters>
         <xqdoc:parameter>
           <xqdoc:name>cmps</xqdoc:name>
           <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
         </xqdoc:parameter>
         <xqdoc:parameter>
-          <xqdoc:name>offline</xqdoc:name>
-          <xqdoc:type>xs:boolean</xqdoc:type>
+          <xqdoc:name>opts</xqdoc:name>
+          <xqdoc:type>map(*)</xqdoc:type>
         </xqdoc:parameter>
       </xqdoc:parameters>
       <xqdoc:return>
-        <xqdoc:type>element(include)</xqdoc:type>
+        <xqdoc:type>map(*)</xqdoc:type>
       </xqdoc:return>
     </xqdoc:function>
     <xqdoc:function arity="1">

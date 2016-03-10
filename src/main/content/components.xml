@@ -454,7 +454,7 @@
     <tagline>The most popular front-end framework for developing
 			responsive, mobile first projects on the web.</tagline>
     <licence>Apache v2.0</licence>
-    <release version="3.3.1">
+    <release version="3.3.4">
       <cdn type="css">//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.css</cdn>
       <cdn type="js">//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js</cdn>
     </release>

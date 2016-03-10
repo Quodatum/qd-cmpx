@@ -8,7 +8,7 @@
 module namespace  cmpx = 'quodatum.cmpx';
 
 declare namespace pkg="http://expath.org/ns/pkg";
-declare variable $cmpx:_ver:="0.1.6";
+declare variable $cmpx:_ver:="0.3.1";
 
 (:~ the database..
  : <components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -40,7 +40,8 @@ declare function cmpx:expath-pkg($name as xs:string){
 };
 
 (:~
- : anotate a pkg:dependency with a @status attribute
+ : anotate a pkg:dependency with info about availability 
+ : adds a @status attribute
  :) 
 declare function cmpx:status($cmp as element(pkg:dependency)) as element(pkg:dependency)
 {
@@ -57,25 +58,35 @@ modify  (insert  node attribute status {$value} into $res,
 return $res
 };
 
-declare function cmpx:app($app as xs:string,$offline as xs:boolean){
-let   $deps:= cmpx:expath-pkg($app)//pkg:dependency
-let $c:= $deps!cmpx:find(@name)
+(:~ 
+ : @param $app name of app
+ : @return map of dependant resources
+ :)
+declare function cmpx:app($app as xs:string,$opts as map(*)){
+let $pkg:=cmpx:expath-pkg($app)
+let $c:= $pkg//pkg:dependency!cmpx:find(@name)
 let $c2:=$c=>cmpx:closure()
 let   $s:=  cmpx:topologic-sort($c2)
-return cmpx:includes($s,$offline)
+return map:merge((
+			cmpx:includes($s,$opts),
+			map{"version":$pkg/pkg:package/@version/fn:string(),
+  					  "static":"/static/" || $app || "/"}
+  		))
 };
 
 (:~
  : generate includes required for components
  :)
-declare function cmpx:includes($cmps as element(cmp)*,$offline as xs:boolean) as element(include)
+declare function cmpx:includes($cmps as element(cmp)*,$opts as map(*)) as map(*)
 {
+let $opts:=map:merge((map{"offline":fn:false()},$opts))
+let $offline:=$opts?offline
 let $css:=$cmps!(fn:head(release[if($offline)then @offline else fn:true()])/*[@type="css"])
 let $js:=$cmps!(fn:head(release[if($offline)then @offline else fn:true()])/*[@type="js"])
-return <include>
-	<css>{$css!cmpx:css(.)}</css>
-	<js>{$js!cmpx:js(.)}</js>
-</include>
+return map{
+	"css":$css!cmpx:css(.),
+	"js":$js!cmpx:js(.)
+}
 };
 
 declare function cmpx:css($e as element()) 
