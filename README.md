@@ -6,7 +6,12 @@ Can generate http include files to load a set of components.
 
 
 ## Examples
-
+cmpx:expath-pkg($name)
+ return the expath doc for web application $name
+ 
+ cmpx:app($name)
+ return dependancy map for web app $name
+ 
 components raw data
 ````
 $cmpx:comps

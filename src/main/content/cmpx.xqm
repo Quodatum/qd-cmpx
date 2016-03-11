@@ -8,7 +8,7 @@
 module namespace  cmpx = 'quodatum.cmpx';
 
 declare namespace pkg="http://expath.org/ns/pkg";
-declare variable $cmpx:_ver:="0.3.1";
+declare variable $cmpx:_ver:="0.3.7";
 
 (:~ the database..
  : <components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -67,10 +67,14 @@ let $pkg:=cmpx:expath-pkg($app)
 let $c:= $pkg//pkg:dependency!cmpx:find(@name)
 let $c2:=$c=>cmpx:closure()
 let   $s:=  cmpx:topologic-sort($c2)
+let $base:="/" || $app || "/"
 return map:merge((
 			cmpx:includes($s,$opts),
-			map{"version":$pkg/pkg:package/@version/fn:string(),
-  					  "static":"/static/" || $app || "/"}
+			map{  "name":$app,
+						"version":$pkg/pkg:package/@version/fn:string(),
+  					  "static":"/static" || $base,
+  					  "base":$base
+					}
   		))
 };
 

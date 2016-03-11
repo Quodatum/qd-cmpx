@@ -16,10 +16,14 @@
   <cmp name="angular-auto-height">
     <runat>browser</runat>
     <home>https://github.com/twygmbh/angular-auto-height</home>
+       <depends>angularjs</depends> 
     <tagline>An AngularJS directive to automatically
          adjust the height of an element corresponding to the parent and siblings.</tagline>
     <release version="0.0.4">
       <cdn type="js">//cdn.rawgit.com/twygmbh/angular-auto-height/9c7a5bdf673b1296d5dd504f463e478c20efc101/dist/auto-height.js</cdn>
+    </release>
+        <release version="0.0.4" offline="true">
+      <local type="js">/static/lib/angular-auto-height/0.0.4/auto-height.js</local>
     </release>
   </cmp>
   
@@ -158,6 +162,15 @@
 <release version="0.2.2" offline="true">
       <local type="css">/static/lib/angular-ya-treeview/0.2.2/ya-treeview.css</local>
       <local type="js">/static/lib/angular-ya-treeview/0.2.2/ya-treeview-tpls.js</local>
+    </release>
+  </cmp>
+  
+    <cmp name="angular-treemendous">
+    <home>?/</home>
+    <tagline>Yet Another Treeview for AngularJS</tagline>
+    <depends>angularjs</depends>
+<release version="0.2.3" offline="true">
+      <local type="js">/static/lib/angular-treemendous-0.2.3/angular-treemendous.js</local>
     </release>
   </cmp>
   
@@ -465,11 +478,11 @@
     <home>http://getbootstrap.com/</home>
     <tagline>bootstrap css only.</tagline>
     <licence>Apache v2.0</licence>
-    <release version="3.3.4">
-      <cdn type="css">//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.css</cdn>
+    <release version="3.3.6">
+      <cdn type="css">//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css</cdn>
     </release>
-      <release version="3.3.4" offline="true">
-      <cdn type="css">/static/lib/twitter-bootstrap-css/3.3.4/bootstrap.css</cdn>
+      <release version="3.3.6" offline="true">
+      <cdn type="css">/static/lib/twitter-bootstrap-css/3.3.6/bootstrap.css</cdn>
     </release>
   </cmp>
   
