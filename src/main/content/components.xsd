@@ -1,0 +1,66 @@
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="urn:quodatum:qd-cmpx:component" xmlns:comp="urn:quodatum:qd-cmpx:component">
+
+	<xs:element name="components">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" minOccurs="0" ref="comp:cmp" />
+			</xs:sequence>
+			<!-- In the 1.0 version of the spec, fix it to '1.0'. -->
+			<xs:attribute name="version" fixed="1.0" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="cmp">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="runat" type="xs:string" />
+				<xs:element name="tagline" type="xs:string" />
+				<xs:element name="home" type="xs:string" />
+				<xs:element name="licence" type="xs:string" />
+				<xs:element name="depends" type="xs:string" />
+				<xs:element ref="comp:release"/>
+			</xs:choice>
+			<xs:attribute use="required" name="name" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="release">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" minOccurs="1"
+					ref="comp:location" />
+			</xs:sequence>
+			<xs:attribute use="required" name="version" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="location">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="local">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute use="optional" name="type" type="xs:string">
+								</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="cdn">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute use="optional" name="type" type="xs:string" />
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+			<xs:attribute use="required" name="base" type="xs:anyURI" />
+			<xs:attribute use="optional" name="offline" type="xs:boolean" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

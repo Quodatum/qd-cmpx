@@ -8,7 +8,8 @@
 module namespace  cmpx = 'quodatum.cmpx';
 
 declare namespace pkg="http://expath.org/ns/pkg";
-declare variable $cmpx:_ver:="0.3.7";
+declare namespace comp="urn:quodatum:qd-cmpx:component";
+declare variable $cmpx:_ver:="0.4.0";
 
 (:~ the database..
  : <components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -23,7 +24,7 @@ declare variable $cmpx:_ver:="0.3.7";
  :	<title>Web app Documentation</title>
  :	<dependency name="twitter-bootstrap-css" version="3.3.4" />
  :)		
-declare variable $cmpx:comps as element(cmp)* :=fn:doc("components.xml")/components/cmp;
+declare variable $cmpx:comps as element(cmp)* :=fn:doc("components.xml")/comp:components/comp:cmp;
 
 (:~ web path :)
 declare %private variable $cmpx:webpath:=db:system()/globaloptions/webpath/string()  || file:dir-separator();
@@ -125,12 +126,12 @@ declare function cmpx:full-uri($uri,$port) as xs:string{
 	else $uri
 };
 
-declare function cmpx:find($name as xs:string) as element(cmp)?
+declare function cmpx:find($name as xs:string) as element(comp:cmp)?
 {
   $cmpx:comps[@name=$name]
 };
 
-declare function cmpx:dependants($name as xs:string) as element(cmp)*
+declare function cmpx:dependants($name as xs:string) as element(comp:cmp)*
 {
   let $c:=cmpx:find($name)
   let $d:=$c/depends!cmpx:find(.)
@@ -138,7 +139,7 @@ declare function cmpx:dependants($name as xs:string) as element(cmp)*
 };
 
 (:~ names of components :)
-declare function cmpx:names($cmps as element(cmp)*) as xs:string*
+declare function cmpx:names($cmps as element(comp:cmp)*) as xs:string*
 {
   $cmps/@name
 };
@@ -166,23 +167,23 @@ declare function cmpx:topologic-sort($unordered, $ordered )   {
 (:~
  : extend component list by recursively adding dependants  
  :)
-declare function cmpx:closure($cmps as element(cmp)*) as element(cmp)*
+declare function cmpx:closure($cmps as element(comp:cmp)*) as element(comp:cmp)*
 { 
  cmpx:closure($cmps,())
 };
 
-declare function cmpx:closure($new as element(cmp)*,$current as element(cmp)*)
+declare function cmpx:closure($new as element(comp:cmp)*,$current as element(comp:cmp)*)
 as element(cmp)*
 {
 let $n:=$new except $current
 return if (fn:empty($n)) 
        then $current
-       else let $x:=$n/depends!cmpx:find(.)
+       else let $x:=$n/comp:depends!cmpx:find(.)
 	        return cmpx:closure($x,($current,$n)) 
 };
 
 (:~ save files for release to local static library :)
-declare %updating function cmpx:save-offline($release as element(release))
+declare %updating function cmpx:save-offline($release as element(comp:release))
 {
 let $target:=function($name){fn:string-join(
 ($cmpx:libpath,$release/../@name,$release/@version,$name),file:dir-separator()

@@ -1,6 +1,6 @@
 <xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0">
   <xqdoc:control>
-    <xqdoc:date>2016-03-11T03:00:25.299Z</xqdoc:date>
+    <xqdoc:date>2016-03-16T00:49:56.984Z</xqdoc:date>
     <xqdoc:version>1.1</xqdoc:version>
   </xqdoc:control>
   <xqdoc:module type="library">
@@ -17,6 +17,7 @@ Install this in the BaseX respository</xqdoc:description>
   <xqdoc:namespaces>
     <xqdoc:namespace prefix="cmpx" uri="quodatum.cmpx"/>
     <xqdoc:namespace prefix="pkg" uri="http://expath.org/ns/pkg"/>
+    <xqdoc:namespace prefix="comp" uri="urn:quodatum:qd-cmpx:component"/>
     <xqdoc:namespace prefix="ann" uri="http://www.w3.org/2012/xquery"/>
   </xqdoc:namespaces>
   <xqdoc:imports/>
@@ -223,7 +224,7 @@ adds a @status attribute</xqdoc:description>
     </xqdoc:function>
     <xqdoc:function arity="1">
       <xqdoc:name>cmpx:find</xqdoc:name>
-      <xqdoc:signature>declare function cmpx:find($name as xs:string) as element(cmp)?</xqdoc:signature>
+      <xqdoc:signature>declare function cmpx:find($name as xs:string) as element(comp:cmp)?</xqdoc:signature>
       <xqdoc:parameters>
         <xqdoc:parameter>
           <xqdoc:name>name</xqdoc:name>
@@ -231,12 +232,12 @@ adds a @status attribute</xqdoc:description>
         </xqdoc:parameter>
       </xqdoc:parameters>
       <xqdoc:return>
-        <xqdoc:type occurrence="?">element(cmp)</xqdoc:type>
+        <xqdoc:type occurrence="?">element(comp:cmp)</xqdoc:type>
       </xqdoc:return>
     </xqdoc:function>
     <xqdoc:function arity="1">
       <xqdoc:name>cmpx:dependants</xqdoc:name>
-      <xqdoc:signature>declare function cmpx:dependants($name as xs:string) as element(cmp)*</xqdoc:signature>
+      <xqdoc:signature>declare function cmpx:dependants($name as xs:string) as element(comp:cmp)*</xqdoc:signature>
       <xqdoc:parameters>
         <xqdoc:parameter>
           <xqdoc:name>name</xqdoc:name>
@@ -244,7 +245,7 @@ adds a @status attribute</xqdoc:description>
         </xqdoc:parameter>
       </xqdoc:parameters>
       <xqdoc:return>
-        <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+        <xqdoc:type occurrence="*">element(comp:cmp)</xqdoc:type>
       </xqdoc:return>
     </xqdoc:function>
     <xqdoc:function arity="1">
@@ -252,11 +253,11 @@ adds a @status attribute</xqdoc:description>
         <xqdoc:description>names of components</xqdoc:description>
       </xqdoc:comment>
       <xqdoc:name>cmpx:names</xqdoc:name>
-      <xqdoc:signature>declare function cmpx:names($cmps as element(cmp)*) as xs:string*</xqdoc:signature>
+      <xqdoc:signature>declare function cmpx:names($cmps as element(comp:cmp)*) as xs:string*</xqdoc:signature>
       <xqdoc:parameters>
         <xqdoc:parameter>
           <xqdoc:name>cmps</xqdoc:name>
-          <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+          <xqdoc:type occurrence="*">element(comp:cmp)</xqdoc:type>
         </xqdoc:parameter>
       </xqdoc:parameters>
       <xqdoc:return>
@@ -301,28 +302,28 @@ adds a @status attribute</xqdoc:description>
         <xqdoc:description>extend component list by recursively adding dependants</xqdoc:description>
       </xqdoc:comment>
       <xqdoc:name>cmpx:closure</xqdoc:name>
-      <xqdoc:signature>declare function cmpx:closure($cmps as element(cmp)*) as element(cmp)*</xqdoc:signature>
+      <xqdoc:signature>declare function cmpx:closure($cmps as element(comp:cmp)*) as element(comp:cmp)*</xqdoc:signature>
       <xqdoc:parameters>
         <xqdoc:parameter>
           <xqdoc:name>cmps</xqdoc:name>
-          <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+          <xqdoc:type occurrence="*">element(comp:cmp)</xqdoc:type>
         </xqdoc:parameter>
       </xqdoc:parameters>
       <xqdoc:return>
-        <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+        <xqdoc:type occurrence="*">element(comp:cmp)</xqdoc:type>
       </xqdoc:return>
     </xqdoc:function>
     <xqdoc:function arity="2">
       <xqdoc:name>cmpx:closure</xqdoc:name>
-      <xqdoc:signature>declare function cmpx:closure($new as element(cmp)*, $current as element(cmp)*) as element(cmp)*</xqdoc:signature>
+      <xqdoc:signature>declare function cmpx:closure($new as element(comp:cmp)*, $current as element(comp:cmp)*) as element(cmp)*</xqdoc:signature>
       <xqdoc:parameters>
         <xqdoc:parameter>
           <xqdoc:name>new</xqdoc:name>
-          <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+          <xqdoc:type occurrence="*">element(comp:cmp)</xqdoc:type>
         </xqdoc:parameter>
         <xqdoc:parameter>
           <xqdoc:name>current</xqdoc:name>
-          <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+          <xqdoc:type occurrence="*">element(comp:cmp)</xqdoc:type>
         </xqdoc:parameter>
       </xqdoc:parameters>
       <xqdoc:return>
@@ -337,11 +338,11 @@ adds a @status attribute</xqdoc:description>
       <xqdoc:annotations>
         <xqdoc:annotation name="updating"/>
       </xqdoc:annotations>
-      <xqdoc:signature>declare %updating function cmpx:save-offline($release as element(release)) as item()*</xqdoc:signature>
+      <xqdoc:signature>declare %updating function cmpx:save-offline($release as element(comp:release)) as item()*</xqdoc:signature>
       <xqdoc:parameters>
         <xqdoc:parameter>
           <xqdoc:name>release</xqdoc:name>
-          <xqdoc:type>element(release)</xqdoc:type>
+          <xqdoc:type>element(comp:release)</xqdoc:type>
         </xqdoc:parameter>
       </xqdoc:parameters>
       <xqdoc:return>
