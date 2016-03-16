@@ -173,7 +173,7 @@
 		<release version="0.14.3">
 			<location
 				base="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/">
-				<cdn type="js">angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js</cdn>
+				<cdn type="js">ui-bootstrap-tpls.min.js</cdn>
 			</location>
 			<location offline="true" base="/static/lib/angular-ui-bootstrap/0.14.3/">
 				<local type="js">ui-bootstrap-tpls.min.js</local>
@@ -419,7 +419,7 @@
 		<depends>dexie.js</depends>
 		<release version="0.0.15">
 			<location base="https://cdn.rawgit.com/FlussoBV/NgDexie/v0.0.15/build/">
-				<cdn type="js">https://cdn.rawgit.com/FlussoBV/NgDexie/v0.0.15/build/ngDexie.js</cdn>
+				<cdn type="js">ngDexie.js</cdn>
 			</location>
 			<location offline="true" base="/static/lib/NgDexie/0.0.15/">
 				<cdn type="js">ngDexie.js</cdn>

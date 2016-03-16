@@ -1,6 +1,6 @@
 <xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0">
   <xqdoc:control>
-    <xqdoc:date>2016-03-16T00:49:56.984Z</xqdoc:date>
+    <xqdoc:date>2016-03-16T10:41:18.827Z</xqdoc:date>
     <xqdoc:version>1.1</xqdoc:version>
   </xqdoc:control>
   <xqdoc:module type="library">
@@ -30,8 +30,7 @@ Install this in the BaseX respository</xqdoc:description>
       <xqdoc:name>cmpx:comps</xqdoc:name>
       <xqdoc:comment>
         <xqdoc:description>the database..
-&lt;components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="components.xsd"&gt;
+&lt;components xmlns="urn:quodatum:qd-cmpx:component" version="1.0"&gt;
 	&lt;cmp name="angular-tree-control"&gt;
 		...
 		&lt;release version="0.2.0"&gt;
@@ -42,7 +41,7 @@ Package format:
 	&lt;title&gt;Web app Documentation&lt;/title&gt;
 	&lt;dependency name="twitter-bootstrap-css" version="3.3.4" /&gt;</xqdoc:description>
       </xqdoc:comment>
-      <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+      <xqdoc:type occurrence="*">element(comp:cmp)</xqdoc:type>
     </xqdoc:variable>
     <xqdoc:variable>
       <xqdoc:name>cmpx:webpath</xqdoc:name>
@@ -124,11 +123,11 @@ adds a @status attribute</xqdoc:description>
         <xqdoc:description>generate includes required for components</xqdoc:description>
       </xqdoc:comment>
       <xqdoc:name>cmpx:includes</xqdoc:name>
-      <xqdoc:signature>declare function cmpx:includes($cmps as element(cmp)*, $opts as map(*)) as map(*)</xqdoc:signature>
+      <xqdoc:signature>declare function cmpx:includes($cmps as element(comp:cmp)*, $opts as map(*)) as map(*)</xqdoc:signature>
       <xqdoc:parameters>
         <xqdoc:parameter>
           <xqdoc:name>cmps</xqdoc:name>
-          <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+          <xqdoc:type occurrence="*">element(comp:cmp)</xqdoc:type>
         </xqdoc:parameter>
         <xqdoc:parameter>
           <xqdoc:name>opts</xqdoc:name>
@@ -315,7 +314,7 @@ adds a @status attribute</xqdoc:description>
     </xqdoc:function>
     <xqdoc:function arity="2">
       <xqdoc:name>cmpx:closure</xqdoc:name>
-      <xqdoc:signature>declare function cmpx:closure($new as element(comp:cmp)*, $current as element(comp:cmp)*) as element(cmp)*</xqdoc:signature>
+      <xqdoc:signature>declare function cmpx:closure($new as element(comp:cmp)*, $current as element(comp:cmp)*) as element(comp:cmp)*</xqdoc:signature>
       <xqdoc:parameters>
         <xqdoc:parameter>
           <xqdoc:name>new</xqdoc:name>
@@ -327,7 +326,7 @@ adds a @status attribute</xqdoc:description>
         </xqdoc:parameter>
       </xqdoc:parameters>
       <xqdoc:return>
-        <xqdoc:type occurrence="*">element(cmp)</xqdoc:type>
+        <xqdoc:type occurrence="*">element(comp:cmp)</xqdoc:type>
       </xqdoc:return>
     </xqdoc:function>
     <xqdoc:function arity="1">
@@ -338,11 +337,11 @@ adds a @status attribute</xqdoc:description>
       <xqdoc:annotations>
         <xqdoc:annotation name="updating"/>
       </xqdoc:annotations>
-      <xqdoc:signature>declare %updating function cmpx:save-offline($release as element(comp:release)) as item()*</xqdoc:signature>
+      <xqdoc:signature>declare %updating function cmpx:save-offline($location as element(comp:location)) as item()*</xqdoc:signature>
       <xqdoc:parameters>
         <xqdoc:parameter>
-          <xqdoc:name>release</xqdoc:name>
-          <xqdoc:type>element(comp:release)</xqdoc:type>
+          <xqdoc:name>location</xqdoc:name>
+          <xqdoc:type>element(comp:location)</xqdoc:type>
         </xqdoc:parameter>
       </xqdoc:parameters>
       <xqdoc:return>
