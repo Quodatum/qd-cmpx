@@ -40,6 +40,14 @@ declare function cmpx:expath-pkg($name as xs:string){
 };
 
 (:~
+ : @return expath-pkg doc for app $name
+ :)
+declare function cmpx:app-dependants($name as xs:string) 
+as element(pkg:dependency)*{
+    let $f:=  file:resolve-path($name ||"/expath-pkg.xml",$cmpx:webpath)
+    return fn:doc($f)/*/pkg:dependency
+};
+(:~
  : anotate a pkg:dependency with info about availability 
  : adds a @status attribute
  :) 

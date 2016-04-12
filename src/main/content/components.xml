@@ -18,14 +18,14 @@
 
 	<cmp name="angular-auto-height">
 		<runat>browser</runat>
-		<home>https://github.com/twygmbh/angular-auto-height</home>
+		<home>https://github.com/m43nu/angular-auto-height</home>
 		<depends>angularjs</depends>
 		<tagline>An AngularJS directive to automatically
 			adjust the height of an element corresponding to the parent and siblings.
 		</tagline>
 		<release version="0.0.4">
 			<location
-				base="//cdn.rawgit.com/twygmbh/angular-auto-height/9c7a5bdf673b1296d5dd504f463e478c20efc101/dist/">
+				base="//cdn.rawgit.com/m43nu/angular-auto-height/d0b4b96ee37b52b1e0b772d9bbd15afe4b031eb7/dist/">
 				<cdn type="js">auto-height.js</cdn>
 			</location>
 			<location offline="true" base="/static/lib/angular-auto-height/0.0.4/">
@@ -335,6 +335,15 @@
 		</release>
 	</cmp>
 
+	<cmp name="firebug-lite">
+		<home>https://getfirebug.com/firebuglite</home>
+		<tagline>Firebug Lite: doing the Firebug way, anywhere. http://getfirebug.com/releases/lite/</tagline>
+		<release version="4">
+			<location offline="true" base="http://getfirebug.com/releases/lite/1.4/">
+				<local type="js">firebug-lite.js</local>
+			</location>
+		</release>
+	</cmp>
 	<cmp name="font-awesome">
 		<runat>browser</runat>
 		<home>http://fortawesome.github.io/Font-Awesome/</home>
@@ -343,11 +352,11 @@
 			size, color, drop shadow, and anything that can be done with the
 			power of CSS.
 		</tagline>
-		<release version="4.3.0">
-			<location base="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/">
+		<release version="4.5.0">
+			<location base="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/">
 				<cdn type="css">css/font-awesome.min.css</cdn>
 			</location>
-			<location offline="true" base="/static/lib/font-awesome/4.3.0/">
+			<location offline="true" base="/static/lib/font-awesome/4.5.0/">
 				<cdn type="css">css/font-awesome.min.css</cdn>
 			</location>
 		</release>
@@ -548,9 +557,14 @@
 			stack traces in
 			all web browsers.
 		</tagline>
-		<release version="0.6.0">
-			<location offline="true" base="/static/lib/stacktrace/0.6.0">
-				<local type="js"></local>
+
+		<release version="1.0.4">
+			<location
+				base="https://cdnjs.cloudflare.com/ajax/libs/stacktrace.js/1.0.4/">
+				<local type="js">stacktrace.min.js</local>
+			</location>
+			<location offline="true" base="/static/lib/stacktrace/1.0.4/">
+				<local type="js">stacktrace.min.js</local>
 			</location>
 		</release>
 	</cmp>
@@ -585,7 +599,7 @@
 		</tagline>
 		<licence>Apache v2.0</licence>
 		<release version="3.3.4">
-			<location base="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/">	
+			<location base="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/">
 				<cdn type="css">css/bootstrap.css</cdn>
 				<cdn type="js">js/bootstrap.min.js</cdn>
 			</location>
@@ -612,7 +626,7 @@
 		<home>https://github.com/angular-ui/ui-ace</home>
 		<depends>angularjs</depends>
 		<depends>ace</depends>
-		<release version="0.2.3" >	
+		<release version="0.2.3">
 			<location offline="true" base="/static/lib/ui-ace/ui-ace-0.2.3/">
 				<local type="js">ui-ace.js</local>
 			</location>
