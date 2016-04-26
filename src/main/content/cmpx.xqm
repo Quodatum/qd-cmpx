@@ -9,19 +9,9 @@ module namespace  cmpx = 'quodatum.cmpx';
 
 declare namespace pkg="http://expath.org/ns/pkg";
 declare namespace comp="urn:quodatum:qd-cmpx:component";
-declare variable $cmpx:_ver:="0.4.1";
+declare variable $cmpx:_ver:="0.5.0";
 
 (:~ the database..
- : <components xmlns="urn:quodatum:qd-cmpx:component" version="1.0">
- :	<cmp name="angular-tree-control">
- :		...
- :		<release version="0.2.0">
- :
- : Package format:
- : <package abbrev="doc" name="urn:quodatum.basex.doc" version="0.5.11"
- :	spec="1.0" xmlns="http://expath.org/ns/pkg">
- :	<title>Web app Documentation</title>
- :	<dependency name="twitter-bootstrap-css" version="3.3.4" />
  :)		
 declare variable $cmpx:comps as element(comp:cmp)* :=fn:doc("components.xml")/comp:components/comp:cmp;
 
@@ -40,9 +30,9 @@ declare function cmpx:expath-pkg($name as xs:string){
 };
 
 (:~
- : @return expath-pkg doc for app $name
+ : @return dependents for app $name
  :)
-declare function cmpx:app-dependants($name as xs:string) 
+declare function cmpx:app-dependents($name as xs:string) 
 as element(pkg:dependency)*{
     let $f:=  file:resolve-path($name ||"/expath-pkg.xml",$cmpx:webpath)
     return fn:doc($f)/*/pkg:dependency
@@ -61,8 +51,9 @@ let $value:=if(fn:empty($c))
              then  "ok"
              else  "noversion"
 return copy $res := $cmp
-modify  (insert  node attribute status {$value} into $res,
-                insert node attribute offline {fn:boolean($releases/comp:location[@offline])} into $res)
+modify  (insert node attribute status {$value} into $res,
+         insert node attribute offline {fn:boolean($releases/comp:location[@offline])} into $res,
+         insert node attribute found {$value="ok"} into $res)
 return $res
 };
 
@@ -143,7 +134,7 @@ declare function cmpx:find($name as xs:string) as element(comp:cmp)?
 declare function cmpx:dependants($name as xs:string) as element(comp:cmp)*
 {
   let $c:=cmpx:find($name)
-  let $d:=$c/comp:depends!cmpx:find(.)
+  let $d:=$c/comp:dependency/@name!cmpx:find(.)
   return ($d)
 };
 
@@ -165,7 +156,7 @@ declare function cmpx:topologic-sort($unordered, $ordered )   {
     if (fn:empty($unordered))
     then $ordered
     else
-        let $nodes := $unordered [ every $id in comp:depends satisfies $id = $ordered/@name]
+        let $nodes := $unordered [ every $id in comp:dependency/@name satisfies $id = $ordered/@name]
 		(: let $_:=fn:trace(fn:count($unordered),"LEFT") :)
         return 
           if ($nodes)
@@ -187,7 +178,7 @@ as element(comp:cmp)*
 let $n:=$new except $current
 return if (fn:empty($n)) 
        then $current
-       else let $x:=$n/comp:depends!cmpx:find(.)
+       else let $x:=$n/comp:dependency/@name!cmpx:find(.)
 	        return cmpx:closure($x,($current,$n)) 
 };
 
@@ -206,3 +197,10 @@ return (
 )
 };
 
+(:~ validate catalog :)
+declare function cmpx:validate-info()as xs:string*
+{
+  validate:xsd-info(fn:doc("components.xml"), fn:doc("components.xsd")),
+  "---",
+   validate:rng-info(fn:doc("components.xml"),"components.rnc",fn:true())
+};

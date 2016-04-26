@@ -2,199 +2,204 @@
 	<cmp name="ace">
 		<home>http://ace.c9.io/</home>
 		<licence>BSD</licence>
-		<tagline>Ace is an embeddable code editor written in JavaScript.
-		</tagline>
+		<description>Ace is an embeddable code editor written in JavaScript.
+		</description>
 		<release version="1.2.3">
 			<location base="//cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/">
-				<cdn type="js">ace.js</cdn>
-				<cdn type="js">ext-language_tools.js</cdn>
+				<resource type="js">ace.js</resource>
+				<resource type="js">ext-language_tools.js</resource>
 			</location>
 			<location offline="true" base="/static/lib/ace/1.2.3/">
-				<local type="js">ace.js</local>
-				<local type="js">ext-language_tools.js</local>
+				<resource type="js">ace.js</resource>
+				<resource type="js">ext-language_tools.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="angular-auto-height">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>https://github.com/m43nu/angular-auto-height</home>
-		<depends>angularjs</depends>
-		<tagline>An AngularJS directive to automatically
+		<description>An AngularJS directive to automatically
 			adjust the height of an element corresponding to the parent and siblings.
-		</tagline>
+		</description>
+		<dependency name="angularjs" />
 		<release version="0.0.4">
 			<location
 				base="//cdn.rawgit.com/m43nu/angular-auto-height/d0b4b96ee37b52b1e0b772d9bbd15afe4b031eb7/dist/">
-				<cdn type="js">auto-height.js</cdn>
+				<resource type="js">auto-height.js</resource>
 			</location>
 			<location offline="true" base="/static/lib/angular-auto-height/0.0.4/">
-				<local type="js">auto-height.js</local>
+				<resource type="js">auto-height.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="angular-breadcrumb">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>http://ncuillery.github.io/angular-breadcrumb</home>
-		<depends>angular-ui-router</depends>
-		<tagline>angular-breadcrumb is a module for AngularJS, which generates
+
+		<description>angular-breadcrumb is a module for AngularJS, which generates
 			a breadcrumb for any page of your application.
 			It is strongly based on
 			the UI-router framework and its hierarchical
 			tree of states.
-		</tagline>
+		</description>
+		<dependency name="angular-ui-router" />
 		<release version="0.4.0">
 			<location
 				base="https://cdn.rawgit.com/ncuillery/angular-breadcrumb/v0.4.0/dist/">
-				<cdn type="js">angular-breadcrumb.js</cdn>
+				<resource type="js">angular-breadcrumb.js</resource>
 			</location>
 			<location offline="true" base="/static/lib/angular-breadcrumb/0.4.0/">
-				<cdn type="js">angular-breadcrumb.js</cdn>
+				<resource type="js">angular-breadcrumb.js</resource>
 			</location>
 		</release>
 
 	</cmp>
 
 	<cmp name="angular-charts">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>http://chinmaymk.github.io/angular-charts/</home>
-		<tagline>angular directives for commonly used d3 charts</tagline>
-		<depends>angularjs</depends>
-		<depends>d3</depends>
+		<description>angular directives for commonly used d3 charts</description>
+		<dependency name="angularjs" />
+		<dependency name="d3" />
 		<release version="0.2.1">
 			<location offline="true" base="/static/lib/angular-charts/0.2.1/">
-				<local type="js">angular-charts.min.js</local>
+				<resource type="js">angular-charts.min.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="angular-flashr">
 		<home>https://github.com/TylerGarlick/angular.flashr</home>
-		<tagline>Flashr is a library that simulates flashing in rails in
+		<description>Flashr is a library that simulates flashing in rails in
 			AngularJS.
 			Essentially, it allows you to post notifications via the
 			simple api.
-		</tagline>
-		<depends>angularjs</depends>
+		</description>
+		<dependency name="angularjs" />
 		<release version="2.0.1">
 			<location base="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/">
-				<cdn type="js">js/toastr.min.js</cdn>
+				<resource type="js">js/toastr.min.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="angular-growl-2">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>https://github.com/JanStevens/angular-growl-2</home>
-		<depends>angularjs</depends>
-		<tagline>growl-like notifications for angularJS projects</tagline>
+
+		<description>growl-like notifications for angularJS projects</description>
+		<dependency name="angularjs" />
 		<release version="0.7.0">
 			<location offline="true" base="/static/lib/angular-growl-2/0.7.0/">
-				<local type="css">angular-growl.min.css</local>
-				<local type="js">angular-growl.min.js</local>
+				<resource type="css">angular-growl.min.css</resource>
+				<resource type="js">angular-growl.min.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="angular-hotkeys">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>http://chieffancypants.github.io/angular-hotkeys/</home>
-		<tagline>Configuration-centric keyboard shortcuts for your angular
+		<description>Configuration-centric keyboard shortcuts for your angular
 			apps
-		</tagline>
-		<depends>angularjs</depends>
+		</description>
+		<dependency name="angularjs" />
 		<release version="1.2.0">
 			<location offline="true" base="/static/lib/angular-hotkeys/1.2.0/">
-				<local type="js">/hotkeys.min.js</local>
+				<resource type="js">/hotkeys.min.js</resource>
 			</location>
 		</release>
 		<release version="1.4.5">
 			<location base="//cdnjs.cloudflare.com/ajax/libs/angular-hotkeys/1.4.5/">
-				<cdn type="css">hotkeys.css</cdn>
-				<cdn type="js">hotkeys.js</cdn>
+				<resource type="css">hotkeys.css</resource>
+				<resource type="js">hotkeys.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="angular-moment">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>https://github.com/urish/angular-moment</home>
-		<tagline>Angular.JS directives for Moment.JS (timeago alternative)
-		</tagline>
-		<depends>moment</depends>
-		<depends>angularjs</depends>
 		<licence>MIT</licence>
+		<description>Angular.JS directives for Moment.JS (timeago alternative)
+		</description>
+		<dependency name="moment" />
+		<dependency name="angularjs" />
+
 		<release version="0.7.0">
 			<location base="//cdnjs.cloudflare.com/ajax/libs/angular-moment/0.7.0/">
-				<cdn type="js">angular-moment.min.js</cdn>
+				<resource type="js">angular-moment.min.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="angular-svg-pan-zoom">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>https://github.com/Promact/angular-svg-pan-zoom/tree/b8c6574b222e41ab57c5eafbc096bc73ab413f0f
 		</home>
-		<tagline>It's an angular wrapper library for
-			https://github.com/ariutta/svg-pan-zoom</tagline>
-		<depends>angularjs</depends>
-		<depends>svg-pan-zoom</depends>
+		<description>It's an angular wrapper library for
+			https://github.com/ariutta/svg-pan-zoom</description>
+		<dependency name="angularjs" />
+		<dependency name="svg-pan-zoom" />
 		<release version="b8c6574b222e41ab57c5eafbc096bc73ab413f0f">
 			<location
 				base="https://cdn.rawgit.com/Promact/angular-svg-pan-zoom/b8c6574b222e41ab57c5eafbc096bc73ab413f0f/dist/">
-				<cdn type="js">angular-svg-pan-zoom.js</cdn>
+				<resource type="js">angular-svg-pan-zoom.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="angular-tree-control">
-		<runat>browser</runat>
-		<tagline>The AngularJS tree component.</tagline>
-		<depends>angularjs</depends>
+		<type>browser</type>
 		<home>http://wix.github.io/angular-tree-control/</home>
 		<licence>MIT</licence>
+		<description>The AngularJS tree component.</description>
+		<dependency name="angularjs" />
+
 		<release version="0.2.0">
 			<location offline="true" base="/static/lib/angular-tree-control/0.2.0/">
-				<local type="css">css/tree-control.css</local>
-				<local type="js">tree-control.js</local>
+				<resource type="css">css/tree-control.css</resource>
+				<resource type="js">tree-control.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="angular-ui-bootstrap">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>http://angular-ui.github.io/bootstrap/</home>
-		<tagline>Bootstrap components written in pure AngularJS by the
+		<description>Bootstrap components written in pure AngularJS by the
 			AngularUI Team
-		</tagline>
-		<depends>angularjs</depends>
+		</description>
+		<dependency name="angularjs" />
 
 		<release version="0.14.3">
 			<location
 				base="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/">
-				<cdn type="js">ui-bootstrap-tpls.min.js</cdn>
+				<resource type="js">ui-bootstrap-tpls.min.js</resource>
 			</location>
 			<location offline="true" base="/static/lib/angular-ui-bootstrap/0.14.3/">
-				<local type="js">ui-bootstrap-tpls.min.js</local>
+				<resource type="js">ui-bootstrap-tpls.min.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="angular-ui-router">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>http://angular-ui.github.io/ui-router/site</home>
-		<depends>angularjs</depends>
-		<tagline>The de-facto solution to flexible routing with nested views
+
+		<description>The de-facto solution to flexible routing with nested views
 			in AngularJS
-		</tagline>
+		</description>
+		<dependency name="angularjs" />
 		<release version="0.2.15">
 			<location
 				base="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/">
-				<cdn type="js">angular-ui-router.js</cdn>
+				<resource type="js">angular-ui-router.js</resource>
 			</location>
 			<location offline="true" base="/static/lib/angular-ui-router/0.2.15/">
-				<local type="js">angular-ui-router.js</local>
+				<resource type="js">angular-ui-router.js</resource>
 			</location>
 		</release>
 
@@ -202,421 +207,421 @@
 
 	<cmp name="angular-ya-treeview">
 		<home>https://github.com/ca77y/angular-ya-treeview</home>
-		<tagline>Yet Another Treeview for AngularJS</tagline>
-		<depends>angularjs</depends>
+		<description>Yet Another Treeview for AngularJS</description>
+		<dependency name="angularjs" />
 		<release version="0.2.2">
 			<location offline="true" base="/static/lib/angular-ya-treeview/0.2.2/">
-				<local type="css">ya-treeview.css</local>
-				<local type="js">ya-treeview-tpls.js</local>
+				<resource type="css">ya-treeview.css</resource>
+				<resource type="js">ya-treeview-tpls.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="angular-treemendous">
 		<home>?/</home>
-		<tagline>Yet Another Treeview for AngularJS</tagline>
-		<depends>angularjs</depends>
+		<description>Yet Another Treeview for AngularJS</description>
+		<dependency name="angularjs" />
 		<release version="0.2.3">
 			<location offline="true" base="/static/lib/angular-treemendous-0.2.3/">
-				<local type="js">angular-treemendous.js</local>
+				<resource type="js">angular-treemendous.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="angularjs">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>https://angularjs.org/</home>
-		<tagline>HTML enhanced for web apps!</tagline>
 		<licence>MIT</licence>
+		<description>HTML enhanced for web apps!</description>
 		<release version="1.4.8">
 			<location base="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/">
-				<cdn type="js">angular.js</cdn>
-				<cdn type="js">angular-resource.js</cdn>
-				<cdn type="js">angular-cookies.js</cdn>
-				<cdn type="js">angular-sanitize.js</cdn>
-				<cdn type="js">angular-touch.js</cdn>
-				<cdn type="js">angular-animate.js</cdn>
+				<resource type="js">angular.js</resource>
+				<resource type="js">angular-resource.js</resource>
+				<resource type="js">angular-cookies.js</resource>
+				<resource type="js">angular-sanitize.js</resource>
+				<resource type="js">angular-touch.js</resource>
+				<resource type="js">angular-animate.js</resource>
 			</location>
 			<location offline="true" base="/static/lib/angularjs/1.4.8/">
-				<cdn type="js">angular.js</cdn>
-				<cdn type="js">angular-resource.js</cdn>
-				<cdn type="js">angular-cookies.js</cdn>
-				<cdn type="js">angular-sanitize.js</cdn>
-				<cdn type="js">angular-touch.js</cdn>
-				<cdn type="js">angular-animate.js</cdn>
+				<resource type="js">angular.js</resource>
+				<resource type="js">angular-resource.js</resource>
+				<resource type="js">angular-cookies.js</resource>
+				<resource type="js">angular-sanitize.js</resource>
+				<resource type="js">angular-touch.js</resource>
+				<resource type="js">angular-animate.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="AngularLogExtender">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>https://github.com/lwhiteley/AngularLogExtender</home>
-		<depends>angularjs</depends>
-		<tagline>AngularLogExtender is an AngularJS module that extends the
+
+		<description>AngularLogExtender is an AngularJS module that extends the
 			Angular $log functionality.
-		</tagline>
+		</description>
+		<dependency name="angularjs" />
 		<release version="0.0.10">
 			<location offline="true" base="/static/lib/AngularLogExtender/0.0.10/">
-				<local type="js">log-ex-unobtrusive.min.js</local>
+				<resource type="js">log-ex-unobtrusive.min.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="async">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>https://github.com/caolan/async</home>
-		<tagline>Async utilities for node and the browser</tagline>
+		<description>Async utilities for node and the browser</description>
 		<release version="0.8.0">
 			<location base="//cdnjs.cloudflare.com/ajax/libs/async/0.8.0/">
-				<cdn>async.js</cdn>
+				<resource type="js">async.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="d3">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>http://d3js.org/</home>
-		<tagline>Data driven documents</tagline>
+		<description>Data driven documents</description>
 		<release version="3.4.6">
 			<location base="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/">
-				<cdn type="js">d3.min.js</cdn>
+				<resource type="js">d3.min.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="dexie.js">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>http://www.dexie.org/</home>
-		<tagline>Minimalistic IndexedDB API with bullet proof transactions
-		</tagline>
+		<description>Minimalistic IndexedDB API with bullet proof transactions
+		</description>
 		<release version="1.1.0">
 			<location base="https://cdnjs.cloudflare.com/ajax/libs/dexie/1.1.0/">
-				<cdn type="js">Dexie.js</cdn>
+				<resource type="js">Dexie.js</resource>
 			</location>
 			<location offline="true" base="/static/lib/dexie.js/1.1.0/">
-				<cdn type="js">Dexie.js</cdn>
+				<resource type="js">Dexie.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="ex-dotml">
-		<runat>expath</runat>
+		<type>expath</type>
 		<home>https://github.com/expkg-zone58/ex-dotml</home>
-		<tagline>The dotML library provides conversion from dotML format to
-			graphviz dot</tagline>
+		<description>The dotML library provides conversion from dotML format to
+			graphviz dot</description>
 		<release version="0.0.9">
 			<location
 				base="https://github.com/expkg-zone58/ex-dotml/releases/download/v0.0.9/">
-				<cdn type="xar">ex-dotml-0.0.9.xar</cdn>
+				<resource type="xar">ex-dotml-0.0.9.xar</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="ex-graphviz">
-		<runat>expath</runat>
+		<type>expath</type>
 		<home>https://github.com/expkg-zone58/ex-graphviz</home>
-		<tagline>XQuery interface for Graphviz with EXPath packaging.
-		</tagline>
+		<description>XQuery interface for Graphviz with EXPath packaging.
+		</description>
 		<release version="0.0.7">
 			<location
 				base="https://github.com/expkg-zone58/ex-graphviz/releases/download/v0.0.7/">
-				<cdn type="xar">ex-graphviz-0.0.7.xar</cdn>
+				<resource type="xar">ex-graphviz-0.0.7.xar</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="FileSaver">
 		<home>https://github.com/eligrey/FileSaver.js/</home>
-		<tagline>An HTML5 saveAs() FileSaver implementation</tagline>
+		<description>An HTML5 saveAs() FileSaver implementation</description>
 		<release version="">
 			<location offline="true" base="/static/lib/">
-				<local type="js">FileSaver.js</local>
+				<resource type="js">FileSaver.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="firebug-lite">
 		<home>https://getfirebug.com/firebuglite</home>
-		<tagline>Firebug Lite: doing the Firebug way, anywhere. http://getfirebug.com/releases/lite/</tagline>
+		<description>Firebug Lite: doing the Firebug way, anywhere. http://getfirebug.com/releases/lite/</description>
 		<release version="4">
-			<location offline="true" base="http://getfirebug.com/releases/lite/1.4/">
-				<local type="js">firebug-lite.js</local>
+			<location base="http://getfirebug.com/releases/lite/1.4/">
+				<resource type="js">firebug-lite.js</resource>
 			</location>
 		</release>
 	</cmp>
 	<cmp name="font-awesome">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>http://fortawesome.github.io/Font-Awesome/</home>
-		<tagline>Font Awesome gives you scalable vector icons that can
+		<description>Font Awesome gives you scalable vector icons that can
 			instantly be customized
 			size, color, drop shadow, and anything that can be done with the
 			power of CSS.
-		</tagline>
+		</description>
 		<release version="4.5.0">
 			<location base="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/">
-				<cdn type="css">css/font-awesome.min.css</cdn>
+				<resource type="css">css/font-awesome.min.css</resource>
 			</location>
 			<location offline="true" base="/static/lib/font-awesome/4.5.0/">
-				<cdn type="css">css/font-awesome.min.css</cdn>
+				<resource type="css">css/font-awesome.min.css</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="jquery">
-		<runat>browser</runat>
-		<tagline>jQuery is a fast, small, and feature-rich JavaScript library.
+		<type>browser</type>
+		<home>http://jquery.com/</home>
+		<licence>MIT</licence>
+		<description>jQuery is a fast, small, and feature-rich JavaScript library.
 			It makes things like HTML document traversal and manipulation, event
 			handling, animation, and Ajax much simpler with an easy-to-use API
 			that works across a multitude of browsers.
-		</tagline>
-		<home>http://jquery.com/</home>
-		<licence>MIT</licence>
+		</description>
+
 		<release version="2.0.2">
 			<location base="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/">
-				<cdn type="js">jquery.min.js</cdn>
+				<resource type="js">jquery.min.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="lodash">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>http://lodash.com/</home>
-		<tagline>A utility library delivering consistency, customization,
-			performance, &amp; extras.</tagline>
 		<licence>MIT</licence>
+		<description>A utility library delivering consistency, customization,
+			performance, &amp; extras.</description>
+
 		<release version="2.4.1">
 			<location base="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/">
-				<cdn type="js">lodash.min.js</cdn>
+				<resource type="js">lodash.min.js</resource>
 			</location>
 			<location offline="true" base="/static/lib/lodash/2.4.1/">
-				<cdn type="js">lodash.min.js</cdn>
+				<resource type="js">lodash.min.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="moment">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>http://momentjs.com/</home>
-		<tagline>A javascript date library for parsing, validating,
-			manipulating, and formatting dates.
-		</tagline>
 		<licence>MIT</licence>
+		<description>A javascript date library for parsing, validating,
+			manipulating, and formatting dates.
+		</description>
+
 		<release version="2.6.0">
 			<location base="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/">
-				<cdn type="js">moment-with-langs.min.js</cdn>
+				<resource type="js">moment-with-langs.min.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="ng-google-chart">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>http://bouil.github.io/angular-google-chart/#/fat</home>
-		<tagline>Google Chart Tools AngularJS Directive Module</tagline>
-		<depends>angularjs</depends>
+		<description>Google Chart Tools AngularJS Directive Module</description>
+		<dependency name="angularjs" />
 		<release version="0.0.9">
 			<location offline="true" base="/static/lib/googlechart/0.0.9/">
-				<local type="js">ng-google-chart.js</local>
+				<resource type="js">ng-google-chart.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="NgDexie">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>https://github.com/FlussoBV/NgDexie</home>
-		<tagline>AngularJS wrapper around the Dexie.js library</tagline>
-		<depends>angularjs</depends>
-		<depends>dexie.js</depends>
+		<description>AngularJS wrapper around the Dexie.js library</description>
+		<dependency name="angularjs" />
+		<dependency name="dexie.js" />
 		<release version="0.0.15">
 			<location base="https://cdn.rawgit.com/FlussoBV/NgDexie/v0.0.15/build/">
-				<cdn type="js">ngDexie.js</cdn>
+				<resource type="js">ngDexie.js</resource>
 			</location>
 			<location offline="true" base="/static/lib/NgDexie/0.0.15/">
-				<cdn type="js">ngDexie.js</cdn>
+				<resource type="js">ngDexie.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="ngStorage">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>https://github.com/gsklee/ngStorage</home>
-		<tagline>localStorage and sessionStorage done right for AngularJS.
-		</tagline>
-		<depends>angularjs</depends>
+		<description>localStorage and sessionStorage done right for AngularJS.
+		</description>
+		<dependency name="angularjs" />
 		<release version="0.3.0">
 			<location offline="true" base="/static/lib/ngStorage/0.3.0/">
-				<local type="js">ngStorage.js</local>
+				<resource type="js">ngStorage.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="oci.treeview">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>https://github.com/objectcomputing/oci.treeview</home>
-		<tagline>AngularJS tree directive with subdirective for extending node
+		<description>AngularJS tree directive with subdirective for extending node
 			behavior
-		</tagline>
-		<depends>angularjs</depends>
+		</description>
+		<dependency name="angularjs" />
 		<release version="2040305">
 			<location offline="true" base="/static/lib/oci.treeview/2040305/">
-				<local type="js">treeview.min.js</local>
-				<local type="css">treeview.css</local>
+				<resource type="js">treeview.min.js</resource>
+				<resource type="css">treeview.css</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="quodatum-directives">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>https://github.com/Quodatum/app-doc</home>
-		<depends>angular-ya-treeview</depends>
-		<tagline>Set of UI controls. Includes File selector with tree view
-		</tagline>
+
+		<description>Set of UI controls. Includes File selector with tree view
+		</description>
+		<dependency name="angular-ya-treeview" />
 		<release version="0.1.0">
 			<location offline="true" base="/static/lib/quodatum-directives/0.1.0/">
-				<local type="js">directives.js</local>
+				<resource type="js">directives.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="quodatum-config">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>https://github.com/Quodatum/app-doc</home>
-		<tagline>common config</tagline>
+		<description>common config</description>
 		<release version="0.1.0">
 			<location offline="true" base="/static/lib/">
-				<local type="js">config.js</local>
+				<resource type="js">config.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="restangular">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>https://github.com/mgonto/restangular</home>
-		<tagline>AngularJS service to handle Rest API Restful Resources
+		<description>AngularJS service to handle Rest API Restful Resources
 			properly and easily
-		</tagline>
-		<depends>angularjs</depends>
-		<depends>lodash</depends>
+		</description>
+		<dependency name="angularjs" />
+		<dependency name="lodash" />
 		<release version="1.3.1">
 			<location base="//cdnjs.cloudflare.com/ajax/libs/restangular/1.3.1/">
-				<cdn type="js">restangular.min.js</cdn>
+				<resource type="js">restangular.min.js</resource>
 			</location>
 			<location offline="true" base="/static/lib/restangular/1.3.1/">
-				<cdn type="js">restangular.min.js</cdn>
+				<resource type="js">restangular.min.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="satellizer">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>https://github.com/sahat/satellizer</home>
-		<tagline>Satellizer is a simple to use, end-to-end, token-based
+		<description>Satellizer is a simple to use, end-to-end, token-based
 			authentication module
 			for AngularJS with built-in support for Google,
 			Facebook, LinkedIn,
 			Twitter authentication providers, plus Email and
 			Password sign-in
 			method.
-		</tagline>
+		</description>
 		<release version="0.7.0">
-			<location base="//cdn.jsdelivr.net/satellizer/0.7.0/">
-				<cdn type="js">satellizer.min.js</cdn>
+			<location base="//resource.jsdelivr.net/satellizer/0.7.0/">
+				<resource type="js">satellizer.min.js</resource>
 			</location>
 		</release>
 	</cmp>
 
-	<cmp name="scrollTo">
-		<runat>browser</runat>
-		<home>https://github.com/khalilravanna/scrollTo</home>
-		<tagline>A simple scrollTo directive using $anchorScroll. The
-			directive also catches the locationChangeStart event thus preventing
-			a page reload.
-		</tagline>
-		<depends>angularjs</depends>
-		<licence>MIT</licence>
-	</cmp>
 
 	<cmp name="smart-table">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>https://github.com/lorenzofox3/Smart-Table</home>
-		<depends>angularjs</depends>
-		<tagline>Smart table is an Angularjs module to easily display data in
+
+		<description>Smart table is an Angularjs module to easily display data in
 			a table with a set of built in features such filtering,sorting, etc
 			in a declarative way.
-		</tagline>
+		</description>
+		<dependency name="angularjs" />
 		<release version="1.4.9">
 			<location offline="true" base="/static/lib/smart-table/1.4.9/">
-				<local type="js">smart-table.min.js</local>
+				<resource type="js">smart-table.min.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="stacktrace">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>http://www.stacktracejs.com/</home>
-		<tagline>Framework-agnostic, micro-library for getting
+		<description>Framework-agnostic, micro-library for getting
 			stack traces in
 			all web browsers.
-		</tagline>
+		</description>
 
 		<release version="1.0.4">
 			<location
 				base="https://cdnjs.cloudflare.com/ajax/libs/stacktrace.js/1.0.4/">
-				<local type="js">stacktrace.min.js</local>
+				<resource type="js">stacktrace.min.js</resource>
 			</location>
 			<location offline="true" base="/static/lib/stacktrace/1.0.4/">
-				<local type="js">stacktrace.min.js</local>
+				<resource type="js">stacktrace.min.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="svg-pan-zoom">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>https://github.com/ariutta/svg-pan-zoom</home>
-		<tagline>JavaScript library that enables panning and zooming of an SVG
+		<description>JavaScript library that enables panning and zooming of an SVG
 			in an HTML document, with mouse events or custom JavaScript hooks
-		</tagline>
+		</description>
 		<release version="3.2.3">
 			<location offline="true" base="/static/lib/svg-pan-zoom/3.2.3/">
-				<local type="js">svg-pan-zoom.js</local>
+				<resource type="js">svg-pan-zoom.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="toastr">
 		<home>http://codeseven.github.io/toastr/</home>
+		<description>toastr is a Javascript library for Gnome / Growl 
+		type non-blocking notifications. jQuery is required. </description>
 		<release version="2.0.1">
 			<location base="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/">
-				<cdn>js/toastr.min.js</cdn>
+				<resource type="js">js/toastr.min.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="twitter-bootstrap">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>http://getbootstrap.com/</home>
-		<tagline>The most popular front-end framework for developing
-			responsive, mobile first projects on the web.
-		</tagline>
 		<licence>Apache v2.0</licence>
+		<description>The most popular front-end framework for developing
+			responsive, mobile first projects on the web.
+		</description>
+
 		<release version="3.3.4">
 			<location base="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/">
-				<cdn type="css">css/bootstrap.css</cdn>
-				<cdn type="js">js/bootstrap.min.js</cdn>
+				<resource type="css">css/bootstrap.css</resource>
+				<resource type="js">js/bootstrap.min.js</resource>
 			</location>
 		</release>
 	</cmp>
 
 	<cmp name="twitter-bootstrap-css">
-		<runat>browser</runat>
+		<type>browser</type>
 		<home>http://getbootstrap.com/</home>
-		<tagline>bootstrap css only.</tagline>
 		<licence>Apache v2.0</licence>
+		<description>bootstrap css only.</description>
+
 		<release version="3.3.6">
 			<location base="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/">
-				<cdn type="css">css/bootstrap.css</cdn>
+				<resource type="css">css/bootstrap.css</resource>
 			</location>
 			<location offline="true" base="/static/lib/twitter-bootstrap-css/3.3.6/">
-				<cdn type="css">bootstrap.css</cdn>
+				<resource type="css">bootstrap.css</resource>
 			</location>
 		</release>
 
@@ -624,11 +629,12 @@
 
 	<cmp name="ui-ace">
 		<home>https://github.com/angular-ui/ui-ace</home>
-		<depends>angularjs</depends>
-		<depends>ace</depends>
+		<description>This directive allows you to add ACE editor elements.</description>
+		<dependency name="angularjs" />
+		<dependency name="ace" />
 		<release version="0.2.3">
 			<location offline="true" base="/static/lib/ui-ace/ui-ace-0.2.3/">
-				<local type="js">ui-ace.js</local>
+				<resource type="js">ui-ace.js</resource>
 			</location>
 		</release>
 	</cmp>

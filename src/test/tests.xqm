@@ -24,3 +24,8 @@ declare %unit:test function test:app() {
   let $a:=cmpx:app("doc",map{})
   return unit:assert($a?css)
 };
+(:~  app info map :)
+declare %unit:test function test:validate() {
+  let $a:=cmpx:validate-info()
+  return unit:assert-equals($a,"---")
+};

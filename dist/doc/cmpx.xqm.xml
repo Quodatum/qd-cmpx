@@ -1,6 +1,6 @@
 <xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0">
   <xqdoc:control>
-    <xqdoc:date>2016-04-12T23:09:58.162+01:00</xqdoc:date>
+    <xqdoc:date>2016-04-26T10:57:57.619+01:00</xqdoc:date>
     <xqdoc:version>1.1</xqdoc:version>
   </xqdoc:control>
   <xqdoc:module type="library">
@@ -29,17 +29,7 @@ Install this in the BaseX respository</xqdoc:description>
     <xqdoc:variable>
       <xqdoc:name>cmpx:comps</xqdoc:name>
       <xqdoc:comment>
-        <xqdoc:description>the database..
-&lt;components xmlns="urn:quodatum:qd-cmpx:component" version="1.0"&gt;
-	&lt;cmp name="angular-tree-control"&gt;
-		...
-		&lt;release version="0.2.0"&gt;
-
-Package format:
-&lt;package abbrev="doc" name="urn:quodatum.basex.doc" version="0.5.11"
-	spec="1.0" xmlns="http://expath.org/ns/pkg"&gt;
-	&lt;title&gt;Web app Documentation&lt;/title&gt;
-	&lt;dependency name="twitter-bootstrap-css" version="3.3.4" /&gt;</xqdoc:description>
+        <xqdoc:description>the database..</xqdoc:description>
       </xqdoc:comment>
       <xqdoc:type occurrence="*">element(comp:cmp)</xqdoc:type>
     </xqdoc:variable>
@@ -82,10 +72,10 @@ Package format:
     <xqdoc:function arity="1">
       <xqdoc:comment>
         <xqdoc:description/>
-        <xqdoc:return>expath-pkg doc for app $name</xqdoc:return>
+        <xqdoc:return>dependents for app $name</xqdoc:return>
       </xqdoc:comment>
-      <xqdoc:name>cmpx:app-dependants</xqdoc:name>
-      <xqdoc:signature>declare function cmpx:app-dependants($name as xs:string) as element(pkg:dependency)*</xqdoc:signature>
+      <xqdoc:name>cmpx:app-dependents</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:app-dependents($name as xs:string) as element(pkg:dependency)*</xqdoc:signature>
       <xqdoc:parameters>
         <xqdoc:parameter>
           <xqdoc:name>name</xqdoc:name>
@@ -363,6 +353,16 @@ adds a @status attribute</xqdoc:description>
       </xqdoc:parameters>
       <xqdoc:return>
         <xqdoc:type occurrence="*">item()</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="0">
+      <xqdoc:comment>
+        <xqdoc:description>validate catalog</xqdoc:description>
+      </xqdoc:comment>
+      <xqdoc:name>cmpx:validate-info</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:validate-info() as xs:string*</xqdoc:signature>
+      <xqdoc:return>
+        <xqdoc:type occurrence="*">xs:string</xqdoc:type>
       </xqdoc:return>
     </xqdoc:function>
   </xqdoc:functions>

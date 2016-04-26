@@ -1,0 +1,27 @@
+# A RELAX NG compact  for quodatum component catalog.
+
+default namespace = "urn:quodatum:qd-cmpx:component"
+
+start = Components
+
+Components= element components {attribute version {"1.0"}, Cmp+ }
+
+Cmp = element cmp {
+    attribute name { xsd:NCName },
+    element type  { text }?,
+    element home  { text }, 
+    element licence { text }?, 
+	element description { text },
+	element dependency{attribute name { xsd:NCName }}*,
+	Release+
+  }
+  
+Release = element release {
+    attribute version { text },Location+
+    }
+
+Location=element location{
+      attribute base { xsd:anyURI },
+      attribute offline { xsd:boolean }?,
+      element resource {attribute type { "js" | "css" |"xar" } , text }*
+    }
