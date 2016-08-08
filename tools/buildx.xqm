@@ -13,10 +13,10 @@ declare namespace pkg="http://expath.org/ns/pkg";
  : $src typically from resolve-uri
  : @return sequences of relative file paths "content/ebnf/CR-xquery-31-20141218.ebnf" "..."
  :)
- declare function files($src as xs:string) as xs:string*
+declare function files($src as xs:string) as xs:string*
  {
    fn:filter(file:list($src,fn:true()),
-          function ($f){file:is-file($src || $f)}
+          function ($f){($src || $f)=>fn:translate("\","/")=>file:is-file()}
         )
           !fn:translate(.,"\","/") 
  };

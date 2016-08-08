@@ -1,6 +1,6 @@
 <xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0">
   <xqdoc:control>
-    <xqdoc:date>2016-04-26T10:57:57.619+01:00</xqdoc:date>
+    <xqdoc:date>2016-08-08T11:17:28.657+01:00</xqdoc:date>
     <xqdoc:version>1.1</xqdoc:version>
   </xqdoc:control>
   <xqdoc:module type="library">
@@ -52,6 +52,16 @@ Install this in the BaseX respository</xqdoc:description>
     </xqdoc:variable>
   </xqdoc:variables>
   <xqdoc:functions>
+    <xqdoc:function arity="0">
+      <xqdoc:comment>
+        <xqdoc:description>return all known components as sequence</xqdoc:description>
+      </xqdoc:comment>
+      <xqdoc:name>cmpx:comps</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:comps() as element(comp:cmp)*</xqdoc:signature>
+      <xqdoc:return>
+        <xqdoc:type occurrence="*">element(comp:cmp)</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
     <xqdoc:function arity="1">
       <xqdoc:comment>
         <xqdoc:description/>
@@ -363,6 +373,22 @@ adds a @status attribute</xqdoc:description>
       <xqdoc:signature>declare function cmpx:validate-info() as xs:string*</xqdoc:signature>
       <xqdoc:return>
         <xqdoc:type occurrence="*">xs:string</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="1">
+      <xqdoc:comment>
+        <xqdoc:description>validate catalog</xqdoc:description>
+      </xqdoc:comment>
+      <xqdoc:name>cmpx:release</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:release($ver as map(*)) as element(comp:release)*</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>ver</xqdoc:name>
+          <xqdoc:type>map(*)</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type occurrence="*">element(comp:release)</xqdoc:type>
       </xqdoc:return>
     </xqdoc:function>
   </xqdoc:functions>

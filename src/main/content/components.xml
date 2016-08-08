@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <components xmlns="urn:quodatum:qd-cmpx:component" version="1.0">
 	<cmp name="ace">
 		<home>http://ace.c9.io/</home>
@@ -14,13 +15,20 @@
 				<resource type="js">ext-language_tools.js</resource>
 			</location>
 		</release>
+		<release version="1.2.4">
+			<location base="//cdnjs.cloudflare.com/ajax/libs/ace/1.2.4/">
+				<resource type="js">ace.js</resource>
+				<resource type="js">ext-language_tools.js</resource>
+			</location>
+		</release>
 	</cmp>
 
 	<cmp name="angular-auto-height">
 		<type>browser</type>
 		<home>https://github.com/m43nu/angular-auto-height</home>
 		<description>An AngularJS directive to automatically
-			adjust the height of an element corresponding to the parent and siblings.
+			adjust the height
+			of an element corresponding to the parent and siblings.
 		</description>
 		<dependency name="angularjs" />
 		<release version="0.0.4">
@@ -38,9 +46,11 @@
 		<type>browser</type>
 		<home>http://ncuillery.github.io/angular-breadcrumb</home>
 
-		<description>angular-breadcrumb is a module for AngularJS, which generates
+		<description>angular-breadcrumb is a module for AngularJS, which
+			generates
 			a breadcrumb for any page of your application.
-			It is strongly based on
+			It is strongly
+			based on
 			the UI-router framework and its hierarchical
 			tree of states.
 		</description>
@@ -189,7 +199,8 @@
 		<type>browser</type>
 		<home>http://angular-ui.github.io/ui-router/site</home>
 
-		<description>The de-facto solution to flexible routing with nested views
+		<description>The de-facto solution to flexible routing with nested
+			views
 			in AngularJS
 		</description>
 		<dependency name="angularjs" />
@@ -251,13 +262,24 @@
 				<resource type="js">angular-animate.js</resource>
 			</location>
 		</release>
+		<release version="1.5.5">
+			<location base="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/">
+				<resource type="js">angular.js</resource>
+				<resource type="js">angular-resource.js</resource>
+				<resource type="js">angular-cookies.js</resource>
+				<resource type="js">angular-sanitize.js</resource>
+				<resource type="js">angular-touch.js</resource>
+				<resource type="js">angular-animate.js</resource>
+			</location>
+		</release>
 	</cmp>
 
 	<cmp name="AngularLogExtender">
 		<type>browser</type>
 		<home>https://github.com/lwhiteley/AngularLogExtender</home>
 
-		<description>AngularLogExtender is an AngularJS module that extends the
+		<description>AngularLogExtender is an AngularJS module that extends
+			the
 			Angular $log functionality.
 		</description>
 		<dependency name="angularjs" />
@@ -305,31 +327,6 @@
 		</release>
 	</cmp>
 
-	<cmp name="ex-dotml">
-		<type>expath</type>
-		<home>https://github.com/expkg-zone58/ex-dotml</home>
-		<description>The dotML library provides conversion from dotML format to
-			graphviz dot</description>
-		<release version="0.0.9">
-			<location
-				base="https://github.com/expkg-zone58/ex-dotml/releases/download/v0.0.9/">
-				<resource type="xar">ex-dotml-0.0.9.xar</resource>
-			</location>
-		</release>
-	</cmp>
-
-	<cmp name="ex-graphviz">
-		<type>expath</type>
-		<home>https://github.com/expkg-zone58/ex-graphviz</home>
-		<description>XQuery interface for Graphviz with EXPath packaging.
-		</description>
-		<release version="0.0.7">
-			<location
-				base="https://github.com/expkg-zone58/ex-graphviz/releases/download/v0.0.7/">
-				<resource type="xar">ex-graphviz-0.0.7.xar</resource>
-			</location>
-		</release>
-	</cmp>
 
 	<cmp name="FileSaver">
 		<home>https://github.com/eligrey/FileSaver.js/</home>
@@ -343,7 +340,8 @@
 
 	<cmp name="firebug-lite">
 		<home>https://getfirebug.com/firebuglite</home>
-		<description>Firebug Lite: doing the Firebug way, anywhere. http://getfirebug.com/releases/lite/</description>
+		<description>Firebug Lite: doing the Firebug way, anywhere.
+			http://getfirebug.com/releases/lite/</description>
 		<release version="4">
 			<location base="http://getfirebug.com/releases/lite/1.4/">
 				<resource type="js">firebug-lite.js</resource>
@@ -355,7 +353,8 @@
 		<home>http://fortawesome.github.io/Font-Awesome/</home>
 		<description>Font Awesome gives you scalable vector icons that can
 			instantly be customized
-			size, color, drop shadow, and anything that can be done with the
+			size, color, drop shadow, and anything that
+			can be done with the
 			power of CSS.
 		</description>
 		<release version="4.5.0">
@@ -372,9 +371,12 @@
 		<type>browser</type>
 		<home>http://jquery.com/</home>
 		<licence>MIT</licence>
-		<description>jQuery is a fast, small, and feature-rich JavaScript library.
-			It makes things like HTML document traversal and manipulation, event
-			handling, animation, and Ajax much simpler with an easy-to-use API
+		<description>jQuery is a fast, small, and feature-rich JavaScript
+			library.
+			It makes things like HTML document traversal and
+			manipulation, event
+			handling, animation, and Ajax much simpler with an
+			easy-to-use API
 			that works across a multitude of browsers.
 		</description>
 
@@ -415,8 +417,71 @@
 				<resource type="js">moment-with-langs.min.js</resource>
 			</location>
 		</release>
+		<release version="2.14.1">
+			<location base="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/">
+				<resource type="js">moment.min.js</resource>
+			</location>
+		</release>
 	</cmp>
 
+	<cmp name="qs">
+		<type>browser</type>
+		<home>https://github.com/ljharb/qs</home>
+		<licence>MIT</licence>
+		<description>A querystring parsing and stringifying library with some added security.
+        </description>
+
+		<release version="6.2.1">
+			<location base="//cdnjs.cloudflare.com/ajax/libs/qs/6.2.1/">
+				<resource type="js">qs.js</resource>
+			</location>
+		</release>
+
+	</cmp>
+
+	<cmp name="react-select">
+		<type>browser</type>
+		<home>https://jedwatson.github.io/react-select/</home>
+		<licence>MIT</licence>
+		<description>A flexible and beautiful Select Input control for ReactJS with
+         multiselect, autocomplete and ajax support.
+        </description>
+		<dependency name="react" />
+		<dependency name="classnames" />
+		<dependency name="react-input-autosize" />
+		<release version="0.9.1">
+			<location base="//npmcdn.com/react-select@0.9.1/dist/">
+				<resource type="js">react-select.js</resource>
+				<resource type="css">react-select.css</resource>
+			</location>
+		</release>
+	</cmp>
+	
+	<cmp name="react-input-autosize">
+		<type>browser</type>
+		<home>https://github.com/JedWatson/react-input-autosize</home>
+		<licence>MIT</licence>
+		<description>Auto-resizing input field for React
+        </description>
+        <dependency name="react" />
+		<release version="1.1.0">
+			<location base="//npmcdn.com/react-input-autosize@1.1.0/dist/">
+				<resource type="js">react-input-autosize.js</resource>
+			</location>
+		</release>
+	</cmp>
+	<cmp name="classnames">
+        <type>browser</type>
+        <home>http://jedwatson.github.io/classnames/</home>
+        <licence>MIT</licence>
+        <description>A simple javascript utility for conditionally joining classNames together
+        </description>
+        <release version="0">
+            <location base="//npmcdn.com/classnames/">
+                <resource type="js">index.js</resource>
+            </location>
+        </release>
+    </cmp>
 	<cmp name="ng-google-chart">
 		<type>browser</type>
 		<home>http://bouil.github.io/angular-google-chart/#/fat</home>
@@ -461,7 +526,8 @@
 	<cmp name="oci.treeview">
 		<type>browser</type>
 		<home>https://github.com/objectcomputing/oci.treeview</home>
-		<description>AngularJS tree directive with subdirective for extending node
+		<description>AngularJS tree directive with subdirective for extending
+			node
 			behavior
 		</description>
 		<dependency name="angularjs" />
@@ -539,7 +605,8 @@
 		<type>browser</type>
 		<home>https://github.com/lorenzofox3/Smart-Table</home>
 
-		<description>Smart table is an Angularjs module to easily display data in
+		<description>Smart table is an Angularjs module to easily display data
+			in
 			a table with a set of built in features such filtering,sorting, etc
 			in a declarative way.
 		</description>
@@ -555,7 +622,8 @@
 		<type>browser</type>
 		<home>http://www.stacktracejs.com/</home>
 		<description>Framework-agnostic, micro-library for getting
-			stack traces in
+			stack traces
+			in
 			all web browsers.
 		</description>
 
@@ -573,7 +641,8 @@
 	<cmp name="svg-pan-zoom">
 		<type>browser</type>
 		<home>https://github.com/ariutta/svg-pan-zoom</home>
-		<description>JavaScript library that enables panning and zooming of an SVG
+		<description>JavaScript library that enables panning and zooming of an
+			SVG
 			in an HTML document, with mouse events or custom JavaScript hooks
 		</description>
 		<release version="3.2.3">
@@ -585,8 +654,10 @@
 
 	<cmp name="toastr">
 		<home>http://codeseven.github.io/toastr/</home>
-		<description>toastr is a Javascript library for Gnome / Growl 
-		type non-blocking notifications. jQuery is required. </description>
+		<description>toastr is a Javascript library for Gnome / Growl
+			type
+			non-blocking notifications. jQuery is required.
+		</description>
 		<release version="2.0.1">
 			<location base="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/">
 				<resource type="js">js/toastr.min.js</resource>
@@ -624,7 +695,59 @@
 				<resource type="css">bootstrap.css</resource>
 			</location>
 		</release>
+	</cmp>
 
+	<cmp name="react">
+		<type>browser</type>
+		<home>https://facebook.github.io/react/</home>
+		<licence>BSD</licence>
+		<description>A JavaScript library for building user interfaces</description>
+
+		<release version="15.3.0">
+			<location base="//cdnjs.cloudflare.com/ajax/libs/react/15.3.0/">
+				<resource type="js">react.js</resource>
+				<resource type="js">react-dom.js</resource>
+			</location>
+		</release>
+	</cmp>
+
+	<cmp name="react-router">
+		<type>browser</type>
+		<home>https://github.com/reactjs/react-router</home>
+		<licence>BSD</licence>
+		<description>A complete routing library for React</description>
+
+		<release version="2.6.0">
+			<location base="//cdnjs.cloudflare.com/ajax/libs/react-router/2.6.0/">
+				<resource type="js">ReactRouter.js</resource>
+			</location>
+		</release>
+	</cmp>
+
+	<cmp name="axois">
+		<type>browser</type>
+		<home>https://github.com/mzabriskie/axios</home>
+		<licence>MIT</licence>
+		<description>Promise based HTTP client for the browser and node.js</description>
+
+		<release version="0.13.1">
+			<location base="//cdnjs.cloudflare.com/ajax/libs/axios/0.13.1/">
+				<resource type="js">axios.js</resource>
+			</location>
+		</release>
+	</cmp>
+
+	<cmp name="babel">
+		<type>browser</type>
+		<home>https://babeljs.io/</home>
+		<licence>MIT</licence>
+		<description>Babel is a JavaScript compiler.</description>
+
+		<release version="0.13.1">
+			<location base="//cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.10.3/">
+				<resource type="js">babel.min.js</resource>
+			</location>
+		</release>
 	</cmp>
 
 	<cmp name="ui-ace">
@@ -635,6 +758,167 @@
 		<release version="0.2.3">
 			<location offline="true" base="/static/lib/ui-ace/ui-ace-0.2.3/">
 				<resource type="js">ui-ace.js</resource>
+			</location>
+		</release>
+	</cmp>
+	<!-- expath -->
+	<cmp name="ex-dotml">
+		<type>expath</type>
+		<home>https://github.com/expkg-zone58/ex-dotml</home>
+		<description>The dotML library provides conversion from dotML format
+			to
+			graphviz dot</description>
+		<release version="0.0.9">
+			<location
+				base="https://github.com/expkg-zone58/ex-dotml/releases/download/v0.0.9/">
+				<resource type="xar">ex-dotml-0.0.9.xar</resource>
+			</location>
+		</release>
+	</cmp>
+
+
+	<cmp name="ex-graphviz">
+		<type>expath</type>
+		<home>https://github.com/expkg-zone58/ex-graphviz</home>
+		<description>XQuery interface for Graphviz with EXPath packaging.
+		</description>
+		<release version="0.0.7">
+			<location
+				base="https://github.com/expkg-zone58/ex-graphviz/releases/download/v0.0.7/">
+				<resource type="xar">ex-graphviz-0.0.7.xar</resource>
+			</location>
+		</release>
+	</cmp>
+
+	<cmp name="functx">
+		<type>expath</type>
+		<home>http://www.xqueryfunctions.com/</home>
+		<description>The FunctX XQuery Function Library.
+		</description>
+		<release version="1.0">
+			<location base="http://files.basex.org/modules/expath/">
+				<resource type="xar">functx-1.0.xar</resource>
+			</location>
+		</release>
+	</cmp>
+
+	<cmp name="schematron-basex">
+		<type>expath</type>
+		<home>https://github.com/vincentml/schematron-basex</home>
+		<description>XQuery module to use ISO Schematron in BaseX.
+			This module
+			uses the standard Schematron implementation from
+			https://code.google.com/p/schematron/.
+		</description>
+		<release version="1.0">
+			<location
+				base="https://cdn.rawgit.com/vincentml/schematron-basex/5420af31263169a84cac181994f460dfe0a1365a/dist/">
+				<resource type="xar">schematron-basex-1.0.xar</resource>
+			</location>
+		</release>
+	</cmp>
+
+	<cmp name="xq-promise">
+		<type>expath</type>
+		<home>https://github.com/james-jw/xq-promise</home>
+		<description>An implementation of the promise pattern, as well as fork-join async processing for XQuery 3.1
+        </description>
+		<release version="89ffe490b71bc1beb2bc8043b9021b39e0a367ff">
+			<location
+				base="https://cdn.rawgit.com/james-jw/xq-promise/89ffe490b71bc1beb2bc8043b9021b39e0a367ff/src/main/xquery/xq-promise.xqm">
+				<resource type="xar">xq-promise.xqm</resource>
+			</location>
+		</release>
+	</cmp>
+	<cmp name="ex-thumbnailator">
+		<type>expath</type>
+		<home>https://github.com/expkg-zone58/ex-thumbnailator</home>
+		<description>An XQuery interface to the thumbnail generator library 
+        [thumbnailator](https://github.com/coobird/thumbnailator)
+        </description>
+		<release version="2.0.1">
+			<location
+				base="https://github.com/expkg-zone58/ex-thumbnailator/releases/download/v2.0.1/">
+				<resource type="xar">thumbnailator-2.0.1.xar</resource>
+			</location>
+		</release>
+	</cmp>
+	<cmp name="mp3tag-extract">
+		<type>expath</type>
+		<home>https://github.com/expkg-zone58/mp3tag-extract</home>
+		<description>An XQuery library to extract mp3 metadata as XML using the
+         [mpatric/mp3agic library](https://github.com/mpatric/mp3agic) 
+        </description>
+		<release version="0.4.1">
+			<location
+				base="https://github.com/expkg-zone58/mp3tag-extract/releases/download/v0.4.1/">
+				<resource type="xar">mp3tag-extractor-0.4.1.xar</resource>
+			</location>
+		</release>
+	</cmp>
+
+	<cmp name="ex-schematron">
+		<type>expath</type>
+		<home>https://github.com/expkg-zone58/ex-schematron</home>
+		<description>An XQuery library to extract mp3 metadata as XML using the
+         [mpatric/mp3agic library](https://github.com/mpatric/mp3agic) 
+        </description>
+		<release version="0.1.3">
+			<location
+				base="https://github.com/expkg-zone58/ex-schematron/releases/download/v0.1.3/">
+				<resource type="xar">schematron-0.1.3.xar</resource>
+			</location>
+		</release>
+	</cmp>
+
+	<cmp name="metadata-extract">
+		<type>expath</type>
+		<home>https://github.com/expkg-zone58/metadata-extract</home>
+		<description>RELEASE IS BROKEN
+        </description>
+		<release version="0.1.3">
+			<location
+				base="https://github.com/expkg-zone58/ex-schematron/releases/download/v0.1.3/">
+				<resource type="xar">schematron-0.1.3.xar</resource>
+			</location>
+		</release>
+	</cmp>
+
+	<cmp name="ex-xparse">
+		<type>expath</type>
+		<home>https://github.com/expkg-zone58/ex-xparse</home>
+		<description>Parse expressions in XPath or XQuery into XML trees using REx generated parsers 
+        </description>
+		<release version="0.3.6">
+			<location
+				base="https://github.com/expkg-zone58/ex-xparse/releases/download/v0.3.6/">
+				<resource type="xar">ex-xparse-0.3.6.xar</resource>
+			</location>
+		</release>
+	</cmp>
+
+	<cmp name="file-walker">
+		<type>expath</type>
+		<home>https://github.com/Quodatum/file-walker</home>
+		<description>File list and search in the XProc style 
+        </description>
+		<release version="0.0.2">
+			<location
+				base="https://github.com/Quodatum/file-walker/releases/download/v0.0.2/">
+				<resource type="xar">file-walker-0.0.2.xar</resource>
+			</location>
+		</release>
+	</cmp>
+
+	<cmp name="qd-cmpx">
+		<type>expath</type>
+		<home>https://github.com/Quodatum/qd-cmpx</home>
+		<description>A Component manager for BaseX applications
+        </description>
+		<release version="0.5.10">
+			<location
+				base="https://github.com/Quodatum/file-walker/releases/download/v0.0.2/">
+				<resource type="xar">file-walker-0.0.2.xar</resource>
 			</location>
 		</release>
 	</cmp>

@@ -21,6 +21,15 @@ declare %private variable $cmpx:webpath:=db:system()/globaloptions/webpath  || f
 (:~ location of static lib :)
 declare variable $cmpx:libpath:=$cmpx:webpath  || "static/lib" ;
 
+(:~ 
+ : return all known components as sequence
+ :)
+declare function cmpx:comps() 
+as element(comp:cmp)*
+{
+    $cmpx:comps
+};
+
 (:~
  : @return expath-pkg doc for app $name
  :)
@@ -196,11 +205,18 @@ return (
 	return file:write-binary($target($name),$t)
 )
 };
-
+ 
 (:~ validate catalog :)
 declare function cmpx:validate-info()as xs:string*
 {
   validate:xsd-info(fn:doc("components.xml"), fn:doc("components.xsd")),
   "---",
    validate:rng-info(fn:doc("components.xml"),"components.rnc",fn:true())
+};
+
+(:~ validate catalog :)
+declare function cmpx:release($ver as map(*))as element(comp:release)*
+{
+$cmpx:comps[@name=$ver?name]
+/comp:release[if ($ver?version) then $ver?version=@version else fn:true()]
 };
