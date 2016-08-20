@@ -449,8 +449,8 @@
 		<dependency name="react" />
 		<dependency name="classnames" />
 		<dependency name="react-input-autosize" />
-		<release version="0.9.1">
-			<location base="//npmcdn.com/react-select@0.9.1/dist/">
+		<release version="1.0.0-beta14">
+			<location base="https://npmcdn.com/react-select/dist/">
 				<resource type="js">react-select.js</resource>
 				<resource type="css">react-select.css</resource>
 			</location>
@@ -465,7 +465,7 @@
         </description>
         <dependency name="react" />
 		<release version="1.1.0">
-			<location base="//npmcdn.com/react-input-autosize@1.1.0/dist/">
+			<location base="https://npmcdn.com/react-input-autosize@1.1.0/dist/">
 				<resource type="js">react-input-autosize.js</resource>
 			</location>
 		</release>
@@ -477,7 +477,7 @@
         <description>A simple javascript utility for conditionally joining classNames together
         </description>
         <release version="0">
-            <location base="//npmcdn.com/classnames/">
+            <location base="https://npmcdn.com/classnames/">
                 <resource type="js">index.js</resource>
             </location>
         </release>
@@ -716,7 +716,7 @@
 		<home>https://github.com/reactjs/react-router</home>
 		<licence>BSD</licence>
 		<description>A complete routing library for React</description>
-
+        <dependency name="react" />
 		<release version="2.6.0">
 			<location base="//cdnjs.cloudflare.com/ajax/libs/react-router/2.6.0/">
 				<resource type="js">ReactRouter.js</resource>
@@ -724,7 +724,7 @@
 		</release>
 	</cmp>
 
-	<cmp name="axois">
+	<cmp name="axios">
 		<type>browser</type>
 		<home>https://github.com/mzabriskie/axios</home>
 		<licence>MIT</licence>
@@ -817,7 +817,18 @@
 			</location>
 		</release>
 	</cmp>
-
+    <cmp name="ex-schematron">
+        <type>expath</type>
+        <home>https://github.com/expkg-zone58/ex-schematron</home>
+        <description>An XQuery packaging of ISO Schematron for BaseX
+        </description>
+        <release version="0.1.3">
+            <location
+                base="https://github.com/expkg-zone58/ex-schematron/releases/download/v0.1.3/">
+                <resource type="xar">schematron-0.1.3.xar</resource>
+            </location>
+        </release>
+    </cmp>
 	<cmp name="xq-promise">
 		<type>expath</type>
 		<home>https://github.com/james-jw/xq-promise</home>
@@ -857,29 +868,15 @@
 		</release>
 	</cmp>
 
-	<cmp name="ex-schematron">
-		<type>expath</type>
-		<home>https://github.com/expkg-zone58/ex-schematron</home>
-		<description>An XQuery library to extract mp3 metadata as XML using the
-         [mpatric/mp3agic library](https://github.com/mpatric/mp3agic) 
-        </description>
-		<release version="0.1.3">
-			<location
-				base="https://github.com/expkg-zone58/ex-schematron/releases/download/v0.1.3/">
-				<resource type="xar">schematron-0.1.3.xar</resource>
-			</location>
-		</release>
-	</cmp>
-
 	<cmp name="metadata-extract">
 		<type>expath</type>
 		<home>https://github.com/expkg-zone58/metadata-extract</home>
 		<description>RELEASE IS BROKEN
         </description>
-		<release version="0.1.3">
+		<release version="1.0.9">
 			<location
-				base="https://github.com/expkg-zone58/ex-schematron/releases/download/v0.1.3/">
-				<resource type="xar">schematron-0.1.3.xar</resource>
+				base="https://github.com/expkg-zone58/metadata-extract/releases/download/v1.0.9/">
+				<resource type="xar">metadata-extractor-1.0.9.xar</resource>
 			</location>
 		</release>
 	</cmp>

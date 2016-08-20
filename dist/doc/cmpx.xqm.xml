@@ -1,6 +1,6 @@
 <xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0">
   <xqdoc:control>
-    <xqdoc:date>2016-08-08T11:17:28.657+01:00</xqdoc:date>
+    <xqdoc:date>2016-08-20T22:02:28.402+01:00</xqdoc:date>
     <xqdoc:version>1.1</xqdoc:version>
   </xqdoc:control>
   <xqdoc:module type="library">
@@ -27,10 +27,20 @@ Install this in the BaseX respository</xqdoc:description>
       <xqdoc:type>xs:string</xqdoc:type>
     </xqdoc:variable>
     <xqdoc:variable>
-      <xqdoc:name>cmpx:comps</xqdoc:name>
+      <xqdoc:name>cmpx:uri</xqdoc:name>
       <xqdoc:comment>
         <xqdoc:description>the database..</xqdoc:description>
       </xqdoc:comment>
+      <xqdoc:annotations>
+        <xqdoc:annotation name="private"/>
+      </xqdoc:annotations>
+      <xqdoc:type occurrence="?">xs:anyURI</xqdoc:type>
+    </xqdoc:variable>
+    <xqdoc:variable>
+      <xqdoc:name>cmpx:comps</xqdoc:name>
+      <xqdoc:annotations>
+        <xqdoc:annotation name="private"/>
+      </xqdoc:annotations>
       <xqdoc:type occurrence="*">element(comp:cmp)</xqdoc:type>
     </xqdoc:variable>
     <xqdoc:variable>
@@ -239,8 +249,8 @@ adds a @status attribute</xqdoc:description>
       </xqdoc:return>
     </xqdoc:function>
     <xqdoc:function arity="1">
-      <xqdoc:name>cmpx:find</xqdoc:name>
-      <xqdoc:signature>declare function cmpx:find($name as xs:string) as element(comp:cmp)?</xqdoc:signature>
+      <xqdoc:name>cmpx:get</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:get($name as xs:string) as element(comp:cmp)?</xqdoc:signature>
       <xqdoc:parameters>
         <xqdoc:parameter>
           <xqdoc:name>name</xqdoc:name>

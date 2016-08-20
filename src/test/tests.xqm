@@ -4,19 +4,19 @@ import module namespace cmpx = "quodatum.cmpx" at "../main/content/cmpx.xqm";
 declare namespace pkg="http://expath.org/ns/pkg"; 
 
    
-(:~ return components. :)
+(:~ there are some components. :)
 declare %unit:test function test:comps() {
-  unit:assert($cmpx:comps)
+  unit:assert(cmpx:comps())
 };
 
-(:~ find a component by name. :)
+(:~ get a component by name. :)
 declare %unit:test function test:find() {
-  unit:assert("quodatum-directives"!cmpx:find(.))
+  unit:assert("quodatum-directives"!cmpx:get(.))
 }; 
   
 (:~ find a closure on component by name. :)
 declare %unit:test function test:closure() {
-  unit:assert("quodatum-directives"!cmpx:find(.)!cmpx:closure(.))
+  unit:assert("quodatum-directives"!cmpx:get(.)!cmpx:closure(.))
 };
  
 (:~  app info map :)

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A RELAX NG compact  for quodatum component catalog. -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="urn:quodatum:qd-cmpx:component" xmlns:ns1="urn:quodatum:qd-cmpx:component">
+  <xs:element name="components">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:cmp"/>
+      </xs:sequence>
+      <xs:attribute name="version" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="1.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cmp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="ns1:type"/>
+        <xs:element ref="ns1:home"/>
+        <xs:element minOccurs="0" ref="ns1:licence"/>
+        <xs:element ref="ns1:description"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:dependency"/>
+        <xs:element maxOccurs="unbounded" ref="ns1:release"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="type" type="xs:string"/>
+  <xs:element name="home" type="xs:string"/>
+  <xs:element name="licence" type="xs:string"/>
+  <xs:element name="description" type="xs:string"/>
+  <xs:element name="dependency">
+    <xs:complexType>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="release">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:location"/>
+      </xs:sequence>
+      <xs:attribute name="version" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="location">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:resource"/>
+      </xs:sequence>
+      <xs:attribute name="base" use="required" type="xs:anyURI"/>
+      <xs:attribute name="offline" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="resource">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="js"/>
+            <xs:enumeration value="css"/>
+            <xs:enumeration value="xar"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

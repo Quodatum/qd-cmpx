@@ -13,7 +13,8 @@ declare variable $cmpx:_ver:="0.5.0";
 
 (:~ the database..
  :)		
-declare variable $cmpx:comps as element(comp:cmp)* :=fn:doc("components.xml")/comp:components/comp:cmp;
+declare  %private variable $cmpx:uri:=resolve-uri("components.xml",static-base-uri()); 
+declare  %private variable $cmpx:comps as element(comp:cmp)* :=fn:doc("components.xml")/comp:components/comp:cmp;
 
 (:~ web path :)
 declare %private variable $cmpx:webpath:=db:system()/globaloptions/webpath  || file:dir-separator();
@@ -52,7 +53,7 @@ as element(pkg:dependency)*{
  :) 
 declare function cmpx:status($cmp as element(pkg:dependency)) as element(pkg:dependency)
 {
-let $c:=cmpx:find($cmp/@name)
+let $c:=cmpx:get($cmp/@name)
 let $releases:=$c/comp:release[@version=$cmp/@version]
 let $value:=if(fn:empty($c)) 
         then "missing"
@@ -72,7 +73,7 @@ return $res
  :)
 declare function cmpx:app($app as xs:string,$opts as map(*)){
 let $pkg:=cmpx:expath-pkg($app)
-let $c:= $pkg//pkg:dependency!cmpx:find(@name)
+let $c:= $pkg//pkg:dependency!cmpx:get(@name)
 let $c2:=$c=>cmpx:closure()
 let   $s:=  cmpx:topologic-sort($c2)
 let $base:="/" || $app || "/"
@@ -135,15 +136,15 @@ declare function cmpx:full-uri($uri,$port) as xs:string{
 	else $uri
 };
 
-declare function cmpx:find($name as xs:string) as element(comp:cmp)?
+declare function cmpx:get($name as xs:string) as element(comp:cmp)?
 {
   $cmpx:comps[@name=$name]
 };
 
 declare function cmpx:dependants($name as xs:string) as element(comp:cmp)*
 {
-  let $c:=cmpx:find($name)
-  let $d:=$c/comp:dependency/@name!cmpx:find(.)
+  let $c:=cmpx:get($name)
+  let $d:=$c/comp:dependency/@name!cmpx:get(.)
   return ($d)
 };
 
@@ -187,7 +188,7 @@ as element(comp:cmp)*
 let $n:=$new except $current
 return if (fn:empty($n)) 
        then $current
-       else let $x:=$n/comp:dependency/@name!cmpx:find(.)
+       else let $x:=$n/comp:dependency/@name!cmpx:get(.)
 	        return cmpx:closure($x,($current,$n)) 
 };
 
@@ -209,9 +210,9 @@ return (
 (:~ validate catalog :)
 declare function cmpx:validate-info()as xs:string*
 {
-  validate:xsd-info(fn:doc("components.xml"), fn:doc("components.xsd")),
+  validate:xsd-info( $cmpx:uri,resolve-uri("components.xsd")),
   "---",
-   validate:rng-info(fn:doc("components.xml"),"components.rnc",fn:true())
+   validate:rng-info( $cmpx:uri,resolve-uri("components.rnc"),fn:true())
 };
 
 (:~ validate catalog :)

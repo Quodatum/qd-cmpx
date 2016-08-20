@@ -150,5 +150,29 @@
     <version num="0.5.11">
       <!-- generated: {fn:current-dateTime()} -->
     </version>
+    <version num="0.5.12">
+      <!-- generated: {fn:current-dateTime()} -->
+    </version>
+    <version num="0.5.13">
+      <!-- generated: {fn:current-dateTime()} -->
+    </version>
+    <version num="0.5.14">
+      <!-- generated: {fn:current-dateTime()} -->
+    </version>
+    <version num="0.5.15">
+      <!-- generated: {fn:current-dateTime()} -->
+    </version>
+    <version num="0.5.16">
+      <!-- generated: {fn:current-dateTime()} -->
+    </version>
+    <version num="0.5.17">
+      <!-- generated: {fn:current-dateTime()} -->
+    </version>
+    <version num="0.5.18">
+      <!-- generated: {fn:current-dateTime()} -->
+    </version>
+    <version num="0.5.20">
+      <!-- generated: {fn:current-dateTime()} -->
+    </version>
   </pkg>
 </repo>
