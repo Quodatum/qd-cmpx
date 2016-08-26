@@ -311,7 +311,16 @@
 			</location>
 		</release>
 	</cmp>
-
+    <cmp name="history">
+        <type>browser</type>
+        <home>https://github.com/mjackson/history</home>
+        <description>A minimal, functional history implementation for JavaScript</description>
+        <release version="2.1.2">
+            <location base="https://cdnjs.cloudflare.com/ajax/libs/history/2.1.2/">
+                <resource type="js">History.js</resource>
+            </location>
+        </release>
+    </cmp>
 	<cmp name="dexie.js">
 		<type>browser</type>
 		<home>http://www.dexie.org/</home>
@@ -717,8 +726,9 @@
 		<licence>BSD</licence>
 		<description>A complete routing library for React</description>
         <dependency name="react" />
-		<release version="2.6.0">
-			<location base="//cdnjs.cloudflare.com/ajax/libs/react-router/2.6.0/">
+        <dependency name="history" />
+		<release version="2.7.0">
+			<location base="//cdnjs.cloudflare.com/ajax/libs/react-router/2.7.0/">
 				<resource type="js">ReactRouter.js</resource>
 			</location>
 		</release>
@@ -743,7 +753,7 @@
 		<licence>MIT</licence>
 		<description>Babel is a JavaScript compiler.</description>
 
-		<release version="0.13.1">
+		<release version="6.10.3">
 			<location base="//cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.10.3/">
 				<resource type="js">babel.min.js</resource>
 			</location>
