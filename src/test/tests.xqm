@@ -1,8 +1,9 @@
 (:~  cmpx unit tests :)
 module namespace test = 'http://basex.org/modules/xqunit-tests';
 import module namespace cmpx = "quodatum.cmpx" at "../main/content/cmpx.xqm";
-declare namespace pkg="http://expath.org/ns/pkg"; 
 
+declare namespace pkg="http://expath.org/ns/pkg";
+ 
    
 (:~ there are some components. :)
 declare %unit:test function test:comps() {
@@ -28,4 +29,8 @@ declare %unit:test function test:app() {
 declare %unit:test function test:validate() {
   let $a:=cmpx:validate-info()
   return unit:assert-equals($a,"---")
+};
+(:~ there are some components. :)
+declare %unit:test function test:missing() {
+  unit:assert-equals(cmpx:missing(),())
 };

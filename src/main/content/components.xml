@@ -479,6 +479,21 @@
 			</location>
 		</release>
 	</cmp>
+
+    <cmp name="react-bootstrap">
+        <type>browser</type>
+        <home>http://react-bootstrap.github.io/</home>
+        <licence>MIT</licence>
+        <description>Bootstrap 3 components built with React
+        </description>
+        <dependency name="react" />
+         <dependency name="twitter-bootstrap-css" />
+        <release version="0.30.5">
+            <location base="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.30.5/">
+                <resource type="js">react-bootstrap.js</resource>
+            </location>
+        </release>
+    </cmp>	
 	<cmp name="classnames">
         <type>browser</type>
         <home>http://jedwatson.github.io/classnames/</home>

@@ -215,9 +215,21 @@ declare function cmpx:validate-info()as xs:string*
    validate:rng-info( $cmpx:uri,resolve-uri("components.rnc"),fn:true())
 };
 
-(:~ validate catalog :)
+(:~ get a release :)
 declare function cmpx:release($ver as map(*))as element(comp:release)*
 {
 $cmpx:comps[@name=$ver?name]
 /comp:release[if ($ver?version) then $ver?version=@version else fn:true()]
 };
+(:~ missing dependances :)
+declare function cmpx:missing() as xs:string*
+{
+   cmpx:value-except(cmpx:comps()/comp:dependency/@name , cmpx:names(cmpx:comps()))
+};
+(: from functx :)
+declare function cmpx:value-except
+  ( $arg1 as xs:anyAtomicType* ,
+    $arg2 as xs:anyAtomicType* )  as xs:anyAtomicType* {
+
+  distinct-values($arg1[not(.=$arg2)])
+ } ;
