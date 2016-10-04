@@ -459,7 +459,7 @@
 		<dependency name="classnames" />
 		<dependency name="react-input-autosize" />
 		<release version="1.0.0-beta14">
-			<location base="https://npmcdn.com/react-select/dist/">
+			<location base="https://unpkg.com/react-select/dist/">
 				<resource type="js">react-select.js</resource>
 				<resource type="css">react-select.css</resource>
 			</location>
@@ -474,7 +474,7 @@
         </description>
         <dependency name="react" />
 		<release version="1.1.0">
-			<location base="https://npmcdn.com/react-input-autosize@1.1.0/dist/">
+			<location base="https://unpkg.com/react-input-autosize@1.1.0/dist/">
 				<resource type="js">react-input-autosize.js</resource>
 			</location>
 		</release>
@@ -501,7 +501,7 @@
         <description>A simple javascript utility for conditionally joining classNames together
         </description>
         <release version="0">
-            <location base="https://npmcdn.com/classnames/">
+            <location base="https://unpkg.com/classnames/">
                 <resource type="js">index.js</resource>
             </location>
         </release>
