@@ -229,7 +229,7 @@
 	</cmp>
 
 	<cmp name="angular-treemendous">
-		<home>?/</home>
+		<home>https://github.com/wtfribley/angular-treemendous</home>
 		<description>Yet Another Treeview for AngularJS</description>
 		<dependency name="angularjs" />
 		<release version="0.2.3">
