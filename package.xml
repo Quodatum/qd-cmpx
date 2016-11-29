@@ -192,5 +192,8 @@
     <version num="0.5.26">
       <!-- generated: {fn:current-dateTime()} -->
     </version>
+    <version num="0.5.27">
+      <!-- generated: {fn:current-dateTime()} -->
+    </version>
   </pkg>
 </repo>
