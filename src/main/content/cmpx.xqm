@@ -6,15 +6,19 @@
  : @copyright Quodatum Ltd  
  :)
 module namespace  cmpx = 'quodatum.cmpx';
-
 declare namespace pkg="http://expath.org/ns/pkg";
 declare namespace comp="urn:quodatum:qd-cmpx:component";
-declare variable $cmpx:_ver:="0.5.0";
+declare variable $cmpx:_ver:="0.6.1";
 
 (:~ the database..
- :)		
-declare  %private variable $cmpx:uri:=resolve-uri("components.xml",static-base-uri()); 
-declare  %private variable $cmpx:comps as element(comp:cmp)* :=fn:doc("components.xml")/comp:components/comp:cmp;
+ :)
+declare  %private variable $cmpx:database:="~qd-cmpx";		
+
+declare  %private variable $cmpx:comps as element(comp:cmp)* :=
+                      if(db:exists($cmpx:database)) then
+                              collection($cmpx:database)/comp:cmp
+                      else 
+                               ();
 
 (:~ web path :)
 declare %private variable $cmpx:webpath:=db:system()/globaloptions/webpath  || file:dir-separator();
@@ -210,21 +214,74 @@ return (
 (:~ validate catalog :)
 declare function cmpx:validate-info()as xs:string*
 {
-  validate:xsd-info( $cmpx:uri,resolve-uri("components.xsd")),
-  "---",
-   validate:rng-info( $cmpx:uri,resolve-uri("components.rnc"),fn:true())
+  for $doc in collection($cmpx:database)
+  return (validate:xsd-info( $doc,resolve-uri("components.xsd")),
+          "---",
+           validate:rng-info( $doc,resolve-uri("components.rnc"),fn:true())
+         )
 };
 
-(:~ get a release :)
+(:~ get a release 
+ : @param $ver map keys 
+:)
 declare function cmpx:release($ver as map(*))as element(comp:release)*
 {
-$cmpx:comps[@name=$ver?name]
-/comp:release[if ($ver?version) then $ver?version=@version else fn:true()]
+    $cmpx:comps[@name=$ver?name]
+    /comp:release[if ($ver?version) then $ver?version=@version else fn:true()]
 };
+
 (:~ missing dependances :)
 declare function cmpx:missing() as xs:string*
 {
    cmpx:value-except(cmpx:comps()/comp:dependency/@name , cmpx:names(cmpx:comps()))
+};
+
+(:~ missing dependances :)
+declare %updating function cmpx:load() 
+{
+  cmpx:sync-from-path($cmpx:database,resolve-uri("data") )
+};
+(:~
+: update or create database from file path
+: @param $dbname name of database
+: @param $path file path contain files
+:)
+declare %updating %private function cmpx:sync-from-path($dbname as xs:string,$path as xs:string){
+   cmpx:sync-from-files($dbname,
+                  $path,
+                  file:list($path,fn:true()),
+                  hof:id#1)
+};
+
+(:~
+: update or create database from file list. After this the database will have a
+: matching copy of the files on the file system
+: @param $dbname name of database
+: @param $path  base file path where files are relative to en
+: @param $files file names from base
+: @param fn function to apply f(fullsrcpath)->anotherpath
+:)
+declare %updating  %private function cmpx:sync-from-files($dbname as xs:string,
+                                           $path as xs:string,
+                                           $files as xs:string*,
+                                         $ingest  )
+{
+let $path:=$path ||"/"
+let $files:=$files!fn:translate(.,"\","/")
+let $files:=fn:filter($files,function($f){file:is-file(fn:concat($path,$f))})
+return if(db:exists($dbname)) then
+       (for $d in db:list($dbname) 
+       where fn:not($d=$files) 
+       return db:delete($dbname,$d),
+       for $f in $files
+       let $_:=fn:trace($path || $f,"file:") 
+       let $content:=$ingest($path || $f) 
+       return db:replace($dbname,$f,$content),
+       db:optimize($dbname))
+       else
+        let $full:=$files!fn:concat($path,.)
+        let $content:=$full!$ingest(.) 
+       return (db:create($dbname,$content,$files))
 };
 (: from functx :)
 declare function cmpx:value-except

@@ -1,0 +1,12 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="react-input-autosize">
+  <type>browser</type>
+  <home>https://github.com/JedWatson/react-input-autosize</home>
+  <licence>MIT</licence>
+  <description>Auto-resizing input field for React</description>
+  <dependency name="react"/>
+  <release version="1.1.0">
+    <location base="https://unpkg.com/react-input-autosize@1.1.0/dist/">
+      <resource type="js">react-input-autosize.js</resource>
+    </location>
+  </release>
+</cmp>

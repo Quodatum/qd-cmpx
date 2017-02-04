@@ -1,0 +1,10 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="FileSaver">
+  <type>browser</type>
+  <home>https://github.com/eligrey/FileSaver.js/</home>
+  <description>An HTML5 saveAs() FileSaver implementation</description>
+  <release version="">
+    <location offline="true" base="/static/lib/">
+      <resource type="js">FileSaver.js</resource>
+    </location>
+  </release>
+</cmp>

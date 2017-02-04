@@ -1,0 +1,12 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="ex-dotml">
+  <type>expath</type>
+  <home>https://github.com/expkg-zone58/ex-dotml</home>
+  <description>The dotML library provides conversion from dotML format
+			to
+			graphviz dot</description>
+  <release version="0.0.9">
+    <location base="https://github.com/expkg-zone58/ex-dotml/releases/download/v0.0.9/">
+      <resource type="xar">ex-dotml-0.0.9.xar</resource>
+    </location>
+  </release>
+</cmp>

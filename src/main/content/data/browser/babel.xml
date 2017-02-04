@@ -1,0 +1,11 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="babel">
+  <type>browser</type>
+  <home>https://babeljs.io/</home>
+  <licence>MIT</licence>
+  <description>Babel is a JavaScript compiler.</description>
+  <release version="6.10.3">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.10.3/">
+      <resource type="js">babel.min.js</resource>
+    </location>
+  </release>
+</cmp>

@@ -1,0 +1,14 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="smart-table">
+  <type>browser</type>
+  <home>https://github.com/lorenzofox3/Smart-Table</home>
+  <description>Smart table is an Angularjs module to easily display data
+			in
+			a table with a set of built in features such filtering,sorting, etc
+			in a declarative way.</description>
+  <dependency name="angularjs"/>
+  <release version="1.4.9">
+    <location offline="true" base="/static/lib/smart-table/1.4.9/">
+      <resource type="js">smart-table.min.js</resource>
+    </location>
+  </release>
+</cmp>

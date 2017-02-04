@@ -1,0 +1,10 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="quodatum-config">
+  <type>browser</type>
+  <home>https://github.com/Quodatum/app-doc</home>
+  <description>common config</description>
+  <release version="0.1.0">
+    <location offline="true" base="/static/lib/">
+      <resource type="js">config.js</resource>
+    </location>
+  </release>
+</cmp>

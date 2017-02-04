@@ -1,0 +1,10 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="qd-cmpx">
+  <type>expath</type>
+  <home>https://github.com/Quodatum/qd-cmpx</home>
+  <description>A Component manager for BaseX applications</description>
+  <release version="0.5.10">
+    <location base="https://github.com/Quodatum/file-walker/releases/download/v0.0.2/">
+      <resource type="xar">file-walker-0.0.2.xar</resource>
+    </location>
+  </release>
+</cmp>

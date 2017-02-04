@@ -1,0 +1,10 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="functx">
+  <type>expath</type>
+  <home>http://www.xqueryfunctions.com/</home>
+  <description>The FunctX XQuery Function Library.</description>
+  <release version="1.0">
+    <location base="http://files.basex.org/modules/expath/">
+      <resource type="xar">functx-1.0.xar</resource>
+    </location>
+  </release>
+</cmp>

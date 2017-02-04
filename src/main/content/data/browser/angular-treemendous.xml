@@ -1,0 +1,11 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="angular-treemendous">
+  <type>browser</type>
+  <home>https://github.com/wtfribley/angular-treemendous</home>
+  <description>Yet Another Treeview for AngularJS</description>
+  <dependency name="angularjs"/>
+  <release version="0.2.3">
+    <location offline="true" base="/static/lib/angular-treemendous-0.2.3/">
+      <resource type="js">angular-treemendous.js</resource>
+    </location>
+  </release>
+</cmp>

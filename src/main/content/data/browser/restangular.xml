@@ -1,0 +1,16 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="restangular">
+  <type>browser</type>
+  <home>https://github.com/mgonto/restangular</home>
+  <description>AngularJS service to handle Rest API Restful Resources
+			properly and easily</description>
+  <dependency name="angularjs"/>
+  <dependency name="lodash"/>
+  <release version="1.3.1">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/restangular/1.3.1/">
+      <resource type="js">restangular.min.js</resource>
+    </location>
+    <location offline="true" base="/static/lib/restangular/1.3.1/">
+      <resource type="js">restangular.min.js</resource>
+    </location>
+  </release>
+</cmp>

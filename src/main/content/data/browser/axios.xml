@@ -1,0 +1,11 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="axios">
+  <type>browser</type>
+  <home>https://github.com/mzabriskie/axios</home>
+  <licence>MIT</licence>
+  <description>Promise based HTTP client for the browser and node.js</description>
+  <release version="0.13.1">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/axios/0.13.1/">
+      <resource type="js">axios.js</resource>
+    </location>
+  </release>
+</cmp>

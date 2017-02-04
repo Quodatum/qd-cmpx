@@ -1,0 +1,13 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="angular-svg-pan-zoom">
+  <type>browser</type>
+  <home>https://github.com/Promact/angular-svg-pan-zoom/tree/b8c6574b222e41ab57c5eafbc096bc73ab413f0f</home>
+  <description>It's an angular wrapper library for
+			https://github.com/ariutta/svg-pan-zoom</description>
+  <dependency name="angularjs"/>
+  <dependency name="svg-pan-zoom"/>
+  <release version="b8c6574b222e41ab57c5eafbc096bc73ab413f0f">
+    <location base="https://cdn.rawgit.com/Promact/angular-svg-pan-zoom/b8c6574b222e41ab57c5eafbc096bc73ab413f0f/dist/">
+      <resource type="js">angular-svg-pan-zoom.js</resource>
+    </location>
+  </release>
+</cmp>

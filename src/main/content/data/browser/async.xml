@@ -1,0 +1,10 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="async">
+  <type>browser</type>
+  <home>https://github.com/caolan/async</home>
+  <description>Async utilities for node and the browser</description>
+  <release version="0.8.0">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/async/0.8.0/">
+      <resource type="js">async.js</resource>
+    </location>
+  </release>
+</cmp>

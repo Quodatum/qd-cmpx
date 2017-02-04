@@ -1,0 +1,16 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="stacktrace">
+  <type>browser</type>
+  <home>http://www.stacktracejs.com/</home>
+  <description>Framework-agnostic, micro-library for getting
+			stack traces
+			in
+			all web browsers.</description>
+  <release version="1.0.4">
+    <location base="https://cdnjs.cloudflare.com/ajax/libs/stacktrace.js/1.0.4/">
+      <resource type="js">stacktrace.min.js</resource>
+    </location>
+    <location offline="true" base="/static/lib/stacktrace/1.0.4/">
+      <resource type="js">stacktrace.min.js</resource>
+    </location>
+  </release>
+</cmp>

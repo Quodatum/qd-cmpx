@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="components.rnc"?>
 <components xmlns="urn:quodatum:qd-cmpx:component" version="1.0">
 	<cmp name="ace">
+	<type>browser</type>
 		<home>http://ace.c9.io/</home>
 		<licence>BSD</licence>
 		<description>Ace is an embeddable code editor written in JavaScript.
@@ -81,6 +83,7 @@
 	</cmp>
 
 	<cmp name="angular-flashr">
+	<type>browser</type>
 		<home>https://github.com/TylerGarlick/angular.flashr</home>
 		<description>Flashr is a library that simulates flashing in rails in
 			AngularJS.
@@ -224,6 +227,7 @@
 	</cmp>
 
 	<cmp name="angular-ya-treeview">
+	<type>browser</type>
 		<home>https://github.com/ca77y/angular-ya-treeview</home>
 		<description>Yet Another Treeview for AngularJS</description>
 		<dependency name="angularjs" />
@@ -236,6 +240,7 @@
 	</cmp>
 
 	<cmp name="angular-treemendous">
+	<type>browser</type>
 		<home>https://github.com/wtfribley/angular-treemendous</home>
 		<description>Yet Another Treeview for AngularJS</description>
 		<dependency name="angularjs" />
@@ -345,6 +350,7 @@
 
 
 	<cmp name="FileSaver">
+	<type>browser</type>
 		<home>https://github.com/eligrey/FileSaver.js/</home>
 		<description>An HTML5 saveAs() FileSaver implementation</description>
 		<release version="">
@@ -355,6 +361,7 @@
 	</cmp>
 
 	<cmp name="firebug-lite">
+	<type>browser</type>
 		<home>https://getfirebug.com/firebuglite</home>
 		<description>Firebug Lite: doing the Firebug way, anywhere.
 			http://getfirebug.com/releases/lite/</description>
@@ -684,6 +691,7 @@
 	</cmp>
 
 	<cmp name="toastr">
+	<type>browser</type>
 		<home>http://codeseven.github.io/toastr/</home>
 		<description>toastr is a Javascript library for Gnome / Growl
 			type
@@ -783,6 +791,7 @@
 	</cmp>
 
 	<cmp name="ui-ace">
+	<type>browser</type>
 		<home>https://github.com/angular-ui/ui-ace</home>
 		<description>This directive allows you to add ACE editor elements.</description>
 		<dependency name="angularjs" />

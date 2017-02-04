@@ -1,0 +1,21 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="angular-ui-router">
+  <type>browser</type>
+  <home>http://angular-ui.github.io/ui-router/site</home>
+  <description>The de-facto solution to flexible routing with nested
+			views
+			in AngularJS</description>
+  <dependency name="angularjs"/>
+  <release version="0.2.17">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.17/">
+      <resource type="js">angular-ui-router.js</resource>
+    </location>
+  </release>
+  <release version="0.2.15">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/">
+      <resource type="js">angular-ui-router.js</resource>
+    </location>
+    <location offline="true" base="/static/lib/angular-ui-router/0.2.15/">
+      <resource type="js">angular-ui-router.js</resource>
+    </location>
+  </release>
+</cmp>

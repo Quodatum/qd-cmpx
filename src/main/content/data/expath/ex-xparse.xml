@@ -1,0 +1,10 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="ex-xparse">
+  <type>expath</type>
+  <home>https://github.com/expkg-zone58/ex-xparse</home>
+  <description>Parse expressions in XPath or XQuery into XML trees using REx generated parsers</description>
+  <release version="0.3.6">
+    <location base="https://github.com/expkg-zone58/ex-xparse/releases/download/v0.3.6/">
+      <resource type="xar">ex-xparse-0.3.6.xar</resource>
+    </location>
+  </release>
+</cmp>

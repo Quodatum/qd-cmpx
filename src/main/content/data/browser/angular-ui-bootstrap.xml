@@ -1,0 +1,15 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="angular-ui-bootstrap">
+  <type>browser</type>
+  <home>http://angular-ui.github.io/bootstrap/</home>
+  <description>Bootstrap components written in pure AngularJS by the
+			AngularUI Team</description>
+  <dependency name="angularjs"/>
+  <release version="0.14.3">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/">
+      <resource type="js">ui-bootstrap-tpls.min.js</resource>
+    </location>
+    <location offline="true" base="/static/lib/angular-ui-bootstrap/0.14.3/">
+      <resource type="js">ui-bootstrap-tpls.min.js</resource>
+    </location>
+  </release>
+</cmp>

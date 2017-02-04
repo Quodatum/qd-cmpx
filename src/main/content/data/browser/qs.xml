@@ -1,0 +1,11 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="qs">
+  <type>browser</type>
+  <home>https://github.com/ljharb/qs</home>
+  <licence>MIT</licence>
+  <description>A querystring parsing and stringifying library with some added security.</description>
+  <release version="6.2.1">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/qs/6.2.1/">
+      <resource type="js">qs.js</resource>
+    </location>
+  </release>
+</cmp>

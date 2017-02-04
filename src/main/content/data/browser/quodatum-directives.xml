@@ -1,0 +1,11 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="quodatum-directives">
+  <type>browser</type>
+  <home>https://github.com/Quodatum/app-doc</home>
+  <description>Set of UI controls. Includes File selector with tree view</description>
+  <dependency name="angular-ya-treeview"/>
+  <release version="0.1.0">
+    <location offline="true" base="/static/lib/quodatum-directives/0.1.0/">
+      <resource type="js">directives.js</resource>
+    </location>
+  </release>
+</cmp>

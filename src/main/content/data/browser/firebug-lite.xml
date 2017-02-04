@@ -1,0 +1,11 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="firebug-lite">
+  <type>browser</type>
+  <home>https://getfirebug.com/firebuglite</home>
+  <description>Firebug Lite: doing the Firebug way, anywhere.
+			http://getfirebug.com/releases/lite/</description>
+  <release version="4">
+    <location base="http://getfirebug.com/releases/lite/1.4/">
+      <resource type="js">firebug-lite.js</resource>
+    </location>
+  </release>
+</cmp>

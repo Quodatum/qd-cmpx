@@ -1,0 +1,12 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="angular-growl-2">
+  <type>browser</type>
+  <home>https://github.com/JanStevens/angular-growl-2</home>
+  <description>growl-like notifications for angularJS projects</description>
+  <dependency name="angularjs"/>
+  <release version="0.7.0">
+    <location offline="true" base="/static/lib/angular-growl-2/0.7.0/">
+      <resource type="css">angular-growl.min.css</resource>
+      <resource type="js">angular-growl.min.js</resource>
+    </location>
+  </release>
+</cmp>

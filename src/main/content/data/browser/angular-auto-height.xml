@@ -1,0 +1,16 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="angular-auto-height">
+  <type>browser</type>
+  <home>https://github.com/m43nu/angular-auto-height</home>
+  <description>An AngularJS directive to automatically
+			adjust the height
+			of an element corresponding to the parent and siblings.</description>
+  <dependency name="angularjs"/>
+  <release version="0.0.4">
+    <location base="//cdn.rawgit.com/m43nu/angular-auto-height/d0b4b96ee37b52b1e0b772d9bbd15afe4b031eb7/dist/">
+      <resource type="js">auto-height.js</resource>
+    </location>
+    <location offline="true" base="/static/lib/angular-auto-height/0.0.4/">
+      <resource type="js">auto-height.js</resource>
+    </location>
+  </release>
+</cmp>

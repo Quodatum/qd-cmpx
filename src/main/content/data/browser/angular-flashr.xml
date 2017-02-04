@@ -1,0 +1,14 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="angular-flashr">
+  <type>browser</type>
+  <home>https://github.com/TylerGarlick/angular.flashr</home>
+  <description>Flashr is a library that simulates flashing in rails in
+			AngularJS.
+			Essentially, it allows you to post notifications via the
+			simple api.</description>
+  <dependency name="angularjs"/>
+  <release version="2.0.1">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/">
+      <resource type="js">js/toastr.min.js</resource>
+    </location>
+  </release>
+</cmp>

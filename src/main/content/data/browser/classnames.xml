@@ -1,0 +1,11 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="classnames">
+  <type>browser</type>
+  <home>http://jedwatson.github.io/classnames/</home>
+  <licence>MIT</licence>
+  <description>A simple javascript utility for conditionally joining classNames together</description>
+  <release version="0">
+    <location base="https://unpkg.com/classnames/">
+      <resource type="js">index.js</resource>
+    </location>
+  </release>
+</cmp>

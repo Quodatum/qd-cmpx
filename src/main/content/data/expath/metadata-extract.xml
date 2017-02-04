@@ -1,0 +1,10 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="metadata-extract">
+  <type>expath</type>
+  <home>https://github.com/expkg-zone58/metadata-extract</home>
+  <description>RELEASE IS BROKEN</description>
+  <release version="1.0.9">
+    <location base="https://github.com/expkg-zone58/metadata-extract/releases/download/v1.0.9/">
+      <resource type="xar">metadata-extractor-1.0.9.xar</resource>
+    </location>
+  </release>
+</cmp>

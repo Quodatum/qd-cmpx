@@ -1,0 +1,12 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="toastr">
+  <type>browser</type>
+  <home>http://codeseven.github.io/toastr/</home>
+  <description>toastr is a Javascript library for Gnome / Growl
+			type
+			non-blocking notifications. jQuery is required.</description>
+  <release version="2.0.1">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/">
+      <resource type="js">js/toastr.min.js</resource>
+    </location>
+  </release>
+</cmp>

@@ -1,6 +1,6 @@
 <xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0">
   <xqdoc:control>
-    <xqdoc:date>2016-11-10T22:14:04.856Z</xqdoc:date>
+    <xqdoc:date>2017-02-03T20:47:43.156Z</xqdoc:date>
     <xqdoc:version>1.1</xqdoc:version>
   </xqdoc:control>
   <xqdoc:module type="library">
@@ -27,14 +27,14 @@ Install this in the BaseX respository</xqdoc:description>
       <xqdoc:type>xs:string</xqdoc:type>
     </xqdoc:variable>
     <xqdoc:variable>
-      <xqdoc:name>cmpx:uri</xqdoc:name>
+      <xqdoc:name>cmpx:database</xqdoc:name>
       <xqdoc:comment>
         <xqdoc:description>the database..</xqdoc:description>
       </xqdoc:comment>
       <xqdoc:annotations>
         <xqdoc:annotation name="private"/>
       </xqdoc:annotations>
-      <xqdoc:type occurrence="?">xs:anyURI</xqdoc:type>
+      <xqdoc:type>xs:string</xqdoc:type>
     </xqdoc:variable>
     <xqdoc:variable>
       <xqdoc:name>cmpx:comps</xqdoc:name>
@@ -388,6 +388,7 @@ adds a @status attribute</xqdoc:description>
     <xqdoc:function arity="1">
       <xqdoc:comment>
         <xqdoc:description>get a release</xqdoc:description>
+        <xqdoc:param>$ver map keys</xqdoc:param>
       </xqdoc:comment>
       <xqdoc:name>cmpx:release</xqdoc:name>
       <xqdoc:signature>declare function cmpx:release($ver as map(*)) as element(comp:release)*</xqdoc:signature>
@@ -409,6 +410,82 @@ adds a @status attribute</xqdoc:description>
       <xqdoc:signature>declare function cmpx:missing() as xs:string*</xqdoc:signature>
       <xqdoc:return>
         <xqdoc:type occurrence="*">xs:string</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="0">
+      <xqdoc:comment>
+        <xqdoc:description>missing dependances</xqdoc:description>
+      </xqdoc:comment>
+      <xqdoc:name>cmpx:load</xqdoc:name>
+      <xqdoc:annotations>
+        <xqdoc:annotation name="updating"/>
+      </xqdoc:annotations>
+      <xqdoc:signature>declare %updating function cmpx:load() as item()*</xqdoc:signature>
+      <xqdoc:return>
+        <xqdoc:type occurrence="*">item()</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="2">
+      <xqdoc:comment>
+        <xqdoc:description>update or create database from file path</xqdoc:description>
+        <xqdoc:param>$dbname name of database</xqdoc:param>
+        <xqdoc:param>$path file path contain files</xqdoc:param>
+      </xqdoc:comment>
+      <xqdoc:name>cmpx:sync-from-path</xqdoc:name>
+      <xqdoc:annotations>
+        <xqdoc:annotation name="updating"/>
+        <xqdoc:annotation name="private"/>
+      </xqdoc:annotations>
+      <xqdoc:signature>declare %updating %private function cmpx:sync-from-path($dbname as xs:string, $path as xs:string) as item()*</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>dbname</xqdoc:name>
+          <xqdoc:type>xs:string</xqdoc:type>
+        </xqdoc:parameter>
+        <xqdoc:parameter>
+          <xqdoc:name>path</xqdoc:name>
+          <xqdoc:type>xs:string</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type occurrence="*">item()</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="4">
+      <xqdoc:comment>
+        <xqdoc:description>update or create database from file list. After this the database will have a
+matching copy of the files on the file system</xqdoc:description>
+        <xqdoc:param>$dbname name of database</xqdoc:param>
+        <xqdoc:param>$path  base file path where files are relative to en</xqdoc:param>
+        <xqdoc:param>$files file names from base</xqdoc:param>
+        <xqdoc:param>fn function to apply f(fullsrcpath)-&gt;anotherpath</xqdoc:param>
+      </xqdoc:comment>
+      <xqdoc:name>cmpx:sync-from-files</xqdoc:name>
+      <xqdoc:annotations>
+        <xqdoc:annotation name="updating"/>
+        <xqdoc:annotation name="private"/>
+      </xqdoc:annotations>
+      <xqdoc:signature>declare %updating %private function cmpx:sync-from-files($dbname as xs:string, $path as xs:string, $files as xs:string*, $ingest as item()*) as item()*</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>dbname</xqdoc:name>
+          <xqdoc:type>xs:string</xqdoc:type>
+        </xqdoc:parameter>
+        <xqdoc:parameter>
+          <xqdoc:name>path</xqdoc:name>
+          <xqdoc:type>xs:string</xqdoc:type>
+        </xqdoc:parameter>
+        <xqdoc:parameter>
+          <xqdoc:name>files</xqdoc:name>
+          <xqdoc:type occurrence="*">xs:string</xqdoc:type>
+        </xqdoc:parameter>
+        <xqdoc:parameter>
+          <xqdoc:name>ingest</xqdoc:name>
+          <xqdoc:type occurrence="*">item()</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type occurrence="*">item()</xqdoc:type>
       </xqdoc:return>
     </xqdoc:function>
     <xqdoc:function arity="2">

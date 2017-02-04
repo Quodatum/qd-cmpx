@@ -1,0 +1,10 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="ex-graphviz">
+  <type>expath</type>
+  <home>https://github.com/expkg-zone58/ex-graphviz</home>
+  <description>XQuery interface for Graphviz with EXPath packaging.</description>
+  <release version="0.0.7">
+    <location base="https://github.com/expkg-zone58/ex-graphviz/releases/download/v0.0.7/">
+      <resource type="xar">ex-graphviz-0.0.7.xar</resource>
+    </location>
+  </release>
+</cmp>

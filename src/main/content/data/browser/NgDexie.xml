@@ -1,0 +1,15 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="NgDexie">
+  <type>browser</type>
+  <home>https://github.com/FlussoBV/NgDexie</home>
+  <description>AngularJS wrapper around the Dexie.js library</description>
+  <dependency name="angularjs"/>
+  <dependency name="dexie.js"/>
+  <release version="0.0.15">
+    <location base="https://cdn.rawgit.com/FlussoBV/NgDexie/v0.0.15/build/">
+      <resource type="js">ngDexie.js</resource>
+    </location>
+    <location offline="true" base="/static/lib/NgDexie/0.0.15/">
+      <resource type="js">ngDexie.js</resource>
+    </location>
+  </release>
+</cmp>

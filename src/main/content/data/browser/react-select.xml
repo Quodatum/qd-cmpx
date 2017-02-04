@@ -1,0 +1,16 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="react-select">
+  <type>browser</type>
+  <home>https://jedwatson.github.io/react-select/</home>
+  <licence>MIT</licence>
+  <description>A flexible and beautiful Select Input control for ReactJS with
+         multiselect, autocomplete and ajax support.</description>
+  <dependency name="react"/>
+  <dependency name="classnames"/>
+  <dependency name="react-input-autosize"/>
+  <release version="1.0.0-beta14">
+    <location base="https://unpkg.com/react-select/dist/">
+      <resource type="js">react-select.js</resource>
+      <resource type="css">react-select.css</resource>
+    </location>
+  </release>
+</cmp>

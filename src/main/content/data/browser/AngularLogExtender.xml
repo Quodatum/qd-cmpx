@@ -1,0 +1,13 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="AngularLogExtender">
+  <type>browser</type>
+  <home>https://github.com/lwhiteley/AngularLogExtender</home>
+  <description>AngularLogExtender is an AngularJS module that extends
+			the
+			Angular $log functionality.</description>
+  <dependency name="angularjs"/>
+  <release version="0.0.10">
+    <location offline="true" base="/static/lib/AngularLogExtender/0.0.10/">
+      <resource type="js">log-ex-unobtrusive.min.js</resource>
+    </location>
+  </release>
+</cmp>

@@ -1,0 +1,12 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="react">
+  <type>browser</type>
+  <home>https://facebook.github.io/react/</home>
+  <licence>BSD</licence>
+  <description>A JavaScript library for building user interfaces</description>
+  <release version="15.3.0">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/react/15.3.0/">
+      <resource type="js">react.js</resource>
+      <resource type="js">react-dom.js</resource>
+    </location>
+  </release>
+</cmp>

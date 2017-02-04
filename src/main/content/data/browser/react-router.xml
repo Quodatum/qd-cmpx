@@ -1,0 +1,13 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="react-router">
+  <type>browser</type>
+  <home>https://github.com/reactjs/react-router</home>
+  <licence>BSD</licence>
+  <description>A complete routing library for React</description>
+  <dependency name="react"/>
+  <dependency name="history"/>
+  <release version="2.7.0">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/react-router/2.7.0/">
+      <resource type="js">ReactRouter.js</resource>
+    </location>
+  </release>
+</cmp>

@@ -1,0 +1,12 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="angular-charts">
+  <type>browser</type>
+  <home>http://chinmaymk.github.io/angular-charts/</home>
+  <description>angular directives for commonly used d3 charts</description>
+  <dependency name="angularjs"/>
+  <dependency name="d3"/>
+  <release version="0.2.1">
+    <location offline="true" base="/static/lib/angular-charts/0.2.1/">
+      <resource type="js">angular-charts.min.js</resource>
+    </location>
+  </release>
+</cmp>

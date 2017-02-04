@@ -1,0 +1,12 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="ui-ace">
+  <type>browser</type>
+  <home>https://github.com/angular-ui/ui-ace</home>
+  <description>This directive allows you to add ACE editor elements.</description>
+  <dependency name="angularjs"/>
+  <dependency name="ace"/>
+  <release version="0.2.3">
+    <location offline="true" base="/static/lib/ui-ace/ui-ace-0.2.3/">
+      <resource type="js">ui-ace.js</resource>
+    </location>
+  </release>
+</cmp>

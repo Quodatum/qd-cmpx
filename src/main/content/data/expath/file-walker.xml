@@ -1,0 +1,10 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="file-walker">
+  <type>expath</type>
+  <home>https://github.com/Quodatum/file-walker</home>
+  <description>File list and search in the XProc style</description>
+  <release version="0.0.2">
+    <location base="https://github.com/Quodatum/file-walker/releases/download/v0.0.2/">
+      <resource type="xar">file-walker-0.0.2.xar</resource>
+    </location>
+  </release>
+</cmp>

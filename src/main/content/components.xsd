@@ -3,7 +3,10 @@
 	targetNamespace="urn:quodatum:qd-cmpx:component" xmlns:comp="urn:quodatum:qd-cmpx:component">
 
 	<xs:element name="components">
-		<xs:complexType>
+        <xs:annotation>
+        	<xs:documentation>Wrapper for multiple cmp elements</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
 			<xs:sequence>
 				<xs:element maxOccurs="unbounded" minOccurs="0" ref="comp:cmp" />
 			</xs:sequence>

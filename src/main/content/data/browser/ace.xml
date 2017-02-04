@@ -1,0 +1,22 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="ace">
+  <type>browser</type>
+  <home>http://ace.c9.io/</home>
+  <licence>BSD</licence>
+  <description>Ace is an embeddable code editor written in JavaScript.</description>
+  <release version="1.2.3">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/">
+      <resource type="js">ace.js</resource>
+      <resource type="js">ext-language_tools.js</resource>
+    </location>
+    <location offline="true" base="/static/lib/ace/1.2.3/">
+      <resource type="js">ace.js</resource>
+      <resource type="js">ext-language_tools.js</resource>
+    </location>
+  </release>
+  <release version="1.2.4">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/ace/1.2.4/">
+      <resource type="js">ace.js</resource>
+      <resource type="js">ext-language_tools.js</resource>
+    </location>
+  </release>
+</cmp>

@@ -1,0 +1,11 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="ex-thumbnailator">
+  <type>expath</type>
+  <home>https://github.com/expkg-zone58/ex-thumbnailator</home>
+  <description>An XQuery interface to the thumbnail generator library 
+        [thumbnailator](https://github.com/coobird/thumbnailator)</description>
+  <release version="2.0.1">
+    <location base="https://github.com/expkg-zone58/ex-thumbnailator/releases/download/v2.0.1/">
+      <resource type="xar">thumbnailator-2.0.1.xar</resource>
+    </location>
+  </release>
+</cmp>

@@ -1,0 +1,17 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="font-awesome">
+  <type>browser</type>
+  <home>http://fortawesome.github.io/Font-Awesome/</home>
+  <description>Font Awesome gives you scalable vector icons that can
+			instantly be customized
+			size, color, drop shadow, and anything that
+			can be done with the
+			power of CSS.</description>
+  <release version="4.5.0">
+    <location base="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/">
+      <resource type="css">css/font-awesome.min.css</resource>
+    </location>
+    <location offline="true" base="/static/lib/font-awesome/4.5.0/">
+      <resource type="css">css/font-awesome.min.css</resource>
+    </location>
+  </release>
+</cmp>

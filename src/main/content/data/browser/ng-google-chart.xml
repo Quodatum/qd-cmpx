@@ -1,0 +1,11 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="ng-google-chart">
+  <type>browser</type>
+  <home>http://bouil.github.io/angular-google-chart/#/fat</home>
+  <description>Google Chart Tools AngularJS Directive Module</description>
+  <dependency name="angularjs"/>
+  <release version="0.0.9">
+    <location offline="true" base="/static/lib/googlechart/0.0.9/">
+      <resource type="js">ng-google-chart.js</resource>
+    </location>
+  </release>
+</cmp>

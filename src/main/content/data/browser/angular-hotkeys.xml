@@ -1,0 +1,18 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="angular-hotkeys">
+  <type>browser</type>
+  <home>http://chieffancypants.github.io/angular-hotkeys/</home>
+  <description>Configuration-centric keyboard shortcuts for your angular
+			apps</description>
+  <dependency name="angularjs"/>
+  <release version="1.2.0">
+    <location offline="true" base="/static/lib/angular-hotkeys/1.2.0/">
+      <resource type="js">/hotkeys.min.js</resource>
+    </location>
+  </release>
+  <release version="1.4.5">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/angular-hotkeys/1.4.5/">
+      <resource type="css">hotkeys.css</resource>
+      <resource type="js">hotkeys.js</resource>
+    </location>
+  </release>
+</cmp>

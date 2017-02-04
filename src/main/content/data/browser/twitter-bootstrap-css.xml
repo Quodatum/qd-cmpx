@@ -1,0 +1,14 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="twitter-bootstrap-css">
+  <type>browser</type>
+  <home>http://getbootstrap.com/</home>
+  <licence>Apache v2.0</licence>
+  <description>bootstrap css only.</description>
+  <release version="3.3.6">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/">
+      <resource type="css">css/bootstrap.css</resource>
+    </location>
+    <location offline="true" base="/static/lib/twitter-bootstrap-css/3.3.6/">
+      <resource type="css">bootstrap.css</resource>
+    </location>
+  </release>
+</cmp>

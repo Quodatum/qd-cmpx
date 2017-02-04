@@ -1,0 +1,13 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="schematron-basex">
+  <type>expath</type>
+  <home>https://github.com/vincentml/schematron-basex</home>
+  <description>XQuery module to use ISO Schematron in BaseX.
+			This module
+			uses the standard Schematron implementation from
+			https://code.google.com/p/schematron/.</description>
+  <release version="1.0">
+    <location base="https://cdn.rawgit.com/vincentml/schematron-basex/5420af31263169a84cac181994f460dfe0a1365a/dist/">
+      <resource type="xar">schematron-basex-1.0.xar</resource>
+    </location>
+  </release>
+</cmp>

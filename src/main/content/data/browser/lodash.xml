@@ -1,0 +1,15 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="lodash">
+  <type>browser</type>
+  <home>http://lodash.com/</home>
+  <licence>MIT</licence>
+  <description>A utility library delivering consistency, customization,
+			performance, &amp; extras.</description>
+  <release version="2.4.1">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/">
+      <resource type="js">lodash.min.js</resource>
+    </location>
+    <location offline="true" base="/static/lib/lodash/2.4.1/">
+      <resource type="js">lodash.min.js</resource>
+    </location>
+  </release>
+</cmp>

@@ -1,0 +1,13 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="angular-moment">
+  <type>browser</type>
+  <home>https://github.com/urish/angular-moment</home>
+  <licence>MIT</licence>
+  <description>Angular.JS directives for Moment.JS (timeago alternative)</description>
+  <dependency name="moment"/>
+  <dependency name="angularjs"/>
+  <release version="0.7.0">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/angular-moment/0.7.0/">
+      <resource type="js">angular-moment.min.js</resource>
+    </location>
+  </release>
+</cmp>

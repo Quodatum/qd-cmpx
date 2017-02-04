@@ -1,0 +1,12 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="angular-ya-treeview">
+  <type>browser</type>
+  <home>https://github.com/ca77y/angular-ya-treeview</home>
+  <description>Yet Another Treeview for AngularJS</description>
+  <dependency name="angularjs"/>
+  <release version="0.2.2">
+    <location offline="true" base="/static/lib/angular-ya-treeview/0.2.2/">
+      <resource type="css">ya-treeview.css</resource>
+      <resource type="js">ya-treeview-tpls.js</resource>
+    </location>
+  </release>
+</cmp>

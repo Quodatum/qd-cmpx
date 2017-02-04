@@ -1,0 +1,20 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="angular-breadcrumb">
+  <type>browser</type>
+  <home>http://ncuillery.github.io/angular-breadcrumb</home>
+  <description>angular-breadcrumb is a module for AngularJS, which
+			generates
+			a breadcrumb for any page of your application.
+			It is strongly
+			based on
+			the UI-router framework and its hierarchical
+			tree of states.</description>
+  <dependency name="angular-ui-router"/>
+  <release version="0.4.0">
+    <location base="https://cdn.rawgit.com/ncuillery/angular-breadcrumb/v0.4.0/dist/">
+      <resource type="js">angular-breadcrumb.js</resource>
+    </location>
+    <location offline="true" base="/static/lib/angular-breadcrumb/0.4.0/">
+      <resource type="js">angular-breadcrumb.js</resource>
+    </location>
+  </release>
+</cmp>

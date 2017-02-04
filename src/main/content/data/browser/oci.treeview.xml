@@ -1,0 +1,14 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="oci.treeview">
+  <type>browser</type>
+  <home>https://github.com/objectcomputing/oci.treeview</home>
+  <description>AngularJS tree directive with subdirective for extending
+			node
+			behavior</description>
+  <dependency name="angularjs"/>
+  <release version="2040305">
+    <location offline="true" base="/static/lib/oci.treeview/2040305/">
+      <resource type="js">treeview.min.js</resource>
+      <resource type="css">treeview.css</resource>
+    </location>
+  </release>
+</cmp>

@@ -1,0 +1,12 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="svg-pan-zoom">
+  <type>browser</type>
+  <home>https://github.com/ariutta/svg-pan-zoom</home>
+  <description>JavaScript library that enables panning and zooming of an
+			SVG
+			in an HTML document, with mouse events or custom JavaScript hooks</description>
+  <release version="3.2.3">
+    <location offline="true" base="/static/lib/svg-pan-zoom/3.2.3/">
+      <resource type="js">svg-pan-zoom.js</resource>
+    </location>
+  </release>
+</cmp>

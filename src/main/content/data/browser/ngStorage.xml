@@ -1,0 +1,11 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="ngStorage">
+  <type>browser</type>
+  <home>https://github.com/gsklee/ngStorage</home>
+  <description>localStorage and sessionStorage done right for AngularJS.</description>
+  <dependency name="angularjs"/>
+  <release version="0.3.0">
+    <location offline="true" base="/static/lib/ngStorage/0.3.0/">
+      <resource type="js">ngStorage.js</resource>
+    </location>
+  </release>
+</cmp>

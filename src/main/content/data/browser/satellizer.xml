@@ -1,0 +1,16 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="satellizer">
+  <type>browser</type>
+  <home>https://github.com/sahat/satellizer</home>
+  <description>Satellizer is a simple to use, end-to-end, token-based
+			authentication module
+			for AngularJS with built-in support for Google,
+			Facebook, LinkedIn,
+			Twitter authentication providers, plus Email and
+			Password sign-in
+			method.</description>
+  <release version="0.7.0">
+    <location base="//resource.jsdelivr.net/satellizer/0.7.0/">
+      <resource type="js">satellizer.min.js</resource>
+    </location>
+  </release>
+</cmp>

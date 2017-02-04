@@ -1,0 +1,44 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="angularjs">
+  <type>browser</type>
+  <home>https://angularjs.org/</home>
+  <licence>MIT</licence>
+  <description>HTML enhanced for web apps!</description>
+  <release version="1.4.8">
+    <location base="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/">
+      <resource type="js">angular.js</resource>
+      <resource type="js">angular-resource.js</resource>
+      <resource type="js">angular-cookies.js</resource>
+      <resource type="js">angular-sanitize.js</resource>
+      <resource type="js">angular-touch.js</resource>
+      <resource type="js">angular-animate.js</resource>
+    </location>
+    <location offline="true" base="/static/lib/angularjs/1.4.8/">
+      <resource type="js">angular.js</resource>
+      <resource type="js">angular-resource.js</resource>
+      <resource type="js">angular-cookies.js</resource>
+      <resource type="js">angular-sanitize.js</resource>
+      <resource type="js">angular-touch.js</resource>
+      <resource type="js">angular-animate.js</resource>
+    </location>
+  </release>
+  <release version="1.5.5">
+    <location base="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/">
+      <resource type="js">angular.js</resource>
+      <resource type="js">angular-resource.js</resource>
+      <resource type="js">angular-cookies.js</resource>
+      <resource type="js">angular-sanitize.js</resource>
+      <resource type="js">angular-touch.js</resource>
+      <resource type="js">angular-animate.js</resource>
+    </location>
+  </release>
+   <release version="1.5.11">
+    <location base="//ajax.googleapis.com/ajax/libs/angularjs/1.5.11/">
+      <resource type="js">angular.js</resource>
+      <resource type="js">angular-resource.js</resource>
+      <resource type="js">angular-cookies.js</resource>
+      <resource type="js">angular-sanitize.js</resource>
+      <resource type="js">angular-touch.js</resource>
+      <resource type="js">angular-animate.js</resource>
+    </location>
+  </release>
+</cmp>

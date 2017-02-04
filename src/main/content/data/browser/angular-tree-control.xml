@@ -1,0 +1,13 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="angular-tree-control">
+  <type>browser</type>
+  <home>http://wix.github.io/angular-tree-control/</home>
+  <licence>MIT</licence>
+  <description>The AngularJS tree component.</description>
+  <dependency name="angularjs"/>
+  <release version="0.2.0">
+    <location offline="true" base="/static/lib/angular-tree-control/0.2.0/">
+      <resource type="css">css/tree-control.css</resource>
+      <resource type="js">tree-control.js</resource>
+    </location>
+  </release>
+</cmp>

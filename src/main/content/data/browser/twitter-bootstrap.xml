@@ -1,0 +1,13 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="twitter-bootstrap">
+  <type>browser</type>
+  <home>http://getbootstrap.com/</home>
+  <licence>Apache v2.0</licence>
+  <description>The most popular front-end framework for developing
+			responsive, mobile first projects on the web.</description>
+  <release version="3.3.4">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/">
+      <resource type="css">css/bootstrap.css</resource>
+      <resource type="js">js/bootstrap.min.js</resource>
+    </location>
+  </release>
+</cmp>

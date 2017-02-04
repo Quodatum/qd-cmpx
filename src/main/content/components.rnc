@@ -2,13 +2,13 @@
 
 default namespace = "urn:quodatum:qd-cmpx:component"
 
-start = Components
+start = Components | Cmp
 
 Components= element components {attribute version {"1.0"}, Cmp+ }
 
 Cmp = element cmp {
     attribute name { xsd:NCName },
-    element type  { text }?,
+    element type  { text },
     element home  { text }, 
     element licence { text }?, 
 	element description { text },

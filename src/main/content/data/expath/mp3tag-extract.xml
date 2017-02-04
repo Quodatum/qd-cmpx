@@ -1,0 +1,11 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="mp3tag-extract">
+  <type>expath</type>
+  <home>https://github.com/expkg-zone58/mp3tag-extract</home>
+  <description>An XQuery library to extract mp3 metadata as XML using the
+         [mpatric/mp3agic library](https://github.com/mpatric/mp3agic)</description>
+  <release version="0.4.1">
+    <location base="https://github.com/expkg-zone58/mp3tag-extract/releases/download/v0.4.1/">
+      <resource type="xar">mp3tag-extractor-0.4.1.xar</resource>
+    </location>
+  </release>
+</cmp>

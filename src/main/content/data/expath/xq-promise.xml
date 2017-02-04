@@ -1,0 +1,10 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="xq-promise">
+  <type>expath</type>
+  <home>https://github.com/james-jw/xq-promise</home>
+  <description>An implementation of the promise pattern, as well as fork-join async processing for XQuery 3.1</description>
+  <release version="89ffe490b71bc1beb2bc8043b9021b39e0a367ff">
+    <location base="https://cdn.rawgit.com/james-jw/xq-promise/89ffe490b71bc1beb2bc8043b9021b39e0a367ff/src/main/xquery/xq-promise.xqm">
+      <resource type="xar">xq-promise.xqm</resource>
+    </location>
+  </release>
+</cmp>
