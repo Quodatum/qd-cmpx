@@ -1,0 +1,12 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="ace">
+  <type>browser</type>
+  <home>https://material.io/</home>
+  <licence>apache 2</licence>
+  <description>Material Design is a unified system that combines theory, resources, and tools for crafting digital experiences.</description>
+  <release version="0.0.0">
+    <location base="https://fonts.googleapis.com/">
+      <resource type="css">css?family=Roboto:300,400,500,700,400italic</resource>
+      <resource type="css">icon?family=Material+Icons</resource>
+    </location>
+  </release>
+</cmp>

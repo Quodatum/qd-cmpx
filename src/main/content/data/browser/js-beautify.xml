@@ -1,0 +1,14 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="js-beautify">
+  <type>browser</type>
+  <home>http://jsbeautifier.org/</home>
+  <licence>MIT</licence>
+  <description>Beautifier for javascript.</description>
+  <release version="1.6.12">
+    <location base="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.6.12/">
+      <resource type="js">beautify.js</resource>
+      <resource type="js">beautify-css.js</resource>
+      <resource type="js">beautify-html.js</resource>
+    </location>
+  </release>
+ 
+</cmp>

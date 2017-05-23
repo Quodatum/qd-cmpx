@@ -1,0 +1,12 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="vuetify">
+  <type>browser</type>
+  <home>https://github.com/monterail/vue-multiselect</home>
+  <licence>MIT</licence>
+  <description>Material Component Framework for Vue.js 2 </description>
+  <release version="0.12.0">
+    <location base="https://unpkg.com/vuetify@0.12.0/dist/">
+      <resource type="css">vuetify.min.css</resource>
+      <resource type="js">vuetify.min.js</resource>
+    </location>
+  </release>
+</cmp>

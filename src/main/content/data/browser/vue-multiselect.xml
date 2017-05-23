@@ -1,0 +1,12 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="vue-multiselect">
+  <type>browser</type>
+  <home>https://github.com/monterail/vue-multiselect</home>
+  <licence>MIT</licence>
+  <description>Universal select/multiselect/tagging component for Vue.js </description>
+  <release version="2.0.0-beta.15">
+    <location base="https://unpkg.com/vue-multiselect@2.0.0-beta.15/dist/">
+      <resource type="css">vue-multiselect.min.css</resource>
+      <resource type="js">vue-multiselect.min.js</resource>
+    </location>
+  </release>
+</cmp>

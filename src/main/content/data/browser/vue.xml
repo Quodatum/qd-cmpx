@@ -1,0 +1,11 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="vue">
+  <type>browser</type>
+  <home>https://vuejs.org/</home>
+  <licence>MIT</licence>
+  <description>A progressive, incrementally-adoptable JavaScript framework for building UI on the web. </description>
+  <release version="2.3.3">
+    <location base="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/">
+      <resource type="js">vue.js</resource>
+    </location>
+  </release>
+</cmp>

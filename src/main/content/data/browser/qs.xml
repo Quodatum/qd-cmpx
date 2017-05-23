@@ -8,4 +8,9 @@
       <resource type="js">qs.js</resource>
     </location>
   </release>
+  <release version="6.4.0">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/qs/6.4.0/">
+      <resource type="js">qs.js</resource>
+    </location>
+  </release>
 </cmp>

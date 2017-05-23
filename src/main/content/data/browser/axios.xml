@@ -8,4 +8,9 @@
       <resource type="js">axios.js</resource>
     </location>
   </release>
+   <release version="0.16.1">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/">
+      <resource type="js">axios.js</resource>
+    </location>
+  </release>
 </cmp>
