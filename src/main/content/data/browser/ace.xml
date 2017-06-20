@@ -25,4 +25,10 @@
       <resource type="js">ext-language_tools.js</resource>
     </location>
   </release>
+   <release version="1.2.7">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/ace/1.2.7/">
+      <resource type="js">ace.js</resource>
+      <resource type="js">ext-language_tools.js</resource>
+    </location>
+  </release>
 </cmp>

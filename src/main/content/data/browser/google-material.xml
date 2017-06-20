@@ -1,4 +1,4 @@
-<cmp xmlns="urn:quodatum:qd-cmpx:component" name="ace">
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="google-material">
   <type>browser</type>
   <home>https://material.io/</home>
   <licence>apache 2</licence>
