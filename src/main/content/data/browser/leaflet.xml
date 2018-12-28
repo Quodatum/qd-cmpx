@@ -1,0 +1,14 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="leaflet">
+  <type>browser</type>
+  <home>https://leafletjs.com/</home>
+  <licence>MIT</licence>
+  <description>an open-source JavaScript library
+for mobile-friendly interactive maps</description>
+
+  <release version="1.0.3">
+    <location base="//unpkg.com/leaflet@1.0.3/dist/">
+      <resource type="css">leaflet.css</resource>
+      <resource type="js">leaflet.js</resource>
+    </location>
+  </release>
+</cmp>

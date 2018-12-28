@@ -2,6 +2,11 @@
   <type>browser</type>
   <home>http://d3js.org/</home>
   <description>Data driven documents</description>
+   <release version="4.13.0">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/">
+      <resource type="js">d3.min.js</resource>
+    </location>
+  </release>
   <release version="3.4.6">
     <location base="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/">
       <resource type="js">d3.min.js</resource>

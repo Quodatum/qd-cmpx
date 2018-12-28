@@ -1,9 +1,14 @@
-<cmp xmlns="urn:quodatum:qd-cmpx:component" name="moment">
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="momentjs">
   <type>browser</type>
   <home>http://momentjs.com/</home>
   <licence>MIT</licence>
   <description>A javascript date library for parsing, validating,
 			manipulating, and formatting dates.</description>
+	 <release version="2.18.1">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/">
+      <resource type="js">moment.js</resource>
+    </location>
+  </release>		
   <release version="2.6.0">
     <location base="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/">
       <resource type="js">moment-with-langs.min.js</resource>

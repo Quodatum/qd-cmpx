@@ -1,0 +1,14 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="prism">
+  <type>browser</type>
+  <home>https://prismjs.com/</home>
+  <licence>MIT</licence>
+  <description>Prism is a lightweight, extensible syntax highlighter,
+   built with modern web standards in mind.</description>
+
+  <release version="0">
+    <location base="/prism/">
+      <resource type="css">prism.css</resource>
+      <resource type="js">prism.js</resource>
+    </location>
+  </release>
+</cmp>

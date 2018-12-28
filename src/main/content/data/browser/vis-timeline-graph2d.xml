@@ -1,0 +1,14 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="vis-timeline-graph2d">
+  <type>browser</type>
+  <home>http://visjs.org/docs/graph2d/</home>
+  <licence>MIT</licence>
+  <description>Graph2d is an interactive visualization chart to draw data in a 2D graph. 
+  You can freely move and zoom in the graph by dragging and scrolling in the window. </description>
+
+  <release version="4.20.1">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/vis/4.20.1/">
+      <resource type="css">vis-timeline-graph2d.min.css</resource>
+      <resource type="js">vis-timeline-graph2d.min.js</resource>
+    </location>
+  </release>
+</cmp>

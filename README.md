@@ -11,7 +11,7 @@ import module namespace  cmpx = 'quodatum.cmpx';
 cmpx:load()
 ```
 ## Examples
-cmpx:expath-pkg($name)
+cmpx:expath-pkg("abide")
  return the expath doc for web application $name
  
  cmpx:app($name)
@@ -19,11 +19,11 @@ cmpx:expath-pkg($name)
  
 components raw data
 ````
-$cmpx:comps
+cmpx:comps()
 ````
 list all names
 ````
-cmpx:names($cmpx:comps)
+cmpx:comps()!cmpx:names(.)
 angular-tree-control
 jquery
 twitter-bootstrap
@@ -35,7 +35,7 @@ lodash
 ````
 find from name
 ````
-cmp:find("angular-tree-control")
+cmpx:get("angular-tree-control")
 <cmp xmlns="urn:quodatum:qd-cmpx:component" name="angular-tree-control">
   <runat>browser</runat>
   <tagline>The AngularJS tree component.</tagline>

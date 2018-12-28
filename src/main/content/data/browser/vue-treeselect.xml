@@ -1,0 +1,13 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="vue-treeselect">
+  <type>browser</type>
+  <home>https://vue-treeselect.js.org/</home>
+  <licence>MIT</licence>
+  <description>vue-treeselect is a multi-select component with nested options support for Vue.js.</description>
+  <dependency name="vue"/>
+  <release version="0.0.29">
+    <location base="//unpkg.com/@riophae/vue-treeselect@0.0.29/dist/">
+      <resource type="css">vue-treeselect.min.css</resource>
+      <resource type="js">vue-treeselect.min.js</resource>
+    </location>
+  </release>
+</cmp>

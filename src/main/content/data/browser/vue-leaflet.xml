@@ -1,0 +1,14 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="vue-leaflet">
+  <type>browser</type>
+  <home>https://github.com/KoRiGaN/Vue2Leaflet#readme</home>
+  <licence>MIT</licence>
+  <description>Vue2Leaflet is a JavaScript library for the Vue framework 
+  that wraps Leaflet making it easy to create reactive maps.</description>
+  <dependency name="vue"/>
+  <dependency name="leaflet"/>
+  <release version="1.0.2">
+    <location base="//unpkg.com/vue2-leaflet@1.0.2/dist/">
+      <resource type="js">vue2-leaflet.js</resource>
+    </location>
+  </release>
+</cmp>

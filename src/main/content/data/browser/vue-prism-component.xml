@@ -1,0 +1,14 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="vue-prism-component">
+  <type>browser</type>
+  <home>https://github.com/egoist/vue-prism-component</home>
+  <licence>MIT</licence>
+  <description>highlight code using prism.js and vue component </description>
+ <dependency name="vue"/>
+  <dependency name="prism"/>
+  <release version="0">
+    <location base="/prism/">
+      <resource type="css">prism.css</resource>
+      <resource type="js">prism.js</resource>
+    </location>
+  </release>
+</cmp>

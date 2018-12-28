@@ -1,0 +1,12 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="localforage">
+  <type>browser</type>
+  <home>https://localforage.github.io/localForage/</home>
+  <licence>MIT</licence>
+  <description>LocalForage is a JavaScript library that improves the offline experience of your web app 
+  by using an asynchronous data store with a simple, localStorage-like API.</description>
+   <release version="1.7.1">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/localforage/1.7.1/">
+      <resource type="js">localforage.js</resource>
+    </location>
+  </release>
+</cmp>

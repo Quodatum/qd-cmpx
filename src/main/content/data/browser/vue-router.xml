@@ -1,11 +1,17 @@
 <cmp xmlns="urn:quodatum:qd-cmpx:component" name="vue-router">
-  <type>browser</type>
-  <home>https://github.com/vuejs/vue-router</home>
-  <licence>MIT</licence>
-  <description>The official router for Vue.js.  </description>
-  <release version="2.5.3">
-    <location base="https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.5.3/">
-      <resource type="js">vue-router.js</resource>
-    </location>
-  </release>
+	<type>browser</type>
+	<home>https://github.com/vuejs/vue-router</home>
+	<licence>MIT</licence>
+	<description>The official router for Vue.js.  </description>
+	<dependency name="vue" />
+	<release version="3.0.1">
+		<location base="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.1/">
+			<resource type="js">vue-router.js</resource>
+		</location>
+	</release>
+	<release version="2.5.3">
+		<location base="https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.5.3/">
+			<resource type="js">vue-router.js</resource>
+		</location>
+	</release>
 </cmp>
