@@ -1,0 +1,12 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="vue-markdown">
+  <type>browser</type>
+  <home>https://github.com/miaolz123/vue-markdown#readme</home>
+  <licence>MIT</licence>
+  <description>A Powerful and Highspeed Markdown Parser for Vue.</description>
+  <dependency name="vue"/>
+  <release version="2.2.4">
+    <location base="//cdn.jsdelivr.net/npm/vue-markdown@2.2.4/dist/">
+      <resource type="js">vue-markdown.js</resource>
+    </location>
+  </release>
+</cmp>

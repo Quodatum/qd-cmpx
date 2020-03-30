@@ -1,0 +1,13 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="vuetify-jsonschema-form">
+	<type>browser</type>
+	<home>https://github.com/koumoul-dev/vuetify-jsonschema-form</home>
+	<licence>MIT</licence>
+	<description>Generate forms for the vuetify UI library (vuejs) based on annotated JSON schemas. </description>
+	<dependency name="vuetify" />
+	<release version="0.35.0">
+		<location base="https://cdn.jsdelivr.net/npm/@koumoul/vuetify-jsonschema-form@0.35.0/dist/">
+			<resource type="js">main.js</resource>
+		</location>
+	</release>
+	
+</cmp>

@@ -1,6 +1,6 @@
 (:~
  : Component library tools
- : Install this in the BaseX respository
+ : maintains a db at ~qd-cmpx
  : @since April 2015  
  : @author Andy Bunce
  : @copyright Quodatum Ltd  
@@ -36,6 +36,28 @@ as element(comp:cmp)*
 };
 
 (:~
+ : 
+ : return map $cmp with added keys to reflect component status from catalog. found=true or status= reason
+ :)
+declare function cmpx:status-enrich($cmp as map(*),$db as element(comp:cmp)*)
+as map(*)
+{
+  let $c:=$db[@name=$cmp?name]
+  return switch (count($c))
+         case 0 return  
+                  map:merge(($cmp,map:entry("status","no component")))
+         case 1 return 
+                 let $v:= $c/comp:release[@version=$cmp?version]
+                 return switch (count($v))
+                         case 0 return  
+                                  map:merge(($cmp,map:entry("status","no version")))
+                         case 1 return 
+                                  map:merge(($cmp,map:entry("found","true")))
+                         default return error()
+         default return error()
+};
+
+(:~
  : @return expath-pkg doc for app $name
  :)
 declare function cmpx:expath-pkg($name as xs:string){
@@ -51,6 +73,7 @@ as element(pkg:dependency)*{
     let $f:=  file:resolve-path($name ||"/expath-pkg.xml",$cmpx:webpath)
     return if(fn:doc-available($f)) then fn:doc($f)/*/pkg:dependency else ()
 };
+
 (:~
  : anotate a pkg:dependency with info about availability 
  : adds a @status attribute
@@ -102,8 +125,8 @@ let $offline:=$opts?offline
 let $css:=$cmps!(fn:head(comp:release/comp:location[if($offline)then @offline else fn:true()])/*[@type="css"])
 let $js:=$cmps!(fn:head(comp:release/comp:location[if($offline)then @offline else fn:true()])/*[@type="js"])
 return map{
-	"css":$css!cmpx:css(.),
-	"js":$js!cmpx:js(.)
+	"css": $css!cmpx:css(.),
+	"js": $js!cmpx:js(.)
 }
 };
 
@@ -140,6 +163,9 @@ declare function cmpx:full-uri($uri,$port) as xs:string{
 	else $uri
 };
 
+(:~
+ : get component with name or empty
+ :)
 declare function cmpx:get($name as xs:string) as element(comp:cmp)?
 {
   $cmpx:comps[@name=$name]

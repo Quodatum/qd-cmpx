@@ -3,8 +3,8 @@
   <home>https://vuejs.org/</home>
   <licence>MIT</licence>
   <description>A progressive, incrementally-adoptable JavaScript framework for building UI on the web. </description>
-  <release version="2.5.21">
-    <location base="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.21/">
+  <release version="2.6.11">
+    <location base="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/">
       <resource type="js">vue.js</resource>
     </location>
   </release>

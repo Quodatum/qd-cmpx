@@ -1,0 +1,12 @@
+<cmp xmlns="urn:quodatum:qd-cmpx:component" name="vuex">
+  <type>browser</type>
+  <home>https://vuejs.org/</home>
+  <licence>MIT</licence>
+  <description>Vuex is a state management pattern + library for Vue.js applications. </description>
+  <dependency name="vue"/>
+  <release version="3.1.0">
+    <location base="https://unpkg.com/vuex@3.1.0/dist/">
+      <resource type="js">vuex.js</resource>
+    </location>
+  </release>
+</cmp>

@@ -58,7 +58,7 @@ let $doc:=copy  $c:=fn:doc($cxan)
           let $new:=<version num="{$pkg/@version}">
                     <!-- generated: {fn:current-dateTime()} -->
                     </version>
-          return if($hit)then () 
+          return if(fn:true())then () 
                  else insert node $new into $pack
                )
           return $c

@@ -3,9 +3,12 @@
   <home>https://prismjs.com/</home>
   <licence>MIT</licence>
   <description>Prism is a lightweight, extensible syntax highlighter,
-   built with modern web standards in mind.</description>
+   built with modern web standards in mind.
+  
+  https://prismjs.com/download.html#themes=prism&amp;languages=markup+css+clike+javascript+xquery 
+  </description>
 
-  <release version="0">
+  <release version="1.15.0">
     <location base="/prism/">
       <resource type="css">prism.css</resource>
       <resource type="js">prism.js</resource>

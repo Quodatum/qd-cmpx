@@ -5,10 +5,10 @@
   <description>highlight code using prism.js and vue component </description>
  <dependency name="vue"/>
   <dependency name="prism"/>
-  <release version="0">
-    <location base="/prism/">
+  <release version="1.1.1">
+    <location base="https://unpkg.com/vue-prism-component@1.1.1/dist/">
       <resource type="css">prism.css</resource>
-      <resource type="js">prism.js</resource>
+      <resource type="js">vue-prism-component.min.js</resource>
     </location>
   </release>
 </cmp>

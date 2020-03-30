@@ -2,7 +2,15 @@
   <type>browser</type>
   <home>http://ace.c9.io/</home>
   <licence>BSD</licence>
-  <description>Ace is an embeddable code editor written in JavaScript.</description>
+  <description>Ace is an embeddable code editor written in JavaScript.
+    modules included ext-language_tools.js,ext-linking</description>
+  <release version="1.4.8">
+    <location base="//cdnjs.cloudflare.com/ajax/libs/ace/1.4.8/">
+      <resource type="js">ace.js</resource>
+      <resource type="js">ext-language_tools.js</resource>
+      <resource type="js">ext-linking</resource>
+    </location>
+  </release>
    <release version="1.4.2">
     <location base="//cdnjs.cloudflare.com/ajax/libs/ace/1.4.2/">
       <resource type="js">ace.js</resource>

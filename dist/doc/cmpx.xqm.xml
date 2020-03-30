@@ -1,6 +1,6 @@
 <xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0">
   <xqdoc:control>
-    <xqdoc:date>2018-12-28T21:55:23.162Z</xqdoc:date>
+    <xqdoc:date>2020-03-30T22:53:36.882+01:00</xqdoc:date>
     <xqdoc:version>1.1</xqdoc:version>
   </xqdoc:control>
   <xqdoc:module type="library">
@@ -8,19 +8,19 @@
     <xqdoc:name>cmpx.xqm</xqdoc:name>
     <xqdoc:comment>
       <xqdoc:description>Component library tools
-Install this in the BaseX respository</xqdoc:description>
+maintains a db at ~qd-cmpx</xqdoc:description>
       <xqdoc:since>April 2015</xqdoc:since>
       <xqdoc:author>Andy Bunce</xqdoc:author>
       <xqdoc:custom tag="copyright">Quodatum Ltd</xqdoc:custom>
     </xqdoc:comment>
   </xqdoc:module>
+  <xqdoc:imports/>
   <xqdoc:namespaces>
     <xqdoc:namespace prefix="cmpx" uri="quodatum.cmpx"/>
     <xqdoc:namespace prefix="pkg" uri="http://expath.org/ns/pkg"/>
     <xqdoc:namespace prefix="comp" uri="urn:quodatum:qd-cmpx:component"/>
     <xqdoc:namespace prefix="ann" uri="http://www.w3.org/2012/xquery"/>
   </xqdoc:namespaces>
-  <xqdoc:imports/>
   <xqdoc:variables>
     <xqdoc:variable>
       <xqdoc:name>cmpx:_ver</xqdoc:name>
@@ -70,6 +70,26 @@ Install this in the BaseX respository</xqdoc:description>
       <xqdoc:signature>declare function cmpx:comps() as element(comp:cmp)*</xqdoc:signature>
       <xqdoc:return>
         <xqdoc:type occurrence="*">element(comp:cmp)</xqdoc:type>
+      </xqdoc:return>
+    </xqdoc:function>
+    <xqdoc:function arity="2">
+      <xqdoc:comment>
+        <xqdoc:description>return map $cmp with added keys to reflect component status from catalog. found=true or status= reason</xqdoc:description>
+      </xqdoc:comment>
+      <xqdoc:name>cmpx:status-enrich</xqdoc:name>
+      <xqdoc:signature>declare function cmpx:status-enrich($cmp as map(*), $db as element(comp:cmp)*) as map(*)</xqdoc:signature>
+      <xqdoc:parameters>
+        <xqdoc:parameter>
+          <xqdoc:name>cmp</xqdoc:name>
+          <xqdoc:type>map(*)</xqdoc:type>
+        </xqdoc:parameter>
+        <xqdoc:parameter>
+          <xqdoc:name>db</xqdoc:name>
+          <xqdoc:type occurrence="*">element(comp:cmp)</xqdoc:type>
+        </xqdoc:parameter>
+      </xqdoc:parameters>
+      <xqdoc:return>
+        <xqdoc:type>map(*)</xqdoc:type>
       </xqdoc:return>
     </xqdoc:function>
     <xqdoc:function arity="1">
@@ -249,6 +269,9 @@ adds a @status attribute</xqdoc:description>
       </xqdoc:return>
     </xqdoc:function>
     <xqdoc:function arity="1">
+      <xqdoc:comment>
+        <xqdoc:description>get component with name or empty</xqdoc:description>
+      </xqdoc:comment>
       <xqdoc:name>cmpx:get</xqdoc:name>
       <xqdoc:signature>declare function cmpx:get($name as xs:string) as element(comp:cmp)?</xqdoc:signature>
       <xqdoc:parameters>
